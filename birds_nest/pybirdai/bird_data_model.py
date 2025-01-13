@@ -9745,18 +9745,6 @@ class FNNCL_ASST_INSTRMNT_DRVD_DT(models.Model):
 
 	FNNCL_ASST_INSTRMNT_DRVD_DT_uniqueID = models.CharField("FNNCL_ASST_INSTRMNT_DRVD_DT_uniqueID",max_length=255, primary_key=True)
 
-	ACCMLTD_PRTL_WRTFFS = models.BigIntegerField("ACCMLTD_PRTL_WRTFFS",default=None, blank=True, null=True)
-
-	ACCMLTD_TTL_WRTFFS = models.BigIntegerField("ACCMLTD_TTL_WRTFFS",default=None, blank=True, null=True)
-
-	CRRNT_LTV_RT = models.FloatField("CRRNT_LTV_RT",default=None, blank=True, null=True)
-
-	DRVD_DFLT_STTS_domain = {		"14":"Not_in_default",
-		"6":"Default",
-}
-
-	DFLT_STTS_DRVD = models.CharField("DFLT_STTS_DRVD",max_length=255, choices=DRVD_DFLT_STTS_domain,default=None, blank=True, null=True, db_comment="DRVD_DFLT_STTS_domain")
-
 	FNNCL_ASST_INSTRMNT_ID = models.CharField("FNNCL_ASST_INSTRMNT_ID",max_length=255,default=None, blank=True, null=True)
 
 	FNNCL_ASST_INSTRMNT_RFRNC_DT = models.DateTimeField("FNNCL_ASST_INSTRMNT_RFRNC_DT",default=None, blank=True, null=True)
@@ -9770,11 +9758,17 @@ class FNNCL_ASST_INSTRMNT_DRVD_DT(models.Model):
 		"6":"Off_balance_sheet_item_received_instrument",
 		"7":"Collateral_received_instrument",
 		"8":"Collateral_given_instrument",
-}
+	}
 
 	FNNCL_ASST_INSTRMNT_RL_TYP = models.CharField("FNNCL_ASST_INSTRMNT_RL_TYP",max_length=255, choices=INSTRMNT_RL_TYP_domain,default=None, blank=True, null=True, db_comment="INSTRMNT_RL_TYP_domain")
 
-	GRSS_CRRYNG_AMNT = models.BigIntegerField("GRSS_CRRYNG_AMNT",default=None, blank=True, null=True)
+	
+	DRVD_DFLT_STTS_domain = {		"14":"Not_in_default",
+		"6":"Default",
+}
+
+	DFLT_STTS_DRVD = models.CharField("DFLT_STTS_DRVD",max_length=255, choices=DRVD_DFLT_STTS_domain,default=None, blank=True, null=True, db_comment="DRVD_DFLT_STTS_domain")
+
 
 	PRFRMNG_STTS_domain = {		"1":"Non_performing",
 		"11":"Performing",
@@ -9802,6 +9796,139 @@ class FNNCL_ASST_INSTRMNT_DRVD_DT(models.Model):
 
 	Financial_asset_instrument_has_Financial_asset_instrument_derived_data = models.ForeignKey("FNNCL_ASST_INSTRMNT", models.SET_NULL,blank=True,null=True,related_name="FNNCL_ASST_INSTRMNT_DRVD_DT_to_Financial_asset_instrument_has_Financial_asset_instrument_derived_datas")
 
+	ACCMLTD_PRTL_WRTFFS = models.BigIntegerField("ACCMLTD_PRTL_WRTFFS",default=None, blank=True, null=True)
+
+	ACCMLTD_TTL_WRTFFS = models.BigIntegerField("ACCMLTD_TTL_WRTFFS",default=None, blank=True, null=True)
+
+	CRRNT_LTV_RT = models.FloatField("CRRNT_LTV_RT",default=None, blank=True, null=True)
+	
+	@property
+	def GRSS_CRRYNG_AMNT(self):
+		accntng_clssfctn = None #ACCNTNG_CLSSFCTN_domain
+		accmltd_imprmnt = 0
+		accmltd_chngs_fv_cr = 0
+		crryng_amnt  = 0 
+		fv = 0
+		gnrl_allwncs_bnk_rsk = 0
+		gnrl_allwncs_crdt_rsk = 0
+		prfrmng_stts = self.PRFRMNG_STTS #CRDT_QLTY_domain
+		imprmnt_stts = None #CRDT_QLTY_domain
+		sbjct_imprmnt_idctr = None  #SBJCT_IMPRMNT_INDCTR_domain
+			
+		if not(self.Financial_asset_instrument_has_Financial_asset_instrument_derived_data is  None):
+			sbjct_imprmnt_idctr = self.Financial_asset_instrument_has_Financial_asset_instrument_derived_data.SBJCT_IMPRMNT_INDCTR
+			financial_asset_type = self.Financial_asset_instrument_has_Financial_asset_instrument_derived_data.financial_asset_instrument_type_delegate
+			if isinstance(financial_asset_type, BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT):
+				accntng_clssfctn = financial_asset_type.ACCNTNG_CLSSFCTN
+				accmltd_imprmnt = financial_asset_type.ACCMLTD_IMPRMNT
+				crryng_amnt  = financial_asset_type.CRRYNG_AMNT
+				imprmnt_stts = financial_asset_type.IMPRMNT_STTS
+
+				balance_sheet_recognised_financial_asset_instrument_by_fair_value_type = financial_asset_type.balance_sheet_recognised_financial_asset_instrument_by_fair_value_type_delegate
+				if not (balance_sheet_recognised_financial_asset_instrument_by_fair_value_type is None):
+					if isinstance(balance_sheet_recognised_financial_asset_instrument_by_fair_value_type,FR_VLD_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT):
+						accmltd_chngs_fv_cr = balance_sheet_recognised_financial_asset_instrument_by_fair_value_type.ACCMLTD_CHNGS_FV
+						fv = balance_sheet_recognised_financial_asset_instrument_by_fair_value_type.FV
+				
+				balance_sheet_recognised_financial_asset_instrument_type = financial_asset_type.balance_sheet_recognised_financial_asset_instrument_type_delegate
+				if not(balance_sheet_recognised_financial_asset_instrument_type is None):
+					if isinstance(balance_sheet_recognised_financial_asset_instrument_type, BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_NGAAP):
+						gnrl_allwncs_bnk_rsk = balance_sheet_recognised_financial_asset_instrument_type.GNRL_ALLWNCS_BNK_RSK
+						gnrl_allwncs_crdt_rsk = balance_sheet_recognised_financial_asset_instrument_type.GNRL_ALLWNCS_CRDT_RSK
+ 		
+		return_grss_crryng_amnt = 0
+		# ACCNTNG_CLSSFCTN_ASSTS_domain = {		"14":"IFRS_Cash_balances_at_central_banks_and_other_demand_deposits_Cash_balances_at_central_banks_and_other_demand_deposits_in_accordance_with_IFRS",
+		# "2":"IFRS_Financial_assets_held_for_trading_Financial_assets_held_for_trading_in_accordance_with_IFRS",
+		# "3":"nGAAP_Trading_Financial_assets_Trading_financial_assets_in_accordance_with_national_GAAP",
+		# "4":"IFRS_Financial_assets_designated_at_fair_value_through_profit_or_loss_Financial_assets_measured_at_fair_value_through_profit_and_loss_and_designated_as_such_upon_initial_recognition_or_subsequently_in_accordance_with_IFRS_except_those_classified_as_financial_assets_held_for_trading",
+		# "41":"IFRS_Non_trading_financial_assets_mandatorily_at_fair_value_through_profit_or_loss_Non_trading_financial_assets_mandatorily_at_fair_value_through_profit_or_loss_in_accordance_with_IFRS",
+		# "45":"nGAAP_Cash_balances_at_central_banks_and_other_demand_deposits_Cash_balances_at_central_banks_and_other_demand_deposits_in_accordance_with_national_GAAP",
+		# "47":"nGAAP_Financial_assets_designated_at_fair_value_through_profit_or_loss_Financial_assets_designated_at_fair_value_through_profit_or_loss_in_accordance_with_national_GAAP",
+		# "6":"IFRS_Financial_assets_at_amortised_cost_Financial_assets_measured_at_amortised_cost_in_accordance_with_IFRS",
+		# "64":"nGAAP_financial_assets_at_fair_value_or_strict_LOCOM",
+		# "7":"nGAAP_Non_trading_non_derivative_financial_assets_measured_at_fair_value_through_profit_or_loss_Non_trading_non_derivative_financial_assets_measured_at_fair_value_to_equity_in_accordance_with_national_GAAP",
+		# "711":"Accounting_portfolios_for_financial_assets_other_than_classified_as_held_for_sale_excluding_financial_assets_held_for_trading_trading_financial_assets_and_cash_and_cash_balances_at_central_banks_and_other_demand_deposits",
+		# "73":"nGAAP_Other_non_trading_non_derivative_financial_assets_LOCOM_nGAAP_Other_non_trading_non_derivative_financial_assets_at_LOCOM",
+		# "74":"nGAAP_Other_non_trading_non_derivative_financial_assets_Other_than_LOCOM",
+		# "76":"nGAAP_Non_trading_non_derivative_financial_assets_measured_at_a_cost_based_method_LOCOM_nGAAP_Non_trading_non_derivative_financial_assets_measured_at_a_cost_based_method_at_LOCOM",
+		# "77":"nGAAP_Non_trading_non_derivative_financial_assets_measured_at_a_cost_based_method_Other_than_LOCOM",
+		# "8":"IFRS_Financial_assets_at_fair_value_through_other_comprehensive_income_Financial_assets_measured_at_fair_value_through_other_comprehensive_income_due_to_business_model_and_cash_flows_characteristics_in_accordance_with_IFRS",
+		# "83":"Investments_in_subsidiaries_joint_ventures_and_associates",
+		# "85":"nGAAP_Accounting_portfolios_for_trading_financial_instruments_Cost_based_method_or_LOCOM",
+		# "9":"nGAAP_Non_trading_non_derivative_financial_assets_measured_at_fair_value_to_equity_Non_trading_non_derivative_financial_assets_measured_at_fair_value_to_equity_in_accordance_with_national_GAAP",
+
+		match accntng_clssfctn:
+			case '4' | \
+	 			 '41' | \
+	 			 '47' | \
+	 			 '7' :
+				# PRFRMNG_STTS_domain = {		"1":"Non_performing",
+				# "11":"Performing",
+				# }
+				match prfrmng_stts:
+					case '11':
+						return_grss_crryng_amnt = fv
+					case '1':
+						return_grss_crryng_amnt = fv + accmltd_chngs_fv_cr
+					case _ : return_grss_crryng_amnt = 0
+			case ('6' | '8' | '9'):
+				return_grss_crryng_amnt = crryng_amnt - accmltd_imprmnt
+			case ('77'):
+				# IMPRMNT_STTS_domain = {		"211":"General_allowances_for_credit_risk_GAAP",
+				# "212":"General_allowances_for_banking_risk_GAAP",
+				# "23":"Stage_1_IFRS_To_be_used_if_the_instrument_is_not_impaired_and_a_loss_allowance_at_an_amount_equal_to_12_month_expected_credit_losses_is_raised_against_the_instrument_under_IFRS_Only_for_instruments_subject_to_impairment_under_IFRS_9",
+				# "24":"Stage_2_IFRS_To_be_used_if_the_instrument_is_not_impaired_and_a_loss_allowance_at_an_amount_equal_to_lifetime_expected_credit_losses_is_raised_against_the_instrument_under_IFRS_Only_for_instruments_subject_to_impairment_under_IFRS_9",
+				# "25":"Stage_3_IFRS_To_be_used_if_the_instrument_is_impaired_and_a_loss_allowance_at_an_amount_equal_to_lifetime_expected_credit_losses_is_raised_against_the_instrument_under_IFRS_Only_for_instruments_subject_to_impairment_under_IFRS_9",
+				# "26":"Specific_allowances_GAAP_To_be_used_if_the_instrument_is_subject_to_impairment_in_accordance_with_an_applied_accounting_standard_other_than_IFRS_9_and_specific_loss_allowances_are_raised_irrespective_of_whether_these_allowances_are_individually_or_collectively_assessed_impaired",
+				# "27":"Purchased_or_originated_credit_impaired_instruments_POCI_IFRS",
+
+				match imprmnt_stts:
+					case '26' :
+						return_grss_crryng_amnt = crryng_amnt - accmltd_imprmnt
+					case '211':
+						return_grss_crryng_amnt = crryng_amnt - gnrl_allwncs_crdt_rsk
+					case '212':
+						return_grss_crryng_amnt = crryng_amnt - gnrl_allwncs_bnk_rsk
+					case _ : 
+						return_grss_crryng_amnt = 0
+			case ('9'):
+				match sbjct_imprmnt_idctr:
+					#	SBJCT_IMPRMNT_INDCTR_INPT_domain = {		"0":"Not_applicable",
+					# "1":"Subject_to_impairment",
+					# "2":"Not_subject_to_impairment",
+					case '1':
+						match prfrmng_stts:
+							case '26':
+								return_grss_crryng_amnt = crryng_amnt - accmltd_imprmnt
+							case '211':
+								return_grss_crryng_amnt = crryng_amnt - gnrl_allwncs_crdt_rsk
+							case '212':
+								return_grss_crryng_amnt = crryng_amnt - gnrl_allwncs_bnk_rsk
+							case _ : 
+								return_grss_crryng_amnt = 0
+
+					case '2':
+						match prfrmng_stts:
+							case '11':
+								return_grss_crryng_amnt = fv
+							case '1':
+								return_grss_crryng_amnt = fv + accmltd_chngs_fv_cr
+							case _ : 
+								return_grss_crryng_amnt = 0
+					case _ : 
+						return_grss_crryng_amnt = 0
+			 			
+			 		
+			case ('76' | '73'):	
+				return_grss_crryng_amnt = crryng_amnt
+			case '74':		
+				return_grss_crryng_amnt = crryng_amnt + accmltd_imprmnt
+			case ('2' | '3') :
+				return_grss_crryng_amnt = fv
+			case _ : 
+				return_grss_crryng_amnt = 0		
+		return return_grss_crryng_amnt
+	 			
 	class Meta:
 
 		verbose_name = 'Financial_asset_instrument_derived_data'
