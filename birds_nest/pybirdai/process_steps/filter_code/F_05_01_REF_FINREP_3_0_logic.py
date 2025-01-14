@@ -69,29 +69,29 @@ class F_05_01_REF_FINREP_3_0_UnionTable :
 	def calc_F_05_01_REF_FINREP_3_0_UnionItems(self) -> list[F_05_01_REF_FINREP_3_0_UnionItem] :
 		items = [] # F_05_01_REF_FINREP_3_0_UnionItem []
 		for item in F_05_01_REF_FINREP_3_0_Other_Loans_Table.Other_Loanss:
-			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
-			newItem.base = item
-			items.append(newItem)
+			new_item = F_05_01_REF_FINREP_3_0_UnionItem()
+			new_item.base = item
+			items.append(new_item)
 		for item in F_05_01_REF_FINREP_3_0_Non_Negotiable_bonds_Table.Non_Negotiable_bondss:
-			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
-			newItem.base = item
-			items.append(newItem)
+			new_item = F_05_01_REF_FINREP_3_0_UnionItem()
+			new_item.base = item
+			items.append(new_item)
 		for item in F_05_01_REF_FINREP_3_0_Credit_card_debt_Table.Credit_card_debts:
-			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
-			newItem.base = item
-			items.append(newItem)
+			new_item = F_05_01_REF_FINREP_3_0_UnionItem()
+			new_item.base = item
+			items.append(new_item)
 		for item in F_05_01_REF_FINREP_3_0_Trade_receivables_Table.Trade_receivabless:
-			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
-			newItem.base = item
-			items.append(newItem)
+			new_item = F_05_01_REF_FINREP_3_0_UnionItem()
+			new_item.base = item
+			items.append(new_item)
 		for item in F_05_01_REF_FINREP_3_0_Finance_leases_Table.Finance_leasess:
-			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
-			newItem.base = item
-			items.append(newItem)
+			new_item = F_05_01_REF_FINREP_3_0_UnionItem()
+			new_item.base = item
+			items.append(new_item)
 		for item in F_05_01_REF_FINREP_3_0_Advances_that_are_not_loans_Table.Advances_that_are_not_loanss:
-			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
-			newItem.base = item
-			items.append(newItem)
+			new_item = F_05_01_REF_FINREP_3_0_UnionItem()
+			new_item.base = item
+			items.append(new_item)
 		return items
 
 	def init(self):
@@ -111,36 +111,29 @@ class Other_Loans(F_05_01_REF_FINREP_3_0_Base):
 	PRTY = None # PRTY
 	def INSTTTNL_SCTR(self):
 		return self.PRTY.INSTTTNL_SCTR
+	FNNCL_ASST_INSTRMNT = None # FNNCL_ASST_INSTRMNT
+	def PRPS(self):
+		return self.FNNCL_ASST_INSTRMNT.PRPS
+	def PRJCT_FNNC_LN(self):
+		return self.FNNCL_ASST_INSTRMNT.PRJCT_FNNC_LN
+	BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_IFRS = None # BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_IFRS
+	def HLD_SL_INDCTR(self):
+		return self.BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_IFRS.HLD_SL_INDCTR
+	FNNCL_ASST_INSTRMNT_DRVD_DT = None # FNNCL_ASST_INSTRMNT_DRVD_DT
+	def GRSS_CRRYNG_AMNT(self):		
+		return self.FNNCL_ASST_INSTRMNT_DRVD_DT.GRSS_CRRYNG_AMNT
+	LN_EXCLDNG_RPRCHS_AGRMNT = None # LN_EXCLDNG_RPRCHS_AGRMNT
+	def TYP_INSTRMNT(self):
+		return self.LN_EXCLDNG_RPRCHS_AGRMNT.LN_TYP
+	def RPYMNT_RGHTS(self):
+		''' return string from RPYMNT_RGHTS enumeration '''
+		return '2'
 
 class Non_Negotiable_bonds(F_05_01_REF_FINREP_3_0_Base):
 	pass
 	LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT = None # LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT
 	def ACCNTNG_CLSSFCTN(self):
 		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.ACCNTNG_CLSSFCTN
-	def ACCNTNG_CLSSFCTN(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.ACCNTNG_CLSSFCTN
-	def ACCNTNG_CLSSFCTN(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.ACCNTNG_CLSSFCTN
-	def ACCNTNG_CLSSFCTN(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.ACCNTNG_CLSSFCTN
-	def ACCNTNG_CLSSFCTN(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.ACCNTNG_CLSSFCTN
-	def ACCNTNG_CLSSFCTN(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.ACCNTNG_CLSSFCTN
-	def ACCNTNG_CLSSFCTN(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.ACCNTNG_CLSSFCTN
-	def CRRYNG_AMNT(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.CRRYNG_AMNT
-	def CRRYNG_AMNT(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.CRRYNG_AMNT
-	def CRRYNG_AMNT(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.CRRYNG_AMNT
-	def CRRYNG_AMNT(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.CRRYNG_AMNT
-	def CRRYNG_AMNT(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.CRRYNG_AMNT
-	def CRRYNG_AMNT(self):
-		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.CRRYNG_AMNT
 	def CRRYNG_AMNT(self):
 		return self.LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT.CRRYNG_AMNT
 
@@ -149,10 +142,6 @@ class Credit_card_debt(F_05_01_REF_FINREP_3_0_Base):
 
 class Trade_receivables(F_05_01_REF_FINREP_3_0_Base):
 	TRD_RCVBL = None # TRD_RCVBL
-	def TYP_INSTRMNT(self):
-		return self.TRD_RCVBL.TRD_RCVBL_TYP
-	def TYP_INSTRMNT(self):
-		return self.TRD_RCVBL.TRD_RCVBL_TYP
 	def TYP_INSTRMNT(self):
 		return self.TRD_RCVBL.TRD_RCVBL_TYP
 	BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT = None # BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT
@@ -168,12 +157,6 @@ class Advances_that_are_not_loans(F_05_01_REF_FINREP_3_0_Base):
 	ADVNC = None # ADVNC
 	def TYP_INSTRMNT(self):
 		return self.ADVNC.ADVNC_TYP
-	def TYP_INSTRMNT(self):
-		return self.ADVNC.ADVNC_TYP
-	def TYP_INSTRMNT(self):
-		return self.ADVNC.ADVNC_TYP
-	def TYP_INSTRMNT(self):
-		return self.ADVNC.ADVNC_TYP
 	BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT = None # BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT
 	def ACCNTNG_CLSSFCTN(self):
 		return self.BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT.ACCNTNG_CLSSFCTN
@@ -183,14 +166,54 @@ class Advances_that_are_not_loans(F_05_01_REF_FINREP_3_0_Base):
 class F_05_01_REF_FINREP_3_0_Other_Loans_Table:
 	BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_Table = None # BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT
 	PRTY_Table = None # PRTY
+	FNNCL_ASST_INSTRMNT_Table = None # FNNCL_ASST_INSTRMNT
+	BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_IFRS_Table = None # BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_IFRS
+	FNNCL_ASST_INSTRMNT_DRVD_DT_Table = None # FNNCL_ASST_INSTRMNT_DRVD_DT
+	LN_EXCLDNG_RPRCHS_AGRMNT_Table = None # LN_EXCLDNG_RPRCHS_AGRMNT
+	OTHR_LN_Table = None # OTHR_LN
+	OTHR_LN_DBTR_ASSGNMNT_Table = None # OTHR_LN_DBTR_ASSGNMNT
+	INSTRMNT_Table = None
+	INSTRMNT_RL_Table = None # INSTRMNT_RL
 	Other_Loanss = []# Other_Loans[]
 	def calc_Other_Loanss(self) :
-		items = [] # Other_Loans[
+		items = [] # Other_Loans[]
 		# Join up any refered tables that you need to join
 		# loop through the main table
 		# set any references you want to on the new Item so that it can refer to themin operations
+
+		for other_loan in self.OTHR_LN_Table:
+			new_item = Other_Loans()
+			new_item.LN_EXCLDNG_RPRCHS_AGRMNT = other_loan
+			for debtor in  self.OTHR_LN_DBTR_ASSGNMNT_Table:
+				if debtor.Other_loan_has_Debtor_s_via_Other_loan_Debtor_assignment == other_loan and debtor.MN_DBTR_INDCTR == '1':
+					new_item.PRTY = debtor.Loan_debtor_is_obliged_to_pay_Other_loan_s_via_Other_loan_Debtor_assignment.Party_acts_in_Party_role
+					
+			the_instrument = None		
+			for instrument in self.INSTRMNT_Table:
+				if instrument.Instrument_type_by_product_delegate.Instrument_type_by_product_uniqueID == other_loan.Instrument_type_by_product_uniqueID:
+					the_instrument = instrument
+					break
+			
+			if the_instrument is not None:
+				for instrument_rl in self.FNNCL_ASST_INSTRMNT_Table:
+					if instrument_rl.Instrument_acts_in_Instrument_role_s == the_instrument:
+						new_item.FNNCL_ASST_INSTRMNT = instrument_rl
+						new_item.FNNCL_ASST_INSTRMNT_DRVD_DT = instrument_rl.Financial_asset_instrument_has_Financial_asset_instrument_derived_data
+						Financial_asset_instrument_type_delegate = instrument_rl.Financial_asset_instrument_type_delegate
+						
+						if Financial_asset_instrument_type_delegate.blnc_sht_rcgnsd_fnncnl_asst_instrmnt:
+							new_item.BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT = Financial_asset_instrument_type_delegate.blnc_sht_rcgnsd_fnncnl_asst_instrmnt
+							Balance_sheet_recognised_financial_asset_instrument_type_delegate = new_item.BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT.Balance_sheet_recognised_financial_asset_instrument_type_delegate
+							if Balance_sheet_recognised_financial_asset_instrument_type_delegate.blnc_sht_rcgnsd_fnncnl_asst_instrmnt_ifrs:
+								new_item.BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_IFRS = Balance_sheet_recognised_financial_asset_instrument_type_delegate.blnc_sht_rcgnsd_fnncnl_asst_instrmnt_ifrs
+						break
+
+						
+			items.append(new_item)
 		return items
-	def init(self):
+
+
+	def init(self):		
 		Orchestration().init(self)
 		self.Other_Loanss.extend(self.calc_Other_Loanss())
 		CSVConverter.persist_object_as_csv(self,True)
