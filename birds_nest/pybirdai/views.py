@@ -300,4 +300,133 @@ def create_response_with_loading(request, task_title, success_message, return_ur
     
     return HttpResponse(html_response)
 
+def bird_diffs_and_corrections(request):
+    """
+    View function for displaying BIRD diffs and corrections page.
+    """
+    return render(request, 'pybirdai/bird_diffs_and_corrections.html')
+
+def export_database_to_csv(request):
+    if request.method == 'GET':
+        return render(request, 'pybirdai/export_database.html')
+    elif request.method == 'POST':
+        # Create a zip file in memory
+        response = HttpResponse(content_type='application/zip')
+        response['Content-Disposition'] = 'attachment; filename="database_export.zip"'
+        
+        # Get all model classes from bird_meta_data_model
+        valid_table_names = set()
+        model_map = {}  # Store model classes for reference
+        for name, obj in inspect.getmembers(bird_meta_data_model):
+            if inspect.isclass(obj) and issubclass(obj, models.Model) and obj != models.Model:
+                valid_table_names.add(obj._meta.db_table)
+                model_map[obj._meta.db_table] = obj
+        
+        with zipfile.ZipFile(response, 'w') as zip_file:
+            # Get all table names from SQLite
+            with connection.cursor() as cursor:
+                cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name NOT LIKE 'django_%'")
+                tables = cursor.fetchall()
+            
+            # Export each table to a CSV file
+            for table in tables:
+                is_meta_data_table = False
+                table_name = table[0]
+                
+                if table_name in valid_table_names:
+                    is_meta_data_table = True
+                    # Get the model class for this table
+                    model_class = model_map[table_name]
+                    
+                    # Get fields in the order they're defined in the model
+                    fields = model_class._meta.fields
+                    headers = []
+                    db_headers = []
+                    for field in fields:
+                        # Skip the id field
+                        if field.name == 'id':
+                            continue
+                        headers.append(field.name.upper())  # Convert header to uppercase
+                        # If it's a foreign key, append _id for the actual DB column
+                        if isinstance(field, models.ForeignKey):
+                            db_headers.append(f"{field.name}_id")
+                        else:
+                            db_headers.append(field.name)
+                    
+                    # Create CSV in memory
+                    csv_content = []
+                    csv_content.append(','.join(headers))
+                    
+                    # Get data with escaped column names and ordered by primary key
+                    with connection.cursor() as cursor:
+                        escaped_headers = [f'"{h}"' if h == 'order' else h for h in db_headers]
+                        # Get primary key column name
+                        cursor.execute(f"PRAGMA table_info({table_name})")
+                        table_info = cursor.fetchall()
+                        pk_column = None
+                        for col in table_info:
+                            if col[5] == 1:  # 5 is the index for pk flag in table_info
+                                pk_column = col[1]  # 1 is the index for column name
+                                break
+                        
+                        # Build ORDER BY clause
+                        order_by = f"ORDER BY {pk_column}" if pk_column else "ORDER BY rowid"  # rowid is always available in SQLite
+                        cursor.execute(f"SELECT {','.join(escaped_headers)} FROM {table_name} {order_by}")
+                        rows = cursor.fetchall()
+                        
+                        for row in rows:
+                            # Convert all values to strings and handle None values
+                            csv_row = [str(val) if val is not None else '' for val in row]
+                            # Escape commas and quotes in values
+                            processed_row = []
+                            for val in csv_row:
+                                if ',' in val or '"' in val:
+                                    escaped_val = val.replace('"', '""')
+                                    processed_row.append(f'"{escaped_val}"')
+                                else:
+                                    processed_row.append(val)
+                            csv_content.append(','.join(processed_row))
+                else:
+                    # Fallback for tables without models
+                    with connection.cursor() as cursor:
+                        # Get column names
+                        cursor.execute(f"SELECT * FROM {table_name} LIMIT 0")
+                        headers = []
+                        column_names = []
+                        for desc in cursor.description:
+                            # Skip the id column
+                            if desc[0].lower() != 'id':
+                                headers.append(desc[0].upper())
+                                column_names.append(desc[0])
+                        
+                        # Get data with escaped column names and ordered by rowid
+                        escaped_headers = [f'"{h.lower()}"' if h.lower() == 'order' else h.lower() for h in column_names]
+                        cursor.execute(f"SELECT {','.join(escaped_headers)} FROM {table_name} ORDER BY rowid")
+                        rows = cursor.fetchall()
+                        
+                        # Create CSV in memory
+                        csv_content = []
+                        csv_content.append(','.join(headers))
+                        for row in rows:
+                            # Convert all values to strings and handle None values
+                            csv_row = [str(val) if val is not None else '' for val in row]
+                            # Escape commas and quotes in values
+                            processed_row = []
+                            for val in csv_row:
+                                if ',' in val or '"' in val:
+                                    escaped_val = val.replace('"', '""')
+                                    processed_row.append(f'"{escaped_val}"')
+                                else:
+                                    processed_row.append(val)
+                            csv_content.append(','.join(processed_row))
+                
+                # Add CSV to zip file
+                if is_meta_data_table:
+                    zip_file.writestr(f"{table_name.replace('pybirdai_', '')}.csv", '\n'.join(csv_content))
+                else:
+                    zip_file.writestr(f"{table_name.replace('pybirdai_', 'bird_')}.csv", '\n'.join(csv_content))
+        
+        return response
+
+
 
