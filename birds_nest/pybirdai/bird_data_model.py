@@ -9804,6 +9804,7 @@ class FNNCL_ASST_INSTRMNT_DRVD_DT(models.Model):
 	
 	@property
 	def GRSS_CRRYNG_AMNT(self):
+		
 		accntng_clssfctn = None #ACCNTNG_CLSSFCTN_domain
 		accmltd_imprmnt = 0
 		accmltd_chngs_fv_cr = 0
@@ -9817,24 +9818,27 @@ class FNNCL_ASST_INSTRMNT_DRVD_DT(models.Model):
 			
 		if not(self.Financial_asset_instrument_has_Financial_asset_instrument_derived_data is  None):
 			sbjct_imprmnt_idctr = self.Financial_asset_instrument_has_Financial_asset_instrument_derived_data.SBJCT_IMPRMNT_INDCTR
-			financial_asset_type = self.Financial_asset_instrument_has_Financial_asset_instrument_derived_data.financial_asset_instrument_type_delegate
-			if isinstance(financial_asset_type, BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT):
-				accntng_clssfctn = financial_asset_type.ACCNTNG_CLSSFCTN
-				accmltd_imprmnt = financial_asset_type.ACCMLTD_IMPRMNT
-				crryng_amnt  = financial_asset_type.CRRYNG_AMNT
-				imprmnt_stts = financial_asset_type.IMPRMNT_STTS
+			financial_asset_type = self.Financial_asset_instrument_has_Financial_asset_instrument_derived_data.Financial_asset_instrument_type_delegate
+			if financial_asset_type.blnc_sht_rcgnsd_fnncnl_asst_instrmnt:
+				accntng_clssfctn = financial_asset_type.blnc_sht_rcgnsd_fnncnl_asst_instrmnt.ACCNTNG_CLSSFCTN
+				accmltd_imprmnt = financial_asset_type.blnc_sht_rcgnsd_fnncnl_asst_instrmnt.ACCMLTD_IMPRMNT
+				crryng_amnt  = financial_asset_type.blnc_sht_rcgnsd_fnncnl_asst_instrmnt.CRRYNG_AMNT
+				imprmnt_stts = financial_asset_type.blnc_sht_rcgnsd_fnncnl_asst_instrmnt.IMPRMNT_STTS
 
-				balance_sheet_recognised_financial_asset_instrument_by_fair_value_type = financial_asset_type.balance_sheet_recognised_financial_asset_instrument_by_fair_value_type_delegate
+				balance_sheet_recognised_financial_asset_instrument_by_fair_value_type = financial_asset_type.blnc_sht_rcgnsd_fnncnl_asst_instrmnt.Balance_sheet_recognised_financial_asset_instrument_by_fair_value_type_delegate
 				if not (balance_sheet_recognised_financial_asset_instrument_by_fair_value_type is None):
-					if isinstance(balance_sheet_recognised_financial_asset_instrument_by_fair_value_type,FR_VLD_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT):
-						accmltd_chngs_fv_cr = balance_sheet_recognised_financial_asset_instrument_by_fair_value_type.ACCMLTD_CHNGS_FV
-						fv = balance_sheet_recognised_financial_asset_instrument_by_fair_value_type.FV
+					if hasattr(balance_sheet_recognised_financial_asset_instrument_by_fair_value_type, 'fr_vld_blnc_sht_rcgnsd_fnncl_asst_instrmnt'):
+						if balance_sheet_recognised_financial_asset_instrument_by_fair_value_type.fr_vld_blnc_sht_rcgnsd_fnncl_asst_instrmnt:
+							accmltd_chngs_fv_cr = balance_sheet_recognised_financial_asset_instrument_by_fair_value_type.fr_vld_blnc_sht_rcgnsd_fnncl_asst_instrmnt.ACCMLTD_CHNGS_FV
+							fv = balance_sheet_recognised_financial_asset_instrument_by_fair_value_type.fr_vld_blnc_sht_rcgnsd_fnncl_asst_instrmnt.FV
 				
-				balance_sheet_recognised_financial_asset_instrument_type = financial_asset_type.balance_sheet_recognised_financial_asset_instrument_type_delegate
+				balance_sheet_recognised_financial_asset_instrument_type = financial_asset_type.blnc_sht_rcgnsd_fnncnl_asst_instrmnt.Balance_sheet_recognised_financial_asset_instrument_type_delegate
+
 				if not(balance_sheet_recognised_financial_asset_instrument_type is None):
-					if isinstance(balance_sheet_recognised_financial_asset_instrument_type, BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_NGAAP):
-						gnrl_allwncs_bnk_rsk = balance_sheet_recognised_financial_asset_instrument_type.GNRL_ALLWNCS_BNK_RSK
-						gnrl_allwncs_crdt_rsk = balance_sheet_recognised_financial_asset_instrument_type.GNRL_ALLWNCS_CRDT_RSK
+					if hasattr(balance_sheet_recognised_financial_asset_instrument_type, 'blnc_sht_rcgnsd_fnncnl_asst_instrmnt_ngaap'):
+						if(balance_sheet_recognised_financial_asset_instrument_type.blnc_sht_rcgnsd_fnncnl_asst_instrmnt_ngaap):
+							gnrl_allwncs_bnk_rsk = balance_sheet_recognised_financial_asset_instrument_type.GNRL_ALLWNCS_BNK_RSK
+							gnrl_allwncs_crdt_rsk = balance_sheet_recognised_financial_asset_instrument_type.GNRL_ALLWNCS_CRDT_RSK
  		
 		return_grss_crryng_amnt = 0
 		# ACCNTNG_CLSSFCTN_ASSTS_domain = {		"14":"IFRS_Cash_balances_at_central_banks_and_other_demand_deposits_Cash_balances_at_central_banks_and_other_demand_deposits_in_accordance_with_IFRS",
