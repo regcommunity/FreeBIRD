@@ -6,14 +6,14 @@ TYP_INSTRMNT_141,Advances that are not loans,Advances that are not loans
 TYP_INSTRMNT_149,Loans and advances,Deposits
 TYP_INSTRMNT_149,Loans and advances,Other Loans
 TYP_INSTRMNT_149,Loans and advances,Non Negotiable bonds
-TYP_INSTRMNT_1491,Commercial real estate (CRE) loans,Commercial real estate (CRE) loans
+TYP_INSTRMNT_1491,Commercial real estate CRE loans,Commercial real estate CRE loans
 TYP_INSTRMNT_210,Debt securities,Debt securities
 TYP_INSTRMNT_2102,Certificates of deposits,Certificates of deposits
 TYP_INSTRMNT_2104,Hybrid contracts,Hybrid contracts
 TYP_INSTRMNT_2105,Other debt securities issued,Other debt securities issued
 TYP_INSTRMNT_2106,Other debt securities issued - convertible compound financial instruments,Other debt securities issued - convertible compound financial instruments
 TYP_INSTRMNT_2107,Other debt securities issued - non-convertible,Other debt securities issued - non-convertible
-TYP_INSTRMNT_211,Debt securities - Asset backed securities (ABS),Debt securities - Asset backed securities (ABS)
+TYP_INSTRMNT_211,Debt securities - Asset backed securities ABS,Debt securities - Asset backed securities ABS
 TYP_INSTRMNT_212,Debt securities - Covered bonds,Debt securities - Covered bonds
 TYP_INSTRMNT_241,Equity instruments,Equity instruments
 TYP_INSTRMNT_241,Equity instruments,Equity instruments
@@ -28,7 +28,7 @@ TYP_INSTRMNT_329,Other than option,Other than option
 TYP_INSTRMNT_390,Option,Option
 TYP_INSTRMNT_390,Option,Option
 TYP_INSTRMNT_51,Credit card debt,Credit card debt
-TYP_INSTRMNT_547,"Deposits other than current accounts (liabilities), repurchase agreements","Deposits other than current accounts (liabilities), repurchase agreements"
+TYP_INSTRMNT_547,Deposits other than current accounts liabilities repurchase agreements,Deposits other than current accounts liabilities repurchase agreements
 TYP_INSTRMNT_549,Deposits,Deposits
 TYP_INSTRMNT_670,Other financial liabilities,Other financial liabilities
 TYP_INSTRMNT_71,Trade receivables,Trade receivables
@@ -71,7 +71,7 @@ TYP_ACCNTNG_ITM_278,Profit or loss before tax from discontinued operations,Profi
 TYP_ACCNTNG_ITM_279,Profit or loss from continuing operations,Profit or loss from continuing operations
 TYP_ACCNTNG_ITM_28,Modifications. Without derecognition,Modifications. Without derecognition
 TYP_ACCNTNG_ITM_280,Tax other comprehensive income,Tax other comprehensive income
-TYP_ACCNTNG_ITM_281,Other comprehensive income (net),Other comprehensive income (net)
+TYP_ACCNTNG_ITM_281,Other comprehensive income net,Other comprehensive income net
 TYP_ACCNTNG_ITM_29,Gains and losses from hedge accounting,Gains and losses from hedge accounting
 TYP_ACCNTNG_ITM_30,Interest. Expenses,Interest. Expenses
 TYP_ACCNTNG_ITM_31,Gains or losses from reclassifications,Gains or losses from reclassifications
@@ -98,7 +98,7 @@ TYP_ACCNTNG_ITM_431,Intangible assets,Intangible assets
 TYP_ACCNTNG_ITM_440,Current tax assets,Current tax assets
 TYP_ACCNTNG_ITM_450,Deferred tax assets,Deferred tax assets
 TYP_ACCNTNG_ITM_451,Tax assets,Tax assets
-TYP_ACCNTNG_ITM_501,Total operating income (net),Total operating income (net)
+TYP_ACCNTNG_ITM_501,Total operating income net,Total operating income net
 TYP_ACCNTNG_ITM_503,Income or expenses. Tax from extraordinary operations,Income or expenses. Tax from extraordinary operations
 TYP_ACCNTNG_ITM_504,Non-current assets and disposal groups classified as held for sale,Non-current assets and disposal groups classified as held for sale
 TYP_ACCNTNG_ITM_512,Gains and losses from remeasurements. Changes in fair value attributable to changes in credit risk,Gains and losses from remeasurements. Changes in fair value attributable to changes in credit risk
