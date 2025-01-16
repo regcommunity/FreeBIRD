@@ -2,7 +2,7 @@
 
 Open Source executable transformations and test data built upon the ECB BIRD data model - https://bird.ecb.europa.eu/
 
-To run from Github webpage, just start a code space and type the following in the terminal.
+To run from the Github webpage, just start a code space and type the following in the terminal.
 
 sh ./code_space_startup.sh
 
