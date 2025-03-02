@@ -123,24 +123,17 @@ def delete_variable_mapping(request, variable_mapping_id):
     return delete_item(request, VARIABLE_MAPPING, 'variable_mapping_id', 'edit_variable_mappings', variable_mapping_id)
 
 def execute_data_point(request, data_point_id):
-    # app_config = RunExecuteDataPoint('pybirdai', 'birds_nest')
-    # result = app_config.run_execute_data_point(data_point_id)
-    # print(result)
+    app_config = RunExecuteDataPoint('pybirdai', 'birds_nest')
+    result = app_config.run_execute_data_point(data_point_id)
+    
+    html_response = f"""
 
-    # Get the results directory
-    results_dir = os.path.join(settings.BASE_DIR, 'tests', 'test_results', 'json')
-
-    # Create a directory for the results if it doesn't exist
-    if not os.path.exists(results_dir):
-        os.makedirs(results_dir)
-
-    # Find latest result file for this datapoint
-    # list all tests !todo()
-    latest_result = os.listdir(results_dir).pop()
-
-    html_response = generate_technical_test_report.generate_technical_test_report(
-        json.load(open(os.path.join(results_dir, latest_result)))
-    )
+        <h3>DataPoint Execution Results</h3>
+        <p><strong>DataPoint ID:</strong> {data_point_id}</p>
+        <p><strong>Result:</strong> {result}</p>
+        <p><a href="/pybirdai/lineage/">View Lineage Files</a></p>
+        <p><a href="/pybirdai/report-templates/">Back to the PyBIRD Reports Templates Page</a></p>
+    """
     return HttpResponse(html_response)
 
 
