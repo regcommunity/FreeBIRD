@@ -5,15 +5,17 @@ from pybirdai.process_steps.pybird.orchestration import Orchestration
 class Cell_F_05_01_REF_FINREP_3_0_152589_REF:
 	F_05_01_REF_FINREP_3_0_Table = None
 	F_05_01_REF_FINREP_3_0s = []
+
 	def metric_value(self):
 		total = 0
 		for item in self.F_05_01_REF_FINREP_3_0s:
 			total += item.GRSS_CRRYNG_AMNT()
 		return total
+
 	def calc_referenced_items(self):
 		items = self.F_05_01_REF_FINREP_3_0_Table.F_05_01_REF_FINREP_3_0s
 		for item in items:
-			filter_passsed = False
+			filter_passed = True
 			if 				(item.PRPS() == '7')  or \
 				(item.PRPS() == '9')  or \
 				(item.PRPS() == '6')  or \
@@ -24,9 +26,9 @@ class Cell_F_05_01_REF_FINREP_3_0_152589_REF:
 				(item.PRPS() == '1')  or \
 				(item.PRPS() == '19')  or \
 				False:
-				filter_passed = True
-			if filter_passed:
-				self.F_05_01_REF_FINREP_3_0s.append(item)
+				print("item.PRPS() failed: " + item.PRPS())
+			else:
+				filter_passed = False
 			if 				(item.ACCNTNG_CLSSFCTN() == '6')  or \
 				(item.ACCNTNG_CLSSFCTN() == '14')  or \
 				(item.ACCNTNG_CLSSFCTN() == '45')  or \
@@ -41,14 +43,14 @@ class Cell_F_05_01_REF_FINREP_3_0_152589_REF:
 				(item.ACCNTNG_CLSSFCTN() == '74')  or \
 				(item.ACCNTNG_CLSSFCTN() == '73')  or \
 				False:
-				filter_passed = True
-			if filter_passed:
-				self.F_05_01_REF_FINREP_3_0s.append(item)
+				print("item.ACCNTNG_CLSSFCTN() failed: " + item.ACCNTNG_CLSSFCTN())
+			else:
+				filter_passed = False
 			if 				(item.HLD_SL_INDCTR() == '2')  or \
 				False:
-				filter_passed = True
-			if filter_passed:
-				self.F_05_01_REF_FINREP_3_0s.append(item)
+				print("item.HLD_SL_INDCTR() failed: " + item.HLD_SL_INDCTR())
+			else:
+				filter_passed = False
 			if 				(item.INSTTTNL_SCTR() == 'S128')  or \
 				(item.INSTTTNL_SCTR() == 'S129')  or \
 				(item.INSTTTNL_SCTR() == 'S121')  or \
@@ -75,19 +77,22 @@ class Cell_F_05_01_REF_FINREP_3_0_152589_REF:
 				(item.INSTTTNL_SCTR() == 'S14_B')  or \
 				(item.INSTTTNL_SCTR() == 'S14_A')  or \
 				False:
-				filter_passed = True
-			if filter_passed:
-				self.F_05_01_REF_FINREP_3_0s.append(item)
+				print("item.INSTTTNL_SCTR() failed: " + item.INSTTTNL_SCTR())
+			else:
+				filter_passed = False
 			if 				(item.RPYMNT_RGHTS() == '2')  or \
 				False:
-				filter_passed = True
-			if filter_passed:
-				self.F_05_01_REF_FINREP_3_0s.append(item)
+				print("item.RPYMNT_RGHTS() failed: " + item.RPYMNT_RGHTS())
+			else:
+				filter_passed = False
 			if 				(item.PRJCT_FNNC_LN() == '1')  or \
 				(item.PRJCT_FNNC_LN() == '2')  or \
 				False:
-				filter_passed = True
+				print("item.PRJCT_FNNC_LN() failed: " + item.PRJCT_FNNC_LN())
+			else:
+				filter_passed = False
 			if filter_passed:
+				print("self.F_05_01_REF_FINREP_3_0s.append(item)")
 				self.F_05_01_REF_FINREP_3_0s.append(item)
 	def init(self):
 		Orchestration().init(self)

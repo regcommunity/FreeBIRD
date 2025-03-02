@@ -28,5 +28,6 @@ urlpatterns = [
     path('lineage/', views.list_lineage_files, name='list_lineage_files'),
     path('lineage/<str:filename>/', views.view_csv_file, name='view_csv'),
     path('bird_diffs_and_corrections/', views.bird_diffs_and_corrections, name='bird_diffs_and_corrections'),
+    path('test_report_view/', views.test_report_view, name='test_report_view'),
     path('export-database-to-csv/', views.export_database_to_csv, name='export_database_to_csv'),
 ]

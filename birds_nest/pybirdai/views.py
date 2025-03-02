@@ -24,13 +24,13 @@ from .bird_meta_data_model import (
     MAINTENANCE_AGENCY,  MEMBER_HIERARCHY, DOMAIN
 )
 from . import bird_meta_data_model
-
+from .utils import generate_technical_test_report
 from .entry_points.execute_datapoint import RunExecuteDataPoint
 
 import os
 import csv
 from pathlib import Path
-
+import json
 from django.template.loader import render_to_string
 from django.db.models import Count, F
 from django.views.generic import ListView
@@ -39,7 +39,7 @@ from .context.sdd_context_django import SDDContext
 from urllib.parse import unquote
 import logging
 import zipfile
-
+from .utils.utils_views import ensure_results_directory,process_test_results_files
 from django.apps import apps
 from django.db import models
 import inspect
@@ -51,11 +51,11 @@ import inspect
 def paginated_modelformset_view(request, model, template_name, order_by=None):
     # Get all maintenance agencies for the create form
     maintenance_agencies = MAINTENANCE_AGENCY.objects.all().order_by('name')
-    
+
     # Get all member mappings and variable mappings for dropdowns
     member_mappings = MEMBER_MAPPING.objects.all().order_by('name')
     variable_mappings = VARIABLE_MAPPING.objects.all().order_by('name')
-    
+
     # Get paginated formset
     page_number = request.GET.get('page', 1)
     queryset = model.objects.all()
@@ -63,9 +63,9 @@ def paginated_modelformset_view(request, model, template_name, order_by=None):
         queryset = queryset.order_by(order_by)
     paginator = Paginator(queryset, 20)
     page_obj = paginator.get_page(page_number)
-    
+
     ModelFormSet = modelformset_factory(model, fields='__all__', extra=0)
-    
+
     if request.method == 'POST':
         formset = ModelFormSet(request.POST, queryset=page_obj.object_list)
         if formset.is_valid():
@@ -77,7 +77,7 @@ def paginated_modelformset_view(request, model, template_name, order_by=None):
             messages.error(request, f'There was an error updating the {model.__name__}.')
     else:
         formset = ModelFormSet(queryset=page_obj.object_list)
-    
+
     context = {
         'formset': formset,
         'page_obj': page_obj,
@@ -90,7 +90,7 @@ def paginated_modelformset_view(request, model, template_name, order_by=None):
 def show_report(request, report_id):
     return render(request, 'pybirdai/' + report_id)
 
-        
+
 
 
 # Basic views
@@ -123,17 +123,24 @@ def delete_variable_mapping(request, variable_mapping_id):
     return delete_item(request, VARIABLE_MAPPING, 'variable_mapping_id', 'edit_variable_mappings', variable_mapping_id)
 
 def execute_data_point(request, data_point_id):
-    app_config = RunExecuteDataPoint('pybirdai', 'birds_nest')
-    result = app_config.run_execute_data_point(data_point_id)
-    
-    html_response = f"""
+    # app_config = RunExecuteDataPoint('pybirdai', 'birds_nest')
+    # result = app_config.run_execute_data_point(data_point_id)
+    # print(result)
 
-        <h3>DataPoint Execution Results</h3>
-        <p><strong>DataPoint ID:</strong> {data_point_id}</p>
-        <p><strong>Result:</strong> {result}</p>
-        <p><a href="/pybirdai/lineage/">View Lineage Files</a></p>
-        <p><a href="/pybirdai/report-templates/">Back to the PyBIRD Reports Templates Page</a></p>
-    """
+    # Get the results directory
+    results_dir = os.path.join(settings.BASE_DIR, 'tests', 'test_results', 'json')
+
+    # Create a directory for the results if it doesn't exist
+    if not os.path.exists(results_dir):
+        os.makedirs(results_dir)
+
+    # Find latest result file for this datapoint
+    # list all tests !todo()
+    latest_result = os.listdir(results_dir).pop()
+
+    html_response = generate_technical_test_report.generate_technical_test_report(
+        json.load(open(os.path.join(results_dir, latest_result)))
+    )
     return HttpResponse(html_response)
 
 
@@ -141,36 +148,36 @@ def execute_data_point(request, data_point_id):
 def list_lineage_files(request):
     lineage_dir = Path(settings.BASE_DIR) / 'results' / 'lineage'
     csv_files = []
-    
+
     if lineage_dir.exists():
         csv_files = [f.name for f in lineage_dir.glob('*.csv')]
-    
+
     return render(request, 'pybirdai/lineage_files.html', {'csv_files': csv_files})
 
 def view_csv_file(request, filename):
 
     file_path = Path(settings.BASE_DIR) / 'results' / 'lineage' / filename
-    
+
     if not file_path.exists() or not filename.endswith('.csv'):
         messages.error(request, 'File not found or invalid file type')
         return redirect('pybirdai:list_lineage_files')
-    
+
     try:
         with open(file_path, 'r', encoding='utf-8') as csvfile:
             csv_reader = csv.reader(csvfile)
             headers = next(csv_reader)  # Get the headers
             data = list(csv_reader)     # Get all rows
-            
+
         # Paginate the results
         items_per_page = 50  # Adjust this number as needed
         paginator = Paginator(data, items_per_page)
         page_number = request.GET.get('page', 1)
         page_obj = paginator.get_page(page_number)
-        
+
         # Calculate some statistics
         total_rows = len(data)
         num_columns = len(headers)
-        
+
         context = {
             'filename': filename,
             'headers': headers,
@@ -181,7 +188,7 @@ def view_csv_file(request, filename):
             'end_index': min(page_obj.number * items_per_page, total_rows),
         }
         return render(request, 'pybirdai/view_csv.html', context)
-        
+
     except Exception as e:
         messages.error(request, f'Error reading file: {str(e)}')
         return redirect('pybirdai:list_lineage_files')
@@ -260,7 +267,7 @@ def create_response_with_loading(request, task_title, success_message, return_ur
                     // Show loading immediately
                     document.getElementById('loading-overlay').style.display = 'flex';
                     document.getElementById('success-message').style.display = 'none';
-                    
+
                     // Start the task execution after a small delay to ensure loading is visible
                     setTimeout(() => {{
                         fetch(window.location.href + '?execute=true', {{
@@ -289,7 +296,7 @@ def create_response_with_loading(request, task_title, success_message, return_ur
         </body>
         </html>
     """
-    
+
     # If this is the AJAX request to execute the task
     if request.GET.get('execute') == 'true':
         # Execute the actual task
@@ -297,7 +304,7 @@ def create_response_with_loading(request, task_title, success_message, return_ur
             return JsonResponse({'status': 'success'})
         except Exception as e:
             return JsonResponse({'status': 'error', 'message': str(e)})
-    
+
     return HttpResponse(html_response)
 
 def bird_diffs_and_corrections(request):
@@ -306,6 +313,18 @@ def bird_diffs_and_corrections(request):
     """
     return render(request, 'pybirdai/bird_diffs_and_corrections.html')
 
+def test_report_view(request):
+    """
+    Summary page for displaying BIRD test reports.
+    """
+    results_dir = ensure_results_directory()
+    templates = process_test_results_files(results_dir)
+
+    context = {
+        'templates': list(templates.values())
+    }
+    return render(request, 'pybirdai/test_report_view.html', context)
+
 def export_database_to_csv(request):
     if request.method == 'GET':
         return render(request, 'pybirdai/export_database.html')
@@ -313,7 +332,7 @@ def export_database_to_csv(request):
         # Create a zip file in memory
         response = HttpResponse(content_type='application/zip')
         response['Content-Disposition'] = 'attachment; filename="database_export.zip"'
-        
+
         # Get all model classes from bird_meta_data_model
         valid_table_names = set()
         model_map = {}  # Store model classes for reference
@@ -321,23 +340,23 @@ def export_database_to_csv(request):
             if inspect.isclass(obj) and issubclass(obj, models.Model) and obj != models.Model:
                 valid_table_names.add(obj._meta.db_table)
                 model_map[obj._meta.db_table] = obj
-        
+
         with zipfile.ZipFile(response, 'w') as zip_file:
             # Get all table names from SQLite
             with connection.cursor() as cursor:
                 cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name NOT LIKE 'django_%'")
                 tables = cursor.fetchall()
-            
+
             # Export each table to a CSV file
             for table in tables:
                 is_meta_data_table = False
                 table_name = table[0]
-                
+
                 if table_name in valid_table_names:
                     is_meta_data_table = True
                     # Get the model class for this table
                     model_class = model_map[table_name]
-                    
+
                     # Get fields in the order they're defined in the model
                     fields = model_class._meta.fields
                     headers = []
@@ -352,11 +371,11 @@ def export_database_to_csv(request):
                             db_headers.append(f"{field.name}_id")
                         else:
                             db_headers.append(field.name)
-                    
+
                     # Create CSV in memory
                     csv_content = []
                     csv_content.append(','.join(headers))
-                    
+
                     # Get data with escaped column names and ordered by primary key
                     with connection.cursor() as cursor:
                         escaped_headers = [f'"{h}"' if h == 'order' else h for h in db_headers]
@@ -368,12 +387,12 @@ def export_database_to_csv(request):
                             if col[5] == 1:  # 5 is the index for pk flag in table_info
                                 pk_column = col[1]  # 1 is the index for column name
                                 break
-                        
+
                         # Build ORDER BY clause
                         order_by = f"ORDER BY {pk_column}" if pk_column else "ORDER BY rowid"  # rowid is always available in SQLite
                         cursor.execute(f"SELECT {','.join(escaped_headers)} FROM {table_name} {order_by}")
                         rows = cursor.fetchall()
-                        
+
                         for row in rows:
                             # Convert all values to strings and handle None values
                             csv_row = [str(val) if val is not None else '' for val in row]
@@ -398,12 +417,12 @@ def export_database_to_csv(request):
                             if desc[0].lower() != 'id':
                                 headers.append(desc[0].upper())
                                 column_names.append(desc[0])
-                        
+
                         # Get data with escaped column names and ordered by rowid
                         escaped_headers = [f'"{h.lower()}"' if h.lower() == 'order' else h.lower() for h in column_names]
                         cursor.execute(f"SELECT {','.join(escaped_headers)} FROM {table_name} ORDER BY rowid")
                         rows = cursor.fetchall()
-                        
+
                         # Create CSV in memory
                         csv_content = []
                         csv_content.append(','.join(headers))
@@ -419,14 +438,11 @@ def export_database_to_csv(request):
                                 else:
                                     processed_row.append(val)
                             csv_content.append(','.join(processed_row))
-                
+
                 # Add CSV to zip file
                 if is_meta_data_table:
                     zip_file.writestr(f"{table_name.replace('pybirdai_', '')}.csv", '\n'.join(csv_content))
                 else:
                     zip_file.writestr(f"{table_name.replace('pybirdai_', 'bird_')}.csv", '\n'.join(csv_content))
-        
+
         return response
-
-
-
