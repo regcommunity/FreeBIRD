@@ -231,7 +231,6 @@ class F_05_01_REF_FINREP_3_0_Other_Loans_Table:
 				other_loan = loan.Loan_type_delegate
 				new_item = Other_Loans()
 				new_item.LN_EXCLDNG_RPRCHS_AGRMNT = loan
-				import pdb; pdb.set_trace()
 				for debtor in  self.OTHR_LN_DBTR_ASSGNMNT_Table:
 					if debtor.Other_loan_has_Debtor_s_via_Other_loan_Loan_debtor_assignment.Loan_type_uniqueID == other_loan.Loan_type_uniqueID and debtor.MN_DBTR_INDCTR == '1':
 						new_item.PRTY = debtor.Loan_debtor_is_obliged_to_pay_Other_loan_s_via_Other_loan_Loan_debtor_assignment.Party_acts_in_Party_role
