@@ -49,7 +49,6 @@ class F_05_01_REF_FINREP_3_0:
 	def CRRYNG_AMNT(self) -> int:
 		return self.unionOfLayers.CRRYNG_AMNT()
 
-
 class F_05_01_REF_FINREP_3_0_Table :
 	F_05_01_REF_FINREP_3_0_UnionTable = None # unionOfLayersTable
 	F_05_01_REF_FINREP_3_0s = [] #F_05_01_REF_FINREP_3_0[]

@@ -11,7 +11,6 @@ class Cell_F_05_01_REF_FINREP_3_0_152457_REF:
 			total += item.CRRYNG_AMNT()
 		return total
 	def calc_referenced_items(self):
-		self.F_05_01_REF_FINREP_3_0s = []
 		items = self.F_05_01_REF_FINREP_3_0_Table.F_05_01_REF_FINREP_3_0s
 		for item in items:
 			filter_passed = True
@@ -55,6 +54,11 @@ class Cell_F_05_01_REF_FINREP_3_0_152457_REF:
 				pass
 			else:
 				filter_passed = False
+			if 				(item.TYP_INSTRMNT() == '1022')  or \
+				False:
+				pass
+			else:
+				filter_passed = False
 			if 				(item.RPYMNT_RGHTS() == '2')  or \
 				False:
 				pass
@@ -73,18 +77,16 @@ class Cell_F_05_01_REF_FINREP_3_0_152457_REF:
 		self.calc_referenced_items()
 		return None
 
+
 class Cell_F_05_01_REF_FINREP_3_0_152589_REF:
 	F_05_01_REF_FINREP_3_0_Table = None
 	F_05_01_REF_FINREP_3_0s = []
-
 	def metric_value(self):
 		total = 0
 		for item in self.F_05_01_REF_FINREP_3_0s:
 			total += item.GRSS_CRRYNG_AMNT()
 		return total
-
 	def calc_referenced_items(self):
-		self.F_05_01_REF_FINREP_3_0s = []
 		items = self.F_05_01_REF_FINREP_3_0_Table.F_05_01_REF_FINREP_3_0s
 		for item in items:
 			filter_passed = True
@@ -148,6 +150,11 @@ class Cell_F_05_01_REF_FINREP_3_0_152589_REF:
 				(item.INSTTTNL_SCTR() == 'S11')  or \
 				(item.INSTTTNL_SCTR() == 'S14_B')  or \
 				(item.INSTTTNL_SCTR() == 'S14_A')  or \
+				False:
+				pass
+			else:
+				filter_passed = False
+			if 				(item.TYP_INSTRMNT() == '1022')  or \
 				False:
 				pass
 			else:
