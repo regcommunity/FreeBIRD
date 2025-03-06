@@ -81,9 +81,8 @@ admin.site.register(VARIABLE_SET_ENUMERATION)
 from .bird_meta_data_model import MEMBER_LINK
 admin.site.register(MEMBER_LINK)
 
-
-from .bird_data_model import ABSTRCT_INSTRMNT_RL
-admin.site.register(ABSTRCT_INSTRMNT_RL)
+from .bird_data_model import FR_VL_DCRS_CNTNGNT_ENCMBRNC
+admin.site.register(FR_VL_DCRS_CNTNGNT_ENCMBRNC)
 from .bird_data_model import ACCNTNG_CNSLDTN_GRP
 admin.site.register(ACCNTNG_CNSLDTN_GRP)
 from .bird_data_model import ADVNC
@@ -104,10 +103,18 @@ from .bird_data_model import ASST_PL_SCRTSTN
 admin.site.register(ASST_PL_SCRTSTN)
 from .bird_data_model import ASST_PL
 admin.site.register(ASST_PL)
+from .bird_data_model import ASST_PL_CLLTRL_RCVD_ASSGNMNT
+admin.site.register(ASST_PL_CLLTRL_RCVD_ASSGNMNT)
 from .bird_data_model import ASST_PL_EQT_INSTRMNT_NT_SCRT_ASSGNMNT
 admin.site.register(ASST_PL_EQT_INSTRMNT_NT_SCRT_ASSGNMNT)
+from .bird_data_model import ASST_PL_EXCHNG_TRDBL_DRVTV_PSTN_ASSGNMNT
+admin.site.register(ASST_PL_EXCHNG_TRDBL_DRVTV_PSTN_ASSGNMNT)
+from .bird_data_model import ASST_PL_INSTRMNT_ASSGNMNT
+admin.site.register(ASST_PL_INSTRMNT_ASSGNMNT)
 from .bird_data_model import ASST_PL_LN_ASSGNMNT
 admin.site.register(ASST_PL_LN_ASSGNMNT)
+from .bird_data_model import ASST_PL_OTC_DRVTV_INSTRMNT_ASSGNMNT
+admin.site.register(ASST_PL_OTC_DRVTV_INSTRMNT_ASSGNMNT)
 from .bird_data_model import ASST_PL_DBT_SCRTY_PSTN_ASSGNMNT
 admin.site.register(ASST_PL_DBT_SCRTY_PSTN_ASSGNMNT)
 from .bird_data_model import ASSNGND_DBTR
@@ -120,18 +127,22 @@ from .bird_data_model import BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN
 admin.site.register(BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN)
 from .bird_data_model import BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_DRVD_DT
 admin.site.register(BLNC_SHT_RCGNSD_EXCHNG_TRDBL_DRVTV_ASST_PSTN_DRVD_DT)
+from .bird_data_model import BLNC_SHT_EXCHNG_TRDBL_DRVTV_ASST_PSTN_IFRS
+admin.site.register(BLNC_SHT_EXCHNG_TRDBL_DRVTV_ASST_PSTN_IFRS)
+from .bird_data_model import BLNC_SHT_EXCHNG_TRDBL_DRVTV_ASST_PSTN_NGAAP
+admin.site.register(BLNC_SHT_EXCHNG_TRDBL_DRVTV_ASST_PSTN_NGAAP)
 from .bird_data_model import BLNC_SHT_RCGNSD_ETD_LBLTY_PSTN
 admin.site.register(BLNC_SHT_RCGNSD_ETD_LBLTY_PSTN)
-from .bird_data_model import BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT
-admin.site.register(BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT)
-from .bird_data_model import BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_IFRS
-admin.site.register(BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_IFRS)
-from .bird_data_model import BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_NGAAP
-admin.site.register(BLNC_SHT_RCGNSD_FNNCNL_ASST_INSTRMNT_NGAAP)
+from .bird_data_model import BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT
+admin.site.register(BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT)
+from .bird_data_model import BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_IFRS
+admin.site.register(BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_IFRS)
+from .bird_data_model import BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_NGAAP
+admin.site.register(BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_NGAAP)
 from .bird_data_model import BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_DRVD_DT
 admin.site.register(BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_DRVD_DT)
-from .bird_data_model import BLNC_SHT_RCGNSD_FNNCNL_LBLTY_INSTRMNT
-admin.site.register(BLNC_SHT_RCGNSD_FNNCNL_LBLTY_INSTRMNT)
+from .bird_data_model import BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT
+admin.site.register(BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT)
 from .bird_data_model import BNFCRY
 admin.site.register(BNFCRY)
 from .bird_data_model import BRRWR
@@ -166,20 +177,34 @@ from .bird_data_model import CLLTRL
 admin.site.register(CLLTRL)
 from .bird_data_model import CLLTRL_ANNX
 admin.site.register(CLLTRL_ANNX)
+from .bird_data_model import CLLTRL_DRVD_DT
+admin.site.register(CLLTRL_DRVD_DT)
+from .bird_data_model import CLLTRL_GVN
+admin.site.register(CLLTRL_GVN)
 from .bird_data_model import CLLTRL_GVN_INSTRMNT
 admin.site.register(CLLTRL_GVN_INSTRMNT)
+from .bird_data_model import CLLTRL_GVN_INSTRMNT_DBT_SCRTY_ISSD_ASSGNMNT
+admin.site.register(CLLTRL_GVN_INSTRMNT_DBT_SCRTY_ISSD_ASSGNMNT)
+from .bird_data_model import CLLTRL_GVN_INSTRMNT_INSTRMNT_ASSGNMNT
+admin.site.register(CLLTRL_GVN_INSTRMNT_INSTRMNT_ASSGNMNT)
 from .bird_data_model import CLLTRL_NN_FNNCL_ASST_ASSGNMNT
 admin.site.register(CLLTRL_NN_FNNCL_ASST_ASSGNMNT)
 from .bird_data_model import CLLTRL_OBTND_TKNG_PSSSSN
 admin.site.register(CLLTRL_OBTND_TKNG_PSSSSN)
 from .bird_data_model import CLLTRL_OBTND_TKNG_PSSSSN_DRVD_DT
 admin.site.register(CLLTRL_OBTND_TKNG_PSSSSN_DRVD_DT)
+from .bird_data_model import CLLTRL_RCVD
+admin.site.register(CLLTRL_RCVD)
 from .bird_data_model import CLLTRL_RCVD_INSTRMNT
 admin.site.register(CLLTRL_RCVD_INSTRMNT)
+from .bird_data_model import CLLTRL_RCVD_INSTRMNT_DRVD_DT
+admin.site.register(CLLTRL_RCVD_INSTRMNT_DRVD_DT)
 from .bird_data_model import CLLTRL_RCVD_INSTRMNT_OBTND_TKNG_PSSSSN
 admin.site.register(CLLTRL_RCVD_INSTRMNT_OBTND_TKNG_PSSSSN)
 from .bird_data_model import CLLTRL_RCVD_INSTRMNT_OBTND_TKNG_PSSSSN_DRVD_DT
 admin.site.register(CLLTRL_RCVD_INSTRMNT_OBTND_TKNG_PSSSSN_DRVD_DT)
+from .bird_data_model import CLLTRL_RL
+admin.site.register(CLLTRL_RL)
 from .bird_data_model import CMMRCL_RL_ESTT_OFFCS_CMMRCL_PRMSS_CLLTRL
 admin.site.register(CMMRCL_RL_ESTT_OFFCS_CMMRCL_PRMSS_CLLTRL)
 from .bird_data_model import CMMRCL_RL_ESTT_CLLTRL
@@ -194,6 +219,8 @@ from .bird_data_model import CVRD_BND_ISSNC
 admin.site.register(CVRD_BND_ISSNC)
 from .bird_data_model import CVRD_BND_PRGRM
 admin.site.register(CVRD_BND_PRGRM)
+from .bird_data_model import CVRD_BND_PRGRMM_RLVNT_RGM_EXCSS
+admin.site.register(CVRD_BND_PRGRMM_RLVNT_RGM_EXCSS)
 from .bird_data_model import CRDT_CRD_DBT
 admin.site.register(CRDT_CRD_DBT)
 from .bird_data_model import CRDT_CRD_DBT_CRDTR_ASSGNMNT
@@ -210,6 +237,8 @@ from .bird_data_model import CRDT_FCLTY_CRDTR_ASSGNMNT
 admin.site.register(CRDT_FCLTY_CRDTR_ASSGNMNT)
 from .bird_data_model import CRDT_FCLTY_DBTR_ASSGNMNT
 admin.site.register(CRDT_FCLTY_DBTR_ASSGNMNT)
+from .bird_data_model import CRDT_FCLTY_DRVD_DT
+admin.site.register(CRDT_FCLTY_DRVD_DT)
 from .bird_data_model import CRDT_FCLTY_ENTTY_RL_ASSGNMNT
 admin.site.register(CRDT_FCLTY_ENTTY_RL_ASSGNMNT)
 from .bird_data_model import CRDT_FCLTY_RSK_DT
@@ -254,14 +283,20 @@ from .bird_data_model import DBT_SCRTY_NGAAP
 admin.site.register(DBT_SCRTY_NGAAP)
 from .bird_data_model import DBT_SCRTY_ISSD
 admin.site.register(DBT_SCRTY_ISSD)
+from .bird_data_model import DBT_SCRTY_ISSD_HDG
+admin.site.register(DBT_SCRTY_ISSD_HDG)
+from .bird_data_model import DBT_SCRTY_ISSD_DRVD_DT
+admin.site.register(DBT_SCRTY_ISSD_DRVD_DT)
+from .bird_data_model import DBT_SCRTY_ISSD_PRTCN_ARRNGMNT_GVN_ASSGNMNT
+admin.site.register(DBT_SCRTY_ISSD_PRTCN_ARRNGMNT_GVN_ASSGNMNT)
 from .bird_data_model import DBT_SCRTY_ISSD_TRDTNL_SCRTSTN_ASSGNMNT
 admin.site.register(DBT_SCRTY_ISSD_TRDTNL_SCRTSTN_ASSGNMNT)
 from .bird_data_model import DBT_SCRTY_PSTN_HDGD_OTC_DRVTV
 admin.site.register(DBT_SCRTY_PSTN_HDGD_OTC_DRVTV)
 from .bird_data_model import DBT_SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT
 admin.site.register(DBT_SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT)
-from .bird_data_model import DBT_SCRTY_STHT_UNDRLYNG_ASSTS
-admin.site.register(DBT_SCRTY_STHT_UNDRLYNG_ASSTS)
+from .bird_data_model import DBT_SCRTY_WTHT_UNDRLYNG_ASSTS
+admin.site.register(DBT_SCRTY_WTHT_UNDRLYNG_ASSTS)
 from .bird_data_model import DBT_SCRTY_WTH_UNDRLYNG_ASSTS
 admin.site.register(DBT_SCRTY_WTH_UNDRLYNG_ASSTS)
 from .bird_data_model import DFLT_FNNCL_ASST_INSTRMNT_INDVDLLY_ASSSSD
@@ -308,6 +343,8 @@ from .bird_data_model import EQT_INSTRMNT_LG_EQT_INSTRMNT_NT_SCRT_ASSGNMNT
 admin.site.register(EQT_INSTRMNT_LG_EQT_INSTRMNT_NT_SCRT_ASSGNMNT)
 from .bird_data_model import EQT_INSTRMNT_NT_SCRT
 admin.site.register(EQT_INSTRMNT_NT_SCRT)
+from .bird_data_model import EQT_INSTRMNT_NT_SCRT_HDG
+admin.site.register(EQT_INSTRMNT_NT_SCRT_HDG)
 from .bird_data_model import EQTY_INSTRMNT_NT_SCRTY_INVSTR_ASSGNMNT
 admin.site.register(EQTY_INSTRMNT_NT_SCRTY_INVSTR_ASSGNMNT)
 from .bird_data_model import EQTY_INSTRMNT_NT_SCRTY_ISSR_ASSGNMNT
@@ -332,18 +369,32 @@ from .bird_data_model import EXCHNG_TRDBL_DRVTV_ASST_LBLTY_PSTN
 admin.site.register(EXCHNG_TRDBL_DRVTV_ASST_LBLTY_PSTN)
 from .bird_data_model import EXCHNG_TRDBL_DRVTV_ASST_PSTN
 admin.site.register(EXCHNG_TRDBL_DRVTV_ASST_PSTN)
+from .bird_data_model import EXCHNG_TRDBL_DRVTV_ASST_PSTN_DRVD_DT
+admin.site.register(EXCHNG_TRDBL_DRVTV_ASST_PSTN_DRVD_DT)
 from .bird_data_model import EXCHNG_TRDBL_DRVTV_CLLTRL
 admin.site.register(EXCHNG_TRDBL_DRVTV_CLLTRL)
+from .bird_data_model import EXCHNG_TRDBL_DRVTV_DRVD_DT
+admin.site.register(EXCHNG_TRDBL_DRVTV_DRVD_DT)
 from .bird_data_model import EXCHNG_TRDBL_DRVTV_LBLTY_PSTN
 admin.site.register(EXCHNG_TRDBL_DRVTV_LBLTY_PSTN)
+from .bird_data_model import EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_DRVD_DT
+admin.site.register(EXCHNG_TRDBL_DRVTV_LBLTY_PSTN_DRVD_DT)
 from .bird_data_model import ETD_LBLTY_PSTN_SNTHTC_SCRTSTN_ASSGNMNT
 admin.site.register(ETD_LBLTY_PSTN_SNTHTC_SCRTSTN_ASSGNMNT)
 from .bird_data_model import EXCHNG_TRDBL_DRVTV_PSTN
 admin.site.register(EXCHNG_TRDBL_DRVTV_PSTN)
 from .bird_data_model import EXCHNG_TRDBL_DRVTV_HDG_PSTN
 admin.site.register(EXCHNG_TRDBL_DRVTV_HDG_PSTN)
-from .bird_data_model import EXCHNG_TRDBL_DRVTV_POSTN_RL
-admin.site.register(EXCHNG_TRDBL_DRVTV_POSTN_RL)
+from .bird_data_model import EXCHNG_TRDBL_DRVTV_PSTN_HDG_IFRS
+admin.site.register(EXCHNG_TRDBL_DRVTV_PSTN_HDG_IFRS)
+from .bird_data_model import EXCHNG_TRDBL_DRVTV_PSTN_HDG_NGAAP
+admin.site.register(EXCHNG_TRDBL_DRVTV_PSTN_HDG_NGAAP)
+from .bird_data_model import EXCHNG_TRDBL_DRVTV_PSTN_PRTCN_ARRNGMNT_ASSGNMNT
+admin.site.register(EXCHNG_TRDBL_DRVTV_PSTN_PRTCN_ARRNGMNT_ASSGNMNT)
+from .bird_data_model import EXCHNG_TRDBL_DRVTV_PSTN_PRTCTN_ARRNGMNT_RCVD_ASSGNMNT
+admin.site.register(EXCHNG_TRDBL_DRVTV_PSTN_PRTCTN_ARRNGMNT_RCVD_ASSGNMNT)
+from .bird_data_model import EXCHNG_TRDBL_DRVTV_PSTN_RL
+admin.site.register(EXCHNG_TRDBL_DRVTV_PSTN_RL)
 from .bird_data_model import EXCHNG_TRDBL_FTR
 admin.site.register(EXCHNG_TRDBL_FTR)
 from .bird_data_model import EXCHNG_TRDBL_OPTN
@@ -402,6 +453,8 @@ from .bird_data_model import FNNCL_LS_LSSR_ASSGNMNT
 admin.site.register(FNNCL_LS_LSSR_ASSGNMNT)
 from .bird_data_model import FNNCL_LBLTY_INSTRMNT
 admin.site.register(FNNCL_LBLTY_INSTRMNT)
+from .bird_data_model import FNNCL_LBLTY_INSTRMNT_DRVD_DT
+admin.site.register(FNNCL_LBLTY_INSTRMNT_DRVD_DT)
 from .bird_data_model import FXD_INTRST_FNNCL_ASST_INSTRMNT
 admin.site.register(FXD_INTRST_FNNCL_ASST_INSTRMNT)
 from .bird_data_model import FRBRN_LNG_NN_NGTBL_SCRTY_PSTN
@@ -432,12 +485,18 @@ from .bird_data_model import GIRR_RSK_FCTR
 admin.site.register(GIRR_RSK_FCTR)
 from .bird_data_model import GLD_CLLTRL
 admin.site.register(GLD_CLLTRL)
+from .bird_data_model import GLD_CLLTRL_LG
+admin.site.register(GLD_CLLTRL_LG)
+from .bird_data_model import GLD_CLLTRL_LG_GLD_CLLTRL_ASSGNMNT
+admin.site.register(GLD_CLLTRL_LG_GLD_CLLTRL_ASSGNMNT)
 from .bird_data_model import GDWLL
 admin.site.register(GDWLL)
 from .bird_data_model import GRDD_RTNG_SYSTM
 admin.site.register(GRDD_RTNG_SYSTM)
 from .bird_data_model import GRP
 admin.site.register(GRP)
+from .bird_data_model import GRP_KY_MNGMNT_PRSNLL_ASSGNMNT
+admin.site.register(GRP_KY_MNGMNT_PRSNLL_ASSGNMNT)
 from .bird_data_model import GRP_CLNTS
 admin.site.register(GRP_CLNTS)
 from .bird_data_model import GRP_CLNTS_KY_MNGMNT_PRSNLL_ASSGNMNT
@@ -460,14 +519,20 @@ from .bird_data_model import INSTTTNL_UNT_FRGN_BRNCHS
 admin.site.register(INSTTTNL_UNT_FRGN_BRNCHS)
 from .bird_data_model import INSTRMNT
 admin.site.register(INSTRMNT)
+from .bird_data_model import INSTRMNT_CLLTRL_ASSGNMNT
+admin.site.register(INSTRMNT_CLLTRL_ASSGNMNT)
 from .bird_data_model import INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT
 admin.site.register(INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT)
+from .bird_data_model import OTC_INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT
+admin.site.register(OTC_INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT)
 from .bird_data_model import INSTRMNT_ENTTY_RL_ASSGNMNT
 admin.site.register(INSTRMNT_ENTTY_RL_ASSGNMNT)
 from .bird_data_model import INSTRMNT_HDGD_EXCHNG_TRDBL_DRVTV
 admin.site.register(INSTRMNT_HDGD_EXCHNG_TRDBL_DRVTV)
 from .bird_data_model import INSTRMNT_HDGD_OTC_DRVTV
 admin.site.register(INSTRMNT_HDGD_OTC_DRVTV)
+from .bird_data_model import INSTRMNT_PRTCTN_ARRNGMNT_ASSGNMNT
+admin.site.register(INSTRMNT_PRTCTN_ARRNGMNT_ASSGNMNT)
 from .bird_data_model import INSTRMNT_PRTCN_ARRNGMNT_ASSGNMNT
 admin.site.register(INSTRMNT_PRTCN_ARRNGMNT_ASSGNMNT)
 from .bird_data_model import INSTRMNT_RSLTNG_DRCTLY_FNNCL_CNTRCT
@@ -550,6 +615,10 @@ from .bird_data_model import LN_EXCLDNG_RPRCHS_AGRMNT
 admin.site.register(LN_EXCLDNG_RPRCHS_AGRMNT)
 from .bird_data_model import LN_EXCLDNG_RPRCHS_AGRMNT_AND_ADVNCE
 admin.site.register(LN_EXCLDNG_RPRCHS_AGRMNT_AND_ADVNCE)
+from .bird_data_model import LN_EXCLDNG_RPRCHS_AGRMNT_AND_ADVNC_HDG
+admin.site.register(LN_EXCLDNG_RPRCHS_AGRMNT_AND_ADVNC_HDG)
+from .bird_data_model import LN_EXCLDNG_RPRCHS_AGRMNT_AND_ADVNC_CLLTRL_GVN_ASSGNMNT
+admin.site.register(LN_EXCLDNG_RPRCHS_AGRMNT_AND_ADVNC_CLLTRL_GVN_ASSGNMNT)
 from .bird_data_model import LN_EXCLDNG_RPRCHS_AGRMNT_CLLTRL_ASSGNMNT
 admin.site.register(LN_EXCLDNG_RPRCHS_AGRMNT_CLLTRL_ASSGNMNT)
 from .bird_data_model import LN_EXCLDNG_RPRCHS_AGRMNT_CLLTRL_ASSGNMNT_DRVD_DT
@@ -562,52 +631,56 @@ from .bird_data_model import LN_AND_ADVNC_LG_LN_AND_ADVNC_ASSGNMNT
 admin.site.register(LN_AND_ADVNC_LG_LN_AND_ADVNC_ASSGNMNT)
 from .bird_data_model import LN_DBTR
 admin.site.register(LN_DBTR)
+from .bird_data_model import LN_DMND_MNMM_RSRV
+admin.site.register(LN_DMND_MNMM_RSRV)
 from .bird_data_model import LN_AND_ADVNC_LG
 admin.site.register(LN_AND_ADVNC_LG)
-from .bird_data_model import LNG_SBT_SCRTY_PSTN
-admin.site.register(LNG_SBT_SCRTY_PSTN)
-from .bird_data_model import LNG_SBT_SCRTY_PSTN_DRVD_DT
-admin.site.register(LNG_SBT_SCRTY_PSTN_DRVD_DT)
+from .bird_data_model import LNG_DBT_SCRTY_PSTN
+admin.site.register(LNG_DBT_SCRTY_PSTN)
+from .bird_data_model import LNG_DBT_SCRTY_PSTN_DRVD_DT
+admin.site.register(LNG_DBT_SCRTY_PSTN_DRVD_DT)
+from .bird_data_model import LNG_DBT_SCRTY_PSTN_ENCMBRNC_DRVD_DT
+admin.site.register(LNG_DBT_SCRTY_PSTN_ENCMBRNC_DRVD_DT)
 from .bird_data_model import LNG_DBT_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT
 admin.site.register(LNG_DBT_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT)
 from .bird_data_model import LNG_DBT_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT
 admin.site.register(LNG_DBT_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT)
-from .bird_data_model import LNG_DBT_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASST_ASSGNMNT_IFRS
-admin.site.register(LNG_DBT_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASST_ASSGNMNT_IFRS)
-from .bird_data_model import LNG_DBT_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASST_ASSGNMNT_NGAAP
-admin.site.register(LNG_DBT_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASST_ASSGNMNT_NGAAP)
-from .bird_data_model import LNG_DBT_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ENCMBRNC_DT
-admin.site.register(LNG_DBT_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ENCMBRNC_DT)
-from .bird_data_model import LNG_EQTY_FND_SCRYT_PSTN
-admin.site.register(LNG_EQTY_FND_SCRYT_PSTN)
-from .bird_data_model import LND_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT
-admin.site.register(LND_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT)
+from .bird_data_model import LNG_DBT_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_IFRS
+admin.site.register(LNG_DBT_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_IFRS)
+from .bird_data_model import LNG_DBT_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_NGAAP
+admin.site.register(LNG_DBT_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT_NGAAP)
+from .bird_data_model import LNG_EQTY_FND_SCRTY_PSTN
+admin.site.register(LNG_EQTY_FND_SCRTY_PSTN)
+from .bird_data_model import LNG_EQTY_FND_SCRYT_PSTN_ENCMBRNC_DT
+admin.site.register(LNG_EQTY_FND_SCRYT_PSTN_ENCMBRNC_DT)
+from .bird_data_model import LNG_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT
+admin.site.register(LNG_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT)
 from .bird_data_model import LNG_EQUTY_FND_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_ASST_ASSGNMNT_IFRS
 admin.site.register(LNG_EQUTY_FND_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_ASST_ASSGNMNT_IFRS)
 from .bird_data_model import LNG_EQUTY_FND_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_ASST_ASSGNMNT_NGAAP
 admin.site.register(LNG_EQUTY_FND_SCRTY_PSTN_PRDNTL_PRFL_ASSGNMNT_ACCNTNG_CLSSFCTN_ASST_ASSGNMNT_NGAAP)
 from .bird_data_model import LNG_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT
 admin.site.register(LNG_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT)
-from .bird_data_model import LNG_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ENCMBRNC_DT
-admin.site.register(LNG_EQTY_FND_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ENCMBRNC_DT)
 from .bird_data_model import LNG_NGTBL_SCRTY_PSTN
 admin.site.register(LNG_NGTBL_SCRTY_PSTN)
 from .bird_data_model import LNG_NN_NGTBL_SCRTY_PSTN
 admin.site.register(LNG_NN_NGTBL_SCRTY_PSTN)
 from .bird_data_model import LNG_NN_NGTBL_SCRTY_PSTN_CLLTRL_ASSGNMNT
 admin.site.register(LNG_NN_NGTBL_SCRTY_PSTN_CLLTRL_ASSGNMNT)
-from .bird_data_model import LNG_NN_NGTBL_SCRTY_PSTNDRVD_DT
-admin.site.register(LNG_NN_NGTBL_SCRTY_PSTNDRVD_DT)
+from .bird_data_model import LNG_NN_NGTBL_SCRTY_PSTN_CLLTRL_ASSGNMNT_DRVD_DT
+admin.site.register(LNG_NN_NGTBL_SCRTY_PSTN_CLLTRL_ASSGNMNT_DRVD_DT)
+from .bird_data_model import LNG_NN_NGTBL_SCRTY_PSTN_DRVD_DT
+admin.site.register(LNG_NN_NGTBL_SCRTY_PSTN_DRVD_DT)
 from .bird_data_model import LNG_SCRTY_PSTN
 admin.site.register(LNG_SCRTY_PSTN)
+from .bird_data_model import LNG_SCRTY_PSTN_HDG
+admin.site.register(LNG_SCRTY_PSTN_HDG)
 from .bird_data_model import LNG_SCRTY_PSTN_BNKG_BK_ASSGNMNT
 admin.site.register(LNG_SCRTY_PSTN_BNKG_BK_ASSGNMNT)
 from .bird_data_model import LNG_SCRTY_PSTN_DRVD_DT
 admin.site.register(LNG_SCRTY_PSTN_DRVD_DT)
-from .bird_data_model import DBT_SCRTY_PRTCTN_ARRNGMNT_ASSGNMNT
-admin.site.register(DBT_SCRTY_PRTCTN_ARRNGMNT_ASSGNMNT)
-from .bird_data_model import LNG_SCRTY_PSTN_PRTCTN_ARRNGMNT_ASSGNMNT_DRVD_DT
-admin.site.register(LNG_SCRTY_PSTN_PRTCTN_ARRNGMNT_ASSGNMNT_DRVD_DT)
+from .bird_data_model import LNG_SCRTY_PSTN_PRTCTN_ARRNGMNT_GVN_ASSGNMNT
+admin.site.register(LNG_SCRTY_PSTN_PRTCTN_ARRNGMNT_GVN_ASSGNMNT)
 from .bird_data_model import LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT
 admin.site.register(LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT)
 from .bird_data_model import LNG_SCRTY_PSTN_PRDNTL_PRTFL_ASSGNMNT_ACCNTNG_CLSSFCTN_FNNCL_ASSTS_ASSGNMNT
@@ -660,6 +733,10 @@ from .bird_data_model import NN_BLNC_SHT_RCGNSD_ETD_LBLTY_PSTN
 admin.site.register(NN_BLNC_SHT_RCGNSD_ETD_LBLTY_PSTN)
 from .bird_data_model import NN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT
 admin.site.register(NN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT)
+from .bird_data_model import NN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_IFRS
+admin.site.register(NN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_IFRS)
+from .bird_data_model import NN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_NGAAP
+admin.site.register(NN_BLNC_SHT_RCGNSD_FNNCL_ASST_INSTRMNT_NGAAP)
 from .bird_data_model import NN_BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT
 admin.site.register(NN_BLNC_SHT_RCGNSD_FNNCL_LBLTY_INSTRMNT)
 from .bird_data_model import NN_CNTRL_GVRNMNT_RTNG_SYSTM
@@ -720,10 +797,12 @@ from .bird_data_model import NN_RTL_EXPSR_FNNCL_ASST_INSTRMNT
 admin.site.register(NN_RTL_EXPSR_FNNCL_ASST_INSTRMNT)
 from .bird_data_model import NN_SLF_EMPLYD_NTRL_PRSN
 admin.site.register(NN_SLF_EMPLYD_NTRL_PRSN)
-from .bird_data_model import NN_SFTWR_PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN
-admin.site.register(NN_SFTWR_PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN)
-from .bird_data_model import NN_SFTWR_PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN
-admin.site.register(NN_SFTWR_PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN)
+from .bird_data_model import NN_SFTWR_PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN
+admin.site.register(NN_SFTWR_PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN)
+from .bird_data_model import NN_SFTWR_PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN
+admin.site.register(NN_SFTWR_PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN)
+from .bird_data_model import NN_SNDCTD_CNTRCT_NN_SB_PRTCPTN_MMBR_INSTRMNT
+admin.site.register(NN_SNDCTD_CNTRCT_NN_SB_PRTCPTN_MMBR_INSTRMNT)
 from .bird_data_model import NN_UPU_SYSTM_PRTY
 admin.site.register(NN_UPU_SYSTM_PRTY)
 from .bird_data_model import CLLTRL_NT_OBTND
@@ -738,6 +817,8 @@ from .bird_data_model import NMRC_RTNG_SYSTM
 admin.site.register(NMRC_RTNG_SYSTM)
 from .bird_data_model import OFF_BLNC_INSTRMNT
 admin.site.register(OFF_BLNC_INSTRMNT)
+from .bird_data_model import OFF_BLNC_INSTRMNT_CLLTRL_GVN_ASSGNMNT
+admin.site.register(OFF_BLNC_INSTRMNT_CLLTRL_GVN_ASSGNMNT)
 from .bird_data_model import OFF_BLNC_INSTRMNT_CLLTRL_ASSGNMNT
 admin.site.register(OFF_BLNC_INSTRMNT_CLLTRL_ASSGNMNT)
 from .bird_data_model import OFF_BLNC_SHT_ITM_GVN_INSTRMNT
@@ -746,12 +827,16 @@ from .bird_data_model import OFF_BLNC_SHT_ITM_GVN_INSTRMNT_DRVD_DT
 admin.site.register(OFF_BLNC_SHT_ITM_GVN_INSTRMNT_DRVD_DT)
 from .bird_data_model import OFF_BLNC_SHT_ITM_RCVD_INSTRMNT
 admin.site.register(OFF_BLNC_SHT_ITM_RCVD_INSTRMNT)
+from .bird_data_model import OFF_BLNC_SHT_ITM_RCVD_INSTRMNT_DRVD_DT
+admin.site.register(OFF_BLNC_SHT_ITM_RCVD_INSTRMNT_DRVD_DT)
 from .bird_data_model import OFFCS_CMMRCL_PRMSS_CLLTRL
 admin.site.register(OFFCS_CMMRCL_PRMSS_CLLTRL)
 from .bird_data_model import OFFCS_CMMRCL_PRMSS_NT_RLTD_LND_CLLTRL
 admin.site.register(OFFCS_CMMRCL_PRMSS_NT_RLTD_LND_CLLTRL)
 from .bird_data_model import OFFCS_CMMRCL_PRMSS_RLTD_LND_CLLTRL
 admin.site.register(OFFCS_CMMRCL_PRMSS_RLTD_LND_CLLTRL)
+from .bird_data_model import DMND_DPST_NT_MNMM_RSRV
+admin.site.register(DMND_DPST_NT_MNMM_RSRV)
 from .bird_data_model import OPN_RPRCHS_AGRMNT_INSTRMNT
 admin.site.register(OPN_RPRCHS_AGRMNT_INSTRMNT)
 from .bird_data_model import ORGNSTN
@@ -794,8 +879,6 @@ from .bird_data_model import OTHR_GRP_CLNTS
 admin.site.register(OTHR_GRP_CLNTS)
 from .bird_data_model import OTHR_IMMTRL_RGHTS_CLLTRL
 admin.site.register(OTHR_IMMTRL_RGHTS_CLLTRL)
-from .bird_data_model import OTC_INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT
-admin.site.register(OTC_INSTRMNT_CLLTRL_RCVD_INSTRMNT_ASSGNMNT)
 from .bird_data_model import OTHR_INTNGL_ASST
 admin.site.register(OTHR_INTNGL_ASST)
 from .bird_data_model import OTHR_INTNGBL_ASST_NT_TKN_INT_PSSSSN
@@ -848,14 +931,18 @@ from .bird_data_model import OTC_CRDT_SPRD_OPTN
 admin.site.register(OTC_CRDT_SPRD_OPTN)
 from .bird_data_model import OTC_DRVTV_HDG
 admin.site.register(OTC_DRVTV_HDG)
+from .bird_data_model import OTC_DRVTV_HDG_IFRS
+admin.site.register(OTC_DRVTV_HDG_IFRS)
+from .bird_data_model import OTC_DRVTV_HDG_NGAAP
+admin.site.register(OTC_DRVTV_HDG_NGAAP)
 from .bird_data_model import OTC_DRVTV_BUYR_ASSGNMNT
 admin.site.register(OTC_DRVTV_BUYR_ASSGNMNT)
 from .bird_data_model import OTC_DRVTV_INSTRMNT
 admin.site.register(OTC_DRVTV_INSTRMNT)
+from .bird_data_model import OTC_DRVTV_INSTRMNT_DRVD_DT
+admin.site.register(OTC_DRVTV_INSTRMNT_DRVD_DT)
 from .bird_data_model import OTC_DRVTV_INSTRMNT_SNTHTC_SCRTSTN_ASSGNMNT
 admin.site.register(OTC_DRVTV_INSTRMNT_SNTHTC_SCRTSTN_ASSGNMNT)
-from .bird_data_model import OTC_DRVTV_RL
-admin.site.register(OTC_DRVTV_RL)
 from .bird_data_model import OTC_DRVTV_SLLR_ASSGNMNT
 admin.site.register(OTC_DRVTV_SLLR_ASSGNMNT)
 from .bird_data_model import OTC_FRWRD
@@ -886,6 +973,8 @@ from .bird_data_model import PRTY_RL
 admin.site.register(PRTY_RL)
 from .bird_data_model import PST_DU_FNNCL_ASST_INSTRMNT
 admin.site.register(PST_DU_FNNCL_ASST_INSTRMNT)
+from .bird_data_model import PMNT_AGNT
+admin.site.register(PMNT_AGNT)
 from .bird_data_model import PNDNG_LGL_ISSS_TX_LTGTN
 admin.site.register(PNDNG_LGL_ISSS_TX_LTGTN)
 from .bird_data_model import PNSN_OTHR_PST_EMPLYMNT_BNFT_OBLGTN
@@ -904,22 +993,34 @@ from .bird_data_model import PHYSCL_CLLTRL
 admin.site.register(PHYSCL_CLLTRL)
 from .bird_data_model import PHYSCL_CLLTRL_INVSTMNT_PRPRTY_ASSGNMNT
 admin.site.register(PHYSCL_CLLTRL_INVSTMNT_PRPRTY_ASSGNMNT)
-from .bird_data_model import PHYSCL_CLLTRL_NN_SFTWR_PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT
-admin.site.register(PHYSCL_CLLTRL_NN_SFTWR_PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT)
-from .bird_data_model import PHYSCL_CLLTRL_NN_SFTWR_PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT
-admin.site.register(PHYSCL_CLLTRL_NN_SFTWR_PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT)
+from .bird_data_model import PHYSCL_CLLTRL_NN_SFTWR_PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT
+admin.site.register(PHYSCL_CLLTRL_NN_SFTWR_PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT)
+from .bird_data_model import PHYSCL_CLLTRL_NN_SFTWR_PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT
+admin.site.register(PHYSCL_CLLTRL_NN_SFTWR_PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT)
 from .bird_data_model import PTNTL_RTL_EXPSR_CLSS_FNNCL_ASST_INSTRMNT
 admin.site.register(PTNTL_RTL_EXPSR_CLSS_FNNCL_ASST_INSTRMNT)
 from .bird_data_model import PRVT_SCTR_CMPNY_OTHR_THN_CRPRTN
 admin.site.register(PRVT_SCTR_CMPNY_OTHR_THN_CRPRTN)
 from .bird_data_model import PRPRTY_PLNT_EQPMNT
 admin.site.register(PRPRTY_PLNT_EQPMNT)
-from .bird_data_model import PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN
-admin.site.register(PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN)
-from .bird_data_model import PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN
-admin.site.register(PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN)
+from .bird_data_model import PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN
+admin.site.register(PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN)
+from .bird_data_model import PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN
+admin.site.register(PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN)
 from .bird_data_model import PRTCTN_ARRNGMNT
 admin.site.register(PRTCTN_ARRNGMNT)
+from .bird_data_model import PRTCTN_ARRNGMNT_DRVD_DT
+admin.site.register(PRTCTN_ARRNGMNT_DRVD_DT)
+from .bird_data_model import PRTCTN_ARRNGMNT_GVN
+admin.site.register(PRTCTN_ARRNGMNT_GVN)
+from .bird_data_model import PRTCTN_ARRNGMNT_GVN_EXCHNG_TRDBL_DRVTV_PSTN_ASSGNMNT
+admin.site.register(PRTCTN_ARRNGMNT_GVN_EXCHNG_TRDBL_DRVTV_PSTN_ASSGNMNT)
+from .bird_data_model import PRTCTN_ARRNGMNT_GVN_INSTRMNT_ASSGNMNT
+admin.site.register(PRTCTN_ARRNGMNT_GVN_INSTRMNT_ASSGNMNT)
+from .bird_data_model import PRTCTN_ARRNGMNT_RCVD
+admin.site.register(PRTCTN_ARRNGMNT_RCVD)
+from .bird_data_model import PRTCTN_ARRNGMNT_RL
+admin.site.register(PRTCTN_ARRNGMNT_RL)
 from .bird_data_model import PRTCTN_PRTCTN_PRVD_ASSGNMNT
 admin.site.register(PRTCTN_PRTCTN_PRVD_ASSGNMNT)
 from .bird_data_model import PRTCTN_PRVDR
@@ -932,8 +1033,12 @@ from .bird_data_model import QCCP
 admin.site.register(QCCP)
 from .bird_data_model import RTNG_AGNCY
 admin.site.register(RTNG_AGNCY)
+from .bird_data_model import RTNG_AGNCY_EXCSS_MTHDLGY_CVRD_BND_PRGRMM_ASSGNMNT
+admin.site.register(RTNG_AGNCY_EXCSS_MTHDLGY_CVRD_BND_PRGRMM_ASSGNMNT)
 from .bird_data_model import RTNG_GRD
 admin.site.register(RTNG_GRD)
+from .bird_data_model import RTNG_GRD_CNTRL_BNK_PRVT_SCTR_CMPN_ASSGNMNT
+admin.site.register(RTNG_GRD_CNTRL_BNK_PRVT_SCTR_CMPN_ASSGNMNT)
 from .bird_data_model import RTNG_GRD_CNTRY_ASSGNMNT
 admin.site.register(RTNG_GRD_CNTRY_ASSGNMNT)
 from .bird_data_model import RTNG_GRD_ISS_BSD_RTNG_SYSTM
@@ -946,8 +1051,6 @@ from .bird_data_model import RTNG_GRD_ISSR_BSD_RTNG_SYSTM_CNTRL_GVRNMNT
 admin.site.register(RTNG_GRD_ISSR_BSD_RTNG_SYSTM_CNTRL_GVRNMNT)
 from .bird_data_model import RTNG_GRD_ISSR_BSD_RTNG_SYSTM_NN_CNTRL_GVRNMNT
 admin.site.register(RTNG_GRD_ISSR_BSD_RTNG_SYSTM_NN_CNTRL_GVRNMNT)
-from .bird_data_model import RTNG_GRD_OTHR_ORGNSTN_ASSGNMNT
-admin.site.register(RTNG_GRD_OTHR_ORGNSTN_ASSGNMNT)
 from .bird_data_model import RTNG_SYSTM
 admin.site.register(RTNG_SYSTM)
 from .bird_data_model import RTNG_SYSTM_APPLD_LGL_PRSN
@@ -976,6 +1079,8 @@ from .bird_data_model import RPRTNG_AGNT_INTRNL_GRP_RL
 admin.site.register(RPRTNG_AGNT_INTRNL_GRP_RL)
 from .bird_data_model import RPRCHS_AGRMNT_BYR_ASSGNMNT
 admin.site.register(RPRCHS_AGRMNT_BYR_ASSGNMNT)
+from .bird_data_model import RPRCHS_AGRMNT_CSH_LG
+admin.site.register(RPRCHS_AGRMNT_CSH_LG)
 from .bird_data_model import RPRCHS_AGRMNT_CMPNNT
 admin.site.register(RPRCHS_AGRMNT_CMPNNT)
 from .bird_data_model import RPRCHS_AGRMNT_INSTRMNT
@@ -986,6 +1091,14 @@ from .bird_data_model import RSDNTL_RL_ESTT_CLLTRL
 admin.site.register(RSDNTL_RL_ESTT_CLLTRL)
 from .bird_data_model import RSTRCTRNG
 admin.site.register(RSTRCTRNG)
+from .bird_data_model import RVRS_RPRCHS_AGRMNT_CSH_LG
+admin.site.register(RVRS_RPRCHS_AGRMNT_CSH_LG)
+from .bird_data_model import RVRS_RPRCHS_AGRMNT_LN
+admin.site.register(RVRS_RPRCHS_AGRMNT_LN)
+from .bird_data_model import RVRS_RPRCHS_AGRMNT_LN_CRDTR_ASSGNMNT
+admin.site.register(RVRS_RPRCHS_AGRMNT_LN_CRDTR_ASSGNMNT)
+from .bird_data_model import RVRS_RPRCHS_AGRMNT_LN_DBTR_ASSGNMNT
+admin.site.register(RVRS_RPRCHS_AGRMNT_LN_DBTR_ASSGNMNT)
 from .bird_data_model import RSK_FAC_SA
 admin.site.register(RSK_FAC_SA)
 from .bird_data_model import KB_PR_BCKT
@@ -994,6 +1107,8 @@ from .bird_data_model import RLLNG_STCK_CLLTRL
 admin.site.register(RLLNG_STCK_CLLTRL)
 from .bird_data_model import SFT
 admin.site.register(SFT)
+from .bird_data_model import SFT_DRVD_DT
+admin.site.register(SFT_DRVD_DT)
 from .bird_data_model import SCRTSTN
 admin.site.register(SCRTSTN)
 from .bird_data_model import SCRTSN_OTHR_CRDT_TRNSFR
@@ -1008,6 +1123,8 @@ from .bird_data_model import SCRTSTN_TRNCH
 admin.site.register(SCRTSTN_TRNCH)
 from .bird_data_model import SCRTY
 admin.site.register(SCRTY)
+from .bird_data_model import SCRTY_SCRTY_CLLTRL_LNDNG_CMPNNT
+admin.site.register(SCRTY_SCRTY_CLLTRL_LNDNG_CMPNNT)
 from .bird_data_model import SCRTY_AGNST_F_BRRWNG_LNDNG_TRNSCTN
 admin.site.register(SCRTY_AGNST_F_BRRWNG_LNDNG_TRNSCTN)
 from .bird_data_model import SCRTY_AGNST_SCRTY_BRRWNG_LNDNG_TRNSCTN
@@ -1028,8 +1145,16 @@ from .bird_data_model import SCRTY_BRRWNG_LNDNG_TRNSCTN_LNDR_ASSGNMNT
 admin.site.register(SCRTY_BRRWNG_LNDNG_TRNSCTN_LNDR_ASSGNMNT)
 from .bird_data_model import SCRTY_BRRWNG_CMPNNT
 admin.site.register(SCRTY_BRRWNG_CMPNNT)
+from .bird_data_model import SCRTY_BRRWNG_CMPNNT_SCRTY_CLLTRL_ASSGNMNT
+admin.site.register(SCRTY_BRRWNG_CMPNNT_SCRTY_CLLTRL_ASSGNMNT)
 from .bird_data_model import SCRTY_CLLTRL
 admin.site.register(SCRTY_CLLTRL)
+from .bird_data_model import SCRTY_CLLTRL_LNDNG_CMPNNT
+admin.site.register(SCRTY_CLLTRL_LNDNG_CMPNNT)
+from .bird_data_model import SCRTY_CLLTRL_LNDNG_CMPNNT_SCRTY_CLLTRL_ASSGNMNT
+admin.site.register(SCRTY_CLLTRL_LNDNG_CMPNNT_SCRTY_CLLTRL_ASSGNMNT)
+from .bird_data_model import SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT
+admin.site.register(SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT)
 from .bird_data_model import SCRTY_DBTR
 admin.site.register(SCRTY_DBTR)
 from .bird_data_model import SCRTY_DRVD_DT
@@ -1042,6 +1167,8 @@ from .bird_data_model import SCRTY_LG
 admin.site.register(SCRTY_LG)
 from .bird_data_model import SCRTY_LNDNG_CMPNNT
 admin.site.register(SCRTY_LNDNG_CMPNNT)
+from .bird_data_model import SCRTY_LNDNG_CMPNNT_SCRTY_ASSGNMNT
+admin.site.register(SCRTY_LNDNG_CMPNNT_SCRTY_ASSGNMNT)
 from .bird_data_model import SCRTY_EXCHNG_TRDBL_DRVTV_PSTN
 admin.site.register(SCRTY_EXCHNG_TRDBL_DRVTV_PSTN)
 from .bird_data_model import SCRTY_PSTN
@@ -1052,8 +1179,10 @@ from .bird_data_model import SCRTY_HDGD_EXCHNG_TRDBL_DRVTV
 admin.site.register(SCRTY_HDGD_EXCHNG_TRDBL_DRVTV)
 from .bird_data_model import SCRTY_PSTN_HDGD_OTC_DRVTV
 admin.site.register(SCRTY_PSTN_HDGD_OTC_DRVTV)
-from .bird_data_model import SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT
-admin.site.register(SCRTY_SCRTY_RPRCHS_AGRMNT_CMPNNT_ASSGNMNT)
+from .bird_data_model import SCRTY_PSTN_IFRS
+admin.site.register(SCRTY_PSTN_IFRS)
+from .bird_data_model import SCRTY_PSTN_NGAAP
+admin.site.register(SCRTY_PSTN_NGAAP)
 from .bird_data_model import SLF_EMPLYD_NTRL_PRSN
 admin.site.register(SLF_EMPLYD_NTRL_PRSN)
 from .bird_data_model import SLLR
@@ -1078,6 +1207,8 @@ from .bird_data_model import SHRT_SCRTY_PSTN_TRDNG_BK_IFRS
 admin.site.register(SHRT_SCRTY_PSTN_TRDNG_BK_IFRS)
 from .bird_data_model import SHRT_SCRTY_PSTN_TRDNG_BK_NGAAP
 admin.site.register(SHRT_SCRTY_PSTN_TRDNG_BK_NGAAP)
+from .bird_data_model import SGNFCNT_CRRNCY_DPRCTN_CNTNGNT_ENCMBRNC
+admin.site.register(SGNFCNT_CRRNCY_DPRCTN_CNTNGNT_ENCMBRNC)
 from .bird_data_model import SGNFCNT_RSK_TRNSFR_SCRTSTN
 admin.site.register(SGNFCNT_RSK_TRNSFR_SCRTSTN)
 from .bird_data_model import SGNFCNT_RSK_TRNSFR_SCRTSTN_DRVD_DT
@@ -1086,14 +1217,14 @@ from .bird_data_model import SNGL_FNNCL_CNTRCT
 admin.site.register(SNGL_FNNCL_CNTRCT)
 from .bird_data_model import SFTWR_CLLTRL
 admin.site.register(SFTWR_CLLTRL)
-from .bird_data_model import SFTWR_CLLTRL_SFTWR_PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT
-admin.site.register(SFTWR_CLLTRL_SFTWR_PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT)
-from .bird_data_model import SFTWR_CLLTRL_SFTWR_PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT
-admin.site.register(SFTWR_CLLTRL_SFTWR_PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT)
-from .bird_data_model import SFTWR_PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT
-admin.site.register(SFTWR_PPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT)
-from .bird_data_model import SFTWR_PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT
-admin.site.register(SFTWR_PPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT)
+from .bird_data_model import SFTWR_CLLTRL_SFTWR_PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT
+admin.site.register(SFTWR_CLLTRL_SFTWR_PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT)
+from .bird_data_model import SFTWR_CLLTRL_SFTWR_PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT
+admin.site.register(SFTWR_CLLTRL_SFTWR_PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT)
+from .bird_data_model import SFTWR_PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT
+admin.site.register(SFTWR_PRPRTY_PLNT_EQPMNT_NT_TKN_INT_PSSSSN_ASSGNMNT)
+from .bird_data_model import SFTWR_PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT
+admin.site.register(SFTWR_PRPRTY_PLNT_EQPMNT_TKN_INT_PSSSSN_ASSGNMNT)
 from .bird_data_model import SPNSR
 admin.site.register(SPNSR)
 from .bird_data_model import STT_LCL_GVRNMNT_SCL_SCRTY_FNDS
@@ -1118,6 +1249,10 @@ from .bird_data_model import SYNDCTD_CNTRCT
 admin.site.register(SYNDCTD_CNTRCT)
 from .bird_data_model import SYNDCTD_FNNCL_CNTRCT_MMBR
 admin.site.register(SYNDCTD_FNNCL_CNTRCT_MMBR)
+from .bird_data_model import SNDCTD_CNTRCT_SB_PRTCPTN_MMBR_INSTRMNT
+admin.site.register(SNDCTD_CNTRCT_SB_PRTCPTN_MMBR_INSTRMNT)
+from .bird_data_model import SNDCTD_CNTRCT_NN_SB_PRTCPTN_MMBR_INSTRMNT_PMNT_AGNT_ASSGNMNT
+admin.site.register(SNDCTD_CNTRCT_NN_SB_PRTCPTN_MMBR_INSTRMNT_PMNT_AGNT_ASSGNMNT)
 from .bird_data_model import SNTHTC_SCRTSTN
 admin.site.register(SNTHTC_SCRTSTN)
 from .bird_data_model import SYNTHTC_SCRTSTN_SSPE
@@ -1154,20 +1289,24 @@ from .bird_data_model import TRNCH_TRDTNL_SCRTSTN
 admin.site.register(TRNCH_TRDTNL_SCRTSTN)
 from .bird_data_model import TRNSFRBL_DPST
 admin.site.register(TRNSFRBL_DPST)
+from .bird_data_model import TRNSFRBL_DPST_DRVD_DT
+admin.site.register(TRNSFRBL_DPST_DRVD_DT)
 from .bird_data_model import TRNSFRD_ASST_LG
 admin.site.register(TRNSFRD_ASST_LG)
+from .bird_data_model import TRNSFRRD_ASST_LG_INSTRMNT_ASSGNMNT
+admin.site.register(TRNSFRRD_ASST_LG_INSTRMNT_ASSGNMNT)
 from .bird_data_model import TRNST_ITM
 admin.site.register(TRNST_ITM)
 from .bird_data_model import VG_SNSTVTY
 admin.site.register(VG_SNSTVTY)
+from .bird_data_model import Balance_sheet_recognised_exchange_tradable_derivative_asset_position_type
+admin.site.register(Balance_sheet_recognised_exchange_tradable_derivative_asset_position_type)
+from .bird_data_model import Balance_sheet_recognised_exchange_tradable_derivative_asset_position_by_accounting_standard
+admin.site.register(Balance_sheet_recognised_exchange_tradable_derivative_asset_position_by_accounting_standard)
 from .bird_data_model import Balance_sheet_recognised_financial_asset_instrument_type
 admin.site.register(Balance_sheet_recognised_financial_asset_instrument_type)
 from .bird_data_model import Balance_sheet_recognised_financial_asset_instrument_by_fair_value_type
 admin.site.register(Balance_sheet_recognised_financial_asset_instrument_by_fair_value_type)
-from .bird_data_model import Balance_sheet_recognised_financial_liability_instrument_type
-admin.site.register(Balance_sheet_recognised_financial_liability_instrument_type)
-from .bird_data_model import Balance_sheet_recognised_financial_liability_instrument_accounting_standard
-admin.site.register(Balance_sheet_recognised_financial_liability_instrument_accounting_standard)
 from .bird_data_model import Central_bank_and_private_sector_company_type
 admin.site.register(Central_bank_and_private_sector_company_type)
 from .bird_data_model import Listed_central_bank_and_private_sector_company_indicator
@@ -1192,10 +1331,6 @@ from .bird_data_model import Debt_security_issued_type
 admin.site.register(Debt_security_issued_type)
 from .bird_data_model import Debt_security_issued_prudential_portfolio_type
 admin.site.register(Debt_security_issued_prudential_portfolio_type)
-from .bird_data_model import Entity_role_typev1
-admin.site.register(Entity_role_typev1)
-from .bird_data_model import Entity_role_type
-admin.site.register(Entity_role_type)
 from .bird_data_model import Financial_asset_instrument_type_by_renegotiation_status
 admin.site.register(Financial_asset_instrument_type_by_renegotiation_status)
 from .bird_data_model import Financial_asset_instrument_type_by_fixed_interest_rate
@@ -1216,6 +1351,10 @@ from .bird_data_model import Instrument_type_by_origin
 admin.site.register(Instrument_type_by_origin)
 from .bird_data_model import Instrument_type_by_product
 admin.site.register(Instrument_type_by_product)
+from .bird_data_model import Loan_type
+admin.site.register(Loan_type)
+from .bird_data_model import Syndication_or_sub_participation_member_instrument_indicator
+admin.site.register(Syndication_or_sub_participation_member_instrument_indicator)
 from .bird_data_model import Long_security_position_type
 admin.site.register(Long_security_position_type)
 from .bird_data_model import Negotiable_security_position_indicator
@@ -1232,10 +1371,6 @@ from .bird_data_model import Party_type_by_address
 admin.site.register(Party_type_by_address)
 from .bird_data_model import Party_type
 admin.site.register(Party_type)
-from .bird_data_model import Property_plant_and_equipment_type
-admin.site.register(Property_plant_and_equipment_type)
-from .bird_data_model import Software_assets_indicator
-admin.site.register(Software_assets_indicator)
 from .bird_data_model import Rating_system_type_by_nature_Grade_vs_Numeric
 admin.site.register(Rating_system_type_by_nature_Grade_vs_Numeric)
 from .bird_data_model import Rating_system_type_by_target_Issue_vs_Issuer_based
@@ -1256,3 +1391,7 @@ from .bird_data_model import Security_borrowing_and_lending_transaction_componen
 admin.site.register(Security_borrowing_and_lending_transaction_component_type_by_Security_type)
 from .bird_data_model import Security_borrowing_and_lending_transaction_component_type_by_direction
 admin.site.register(Security_borrowing_and_lending_transaction_component_type_by_direction)
+from .bird_data_model import Security_position_type
+admin.site.register(Security_position_type)
+from .bird_data_model import Security_position_by_accounting_standard
+admin.site.register(Security_position_by_accounting_standard)
