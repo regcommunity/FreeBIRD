@@ -38,11 +38,6 @@ INSERT INTO pybirdai_prty(rowid,test_id,PRTY_uniqueID,INSTTTNL_SCTR,PRTY_ACCNTNG
 INSERT INTO pybirdai_prty(rowid,test_id,PRTY_uniqueID,INSTTTNL_SCTR,PRTY_ACCNTNG_CNSLDTN_LVL,PRTY_ACCNTNG_STNDRD,PRTY_ID,PRTY_RFRNC_DT,PRTY_RPRTNG_AGNT_ID,PRTY_TYP,PRTY_TYP_ADDRS,ECNMC_ACTVTY,Party_type_by_address_delegate_id,Party_type_delegate_id,Party_has_Party_derived_data_id,Party_has_Party_risk_data_id) VALUES(3,'1','63829150_2018-09-30_BLZ10','S122_A_1','1','2','63829150','2018-09-30 12:00:00','BLZ10','31','7',NULL,NULL,NULL,NULL,NULL);
 INSERT INTO pybirdai_prty_rl(rowid,entty_trnsctn_rl_ptr_id,PRTY_ACCNTNG_CNSLDTN_LVL,PRTY_ACCNTNG_STNDRD,PRTY_ID,PRTY_RFRNC_DT,PRTY_RPRTNG_AGNT_ID,PRTY_RL_TYP,Party_acts_in_Party_role_id) VALUES(1,'78451209_2018-09-30_BLZ10','1','2','78451209','2018-09-30 00:00:00','BLZ10','28','78451209_2018-09-30_BLZ10');
 INSERT INTO pybirdai_prty_rl(rowid,entty_trnsctn_rl_ptr_id,PRTY_ACCNTNG_CNSLDTN_LVL,PRTY_ACCNTNG_STNDRD,PRTY_ID,PRTY_RFRNC_DT,PRTY_RPRTNG_AGNT_ID,PRTY_RL_TYP,Party_acts_in_Party_role_id) VALUES(2,'BLZ10_2018-09-30_BLZ10','1','2','BLZ10','2018-09-30 00:00:00','BLZ10','17','BLZ10_2018-09-30_BLZ10');
-UPDATE pybirdai_blnc_sht_rcgnsd_fnncl_asst_instrmnt SET Balance_sheet_recognised_financial_asset_instrument_type_delegate_id=NULL WHERE rowid=1;
-DELETE FROM pybirdai_financial_asset_instrument_type_by_crr_article_123_retail_exposure WHERE rowid=1;
-DELETE FROM pybirdai_financial_asset_instrument_type_by_fixed_interest_rate WHERE rowid=1;
-DELETE FROM pybirdai_financial_asset_instrument_type_by_interest_rate_only WHERE rowid=1;
-DELETE FROM pybirdai_financial_asset_instrument_type_by_renegotiation_status WHERE rowid=1;
 UPDATE pybirdai_blnc_sht_rcgnsd_fnncl_asst_instrmnt SET Balance_sheet_recognised_financial_asset_instrument_type_delegate_id='123321_2018-09-30_BLZ10' WHERE rowid=1;
 INSERT INTO pybirdai_financial_asset_instrument_type_by_crr_article_123_retail_exposure(rowid,test_id,Financial_asset_instrument_type_by_CRR_Article_123_Retail_exposure_uniqueID) VALUES(1,'1','123321_2018-09-30_BLZ10');
 INSERT INTO pybirdai_financial_asset_instrument_type_by_fixed_interest_rate(rowid,test_id,Financial_asset_instrument_type_by_fixed_interest_rate_uniqueID) VALUES(1,'1','123321_2018-09-30_BLZ10');
