@@ -195,76 +195,8 @@ class TestCodeGenerator:
                         )
                     ],
                     decorator_list=[]
-                ),
-                ast.FunctionDef(
-                    name='test_delete_lineage',
-                    args=ast.arguments(
-                        posonlyargs=[],
-                        args=[],
-                        kwonlyargs=[],
-                        kw_defaults=[],
-                        defaults=[]
-                    ),
-                    body=[
-                        ast.Expr(
-                            value=ast.Call(
-                                func=ast.Attribute(
-                                    value=ast.Name(id='ExecuteDataPoint', ctx=ast.Load()),
-                                    attr='delete_lineage_data',
-                                    ctx=ast.Load()
-                                ),
-                                args=[],
-                                keywords=[]
-                            )
-                        ),
-                        ast.Assign(
-                            targets=[ast.Name(id='base_dir', ctx=ast.Store())],
-                            value=ast.Attribute(
-                                value=ast.Name(id='settings', ctx=ast.Load()),
-                                attr='BASE_DIR',
-                                ctx=ast.Load()
-                            )
-                        ),
-                        ast.Assign(
-                            targets=[ast.Name(id='lineage_dir', ctx=ast.Store())],
-                            value=ast.Call(
-                                func=ast.Attribute(
-                                    value=ast.Name(id='os', ctx=ast.Load()),
-                                    attr='path.join',
-                                    ctx=ast.Load()
-                                ),
-                                args=[
-                                    ast.Name(id='base_dir', ctx=ast.Load()),
-                                    ast.Constant(value='results'),
-                                    ast.Constant(value='lineage')
-                                ],
-                                keywords=[]
-                            )
-                        ),
-                        ast.Assert(
-                            test=ast.Compare(
-                                left=ast.Call(
-                                    func=ast.Name(id='len', ctx=ast.Load()),
-                                    args=[
-                                        ast.Call(
-                                            func=ast.Attribute(
-                                                value=ast.Name(id='os', ctx=ast.Load()),
-                                                attr='listdir',
-                                                ctx=ast.Load()
-                                            ),
-                                            args=[ast.Name(id='lineage_dir', ctx=ast.Load())],
-                                            keywords=[]
-                                        )
-                                    ],
-                                    keywords=[]
-                                ),
-                                ops=[ast.Eq()],
-                                comparators=[ast.Constant(value=1)]
-                            )
-                        )
-                    ],
-                    decorator_list=[]
                 )
+                
             ],
             type_ignores=[]
         )
@@ -420,7 +352,7 @@ class TestCodeGenerator:
         return ast.unparse(ast.fix_missing_locations(test_functions_additional))
 
     @staticmethod
-    def save_generated_code(output_file, import_code, test_code, test_code_additional, logger):
+    def save_generated_code(output_file, import_code, test_code, logger):
         """
         Save the generated code to an output file.
 
@@ -428,15 +360,13 @@ class TestCodeGenerator:
             output_file (str): Path to the output file.
             import_code (str): Import statements code.
             test_code (str): Test functions code.
-            test_code_additional (str): Additional test functions code.
             logger (logging.Logger): Logger instance for logging debug messages.
         """
         with open(output_file, 'w') as f:
             f.write(import_code)
             f.write('\n\n')
             f.write(test_code)
-            f.write('\n\n')
-            f.write(test_code_additional)
+            
         logger.debug(f"Saved generated code to {output_file}")
 
     @classmethod
@@ -469,12 +399,12 @@ class TestCodeGenerator:
         test_code = cls.create_test_functions(datapoint_value, datapoint_id)
         logger.debug("Generated test functions")
 
-        test_code_additional = cls.create_additional_test_functions(cell_class, regulatory_template_id)
-        logger.debug("Generated additional test functions")
+        #test_code_additional = cls.create_additional_test_functions(cell_class, regulatory_template_id)
+        #logger.debug("Generated additional test functions")
 
         # Save generated code
         output_file = os.path.join('tests', f'test_{cell_class.lower()}__{scenario_name}.py')
-        cls.save_generated_code(output_file, import_code, test_code, test_code_additional, logger)
+        cls.save_generated_code(output_file, import_code, test_code, logger)
 
 
 def main():

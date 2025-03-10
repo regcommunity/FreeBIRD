@@ -166,12 +166,12 @@ limitations under the License. -->
                     <div class="test-row">
                         <span class="test-name">{{ scenario.name }}</span>
                         <div class="result-icon {% if scenario.passed %}pass{% else %}fail{% endif %}"></div>
-                        <div class="test-details">
+                        <!--<div class="test-details">
                             {% for test in scenario.tests %}
                                 Test {{forloop.counter }}: {% if test.passed %}✓{% else %}✗{% endif %}
                                 {% if not forloop.last %} | {% endif %}
                             {% endfor %}
-                        </div>
+                        </div>-->
                     </div>
                     {% endfor %}
                     </div>

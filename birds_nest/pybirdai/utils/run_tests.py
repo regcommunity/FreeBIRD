@@ -23,6 +23,7 @@ import typing
 from datetime import datetime
 from logger_factory import return_logger, Path
 from constants import *
+import glob
 
 # Configure logger for this module
 logger = return_logger(str(Path(__file__).resolve()).rsplit("/",1)[-1])
@@ -215,7 +216,7 @@ class RegulatoryTemplateTestRunner:
             use_uv: Whether to use UV as backend
         """
         # Set up paths
-        test_data_scenario_path = f"tests/fixtures/templates/{reg_tid}/{dp_suffix}/"
+        test_data_scenario_path = f"tests/fixtures/templates/{reg_tid}/{dp_suffix}"
         test_data_sql_path = f"{test_data_scenario_path}/{scenario_path}/"
         txt_path_stub, json_path_stub = self.get_file_paths(reg_tid, dp_suffix)
 
@@ -381,6 +382,16 @@ class RegulatoryTemplateTestRunner:
         Main entry point for the test runner.
         Determines whether to run from config file or command line arguments.
         """
+        # clear old results
+        old_txt_files = glob.glob(os.path.join(TEST_RESULTS_TXT_FOLDER, "*.txt"))
+        old_json_files = glob.glob(os.path.join(TEST_RESULTS_JSON_FOLDER, "*.json"))
+
+        for file_path in old_txt_files + old_json_files:
+            try:
+                os.remove(file_path)                
+            except Exception as e:
+                logger.error(f"Failed to delete file {file_path}: {str(e)}")
+    
         # Check if running from config file
         if self.args.config_file:
             self.run_tests_from_config(self.args.config_file, eval(self.args.uv))
