@@ -74,3 +74,9 @@ INSERT INTO pybirdai_nn_rtl_expsr_fnncl_asst_instrmnt(rowid,financial_asset_inst
 INSERT INTO pybirdai_nt_pst_du_fnncl_asst_instrmnt(rowid,past_due_financial_asset_instrument_indicator_ptr_id) VALUES(1,'123321_2018-09-30_BLZ10');
 INSERT INTO pybirdai_past_due_financial_asset_instrument_indicator(rowid,test_id,Past_due_financial_asset_instrument_indicator_uniqueID) VALUES(1,'1','123321_2018-09-30_BLZ10');
 INSERT INTO pybirdai_prfrmng_nn_rtl_expsr_clss_fnncl_asst_instrmnt(rowid,nn_rtl_expsr_fnncl_asst_instrmnt_ptr_id,PRFRMNG_FRBRN_EXPSR_UNDR_PRBTN_RCLSSFD_NN_PRFRMNG_INDCTR) VALUES(1,'123321_2018-09-30_BLZ10',NULL);
+UPDATE pybirdai_prty SET INSTTTNL_SCTR='S122_A', ECNMC_ACTVTY='64_1', Party_type_delegate_id='BLZ10_2018-09-30_BLZ10', Party_has_Party_derived_data_id='BLZ10_2018-09-30_BLZ10', Party_has_Party_risk_data_id='BLZ10_2018-09-30_BLZ10' WHERE rowid=1;
+UPDATE pybirdai_prty SET INSTTTNL_SCTR='S11', ECNMC_ACTVTY='23_32', Party_type_delegate_id='78451209_2018-09-30_BLZ10', Party_has_Party_derived_data_id='78451209_2018-09-30_BLZ10', Party_has_Party_risk_data_id='78451209_2018-09-30_BLZ10' WHERE rowid=2;
+UPDATE pybirdai_prty SET INSTTTNL_SCTR='S11', ECNMC_ACTVTY='23_32', Party_type_delegate_id='63829150_2018-09-30_BLZ10', Party_has_Party_derived_data_id='63829150_2018-09-30_BLZ10', Party_has_Party_risk_data_id='63829150_2018-09-30_BLZ10' WHERE rowid=3;
+UPDATE pybirdai_prty_drvd_dt SET INSTTNL_SCTR_EBA_ITS='S11', INSTTNL_SCTR_SHS='S11' WHERE rowid=1;
+UPDATE pybirdai_prty_drvd_dt SET INSTTNL_SCTR_EBA_ITS='S122_A', INSTTNL_SCTR_SHS='S122_A' WHERE rowid=2;
+UPDATE pybirdai_prty_drvd_dt SET INSTTNL_SCTR_EBA_ITS='S11', INSTTNL_SCTR_SHS='S11' WHERE rowid=3;
