@@ -79,31 +79,31 @@ class F_05_01_REF_FINREP_3_0_UnionTable :
 	F_05_01_REF_FINREP_3_0_Advances_that_are_not_loans_Table = None # Advances_that_are_not_loans
 	def calc_F_05_01_REF_FINREP_3_0_UnionItems(self) -> list[F_05_01_REF_FINREP_3_0_UnionItem] :
 		items = [] # F_05_01_REF_FINREP_3_0_UnionItem []
-		for item in F_05_01_REF_FINREP_3_0_Other_Loans_Table.Other_Loanss:
+		for item in self.F_05_01_REF_FINREP_3_0_Other_Loans_Table.Other_Loanss:
 			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
 			newItem.base = item
 			items.append(newItem)
-		for item in F_05_01_REF_FINREP_3_0_Non_Negotiable_bonds_Table.Non_Negotiable_bondss:
+		for item in self.F_05_01_REF_FINREP_3_0_Non_Negotiable_bonds_Table.Non_Negotiable_bondss:
 			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
 			newItem.base = item
 			items.append(newItem)
-		for item in F_05_01_REF_FINREP_3_0_Credit_card_debt_Table.Credit_card_debts:
+		for item in self.F_05_01_REF_FINREP_3_0_Credit_card_debt_Table.Credit_card_debts:
 			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
 			newItem.base = item
 			items.append(newItem)
-		for item in F_05_01_REF_FINREP_3_0_Trade_receivables_Table.Trade_receivabless:
+		for item in self.F_05_01_REF_FINREP_3_0_Trade_receivables_Table.Trade_receivabless:
 			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
 			newItem.base = item
 			items.append(newItem)
-		for item in F_05_01_REF_FINREP_3_0_Finance_leases_Table.Finance_leasess:
+		for item in self.F_05_01_REF_FINREP_3_0_Finance_leases_Table.Finance_leasess:
 			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
 			newItem.base = item
 			items.append(newItem)
-		for item in F_05_01_REF_FINREP_3_0_Reverse_repurchase_agreements_Table.Reverse_repurchase_agreementss:
+		for item in self.F_05_01_REF_FINREP_3_0_Reverse_repurchase_agreements_Table.Reverse_repurchase_agreementss:
 			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
 			newItem.base = item
 			items.append(newItem)
-		for item in F_05_01_REF_FINREP_3_0_Advances_that_are_not_loans_Table.Advances_that_are_not_loanss:
+		for item in self.F_05_01_REF_FINREP_3_0_Advances_that_are_not_loans_Table.Advances_that_are_not_loanss:
 			newItem = F_05_01_REF_FINREP_3_0_UnionItem()
 			newItem.base = item
 			items.append(newItem)
@@ -111,6 +111,7 @@ class F_05_01_REF_FINREP_3_0_UnionTable :
 
 	def init(self):
 		Orchestration().init(self)
+		self.F_05_01_REF_FINREP_3_0_UnionItems = []
 		self.F_05_01_REF_FINREP_3_0_UnionItems.extend(self.calc_F_05_01_REF_FINREP_3_0_UnionItems())
 		CSVConverter.persist_object_as_csv(self,True)
 		return None
@@ -261,6 +262,7 @@ class F_05_01_REF_FINREP_3_0_Other_Loans_Table:
 
 	def init(self):
 		Orchestration().init(self)
+		self.Other_Loanss = []
 		self.Other_Loanss.extend(self.calc_Other_Loanss())
 		CSVConverter.persist_object_as_csv(self,True)
 		return None
@@ -277,6 +279,7 @@ class F_05_01_REF_FINREP_3_0_Non_Negotiable_bonds_Table:
 		return items
 	def init(self):
 		Orchestration().init(self)
+		self.Non_Negotiable_bondss = []
 		self.Non_Negotiable_bondss.extend(self.calc_Non_Negotiable_bondss())
 		CSVConverter.persist_object_as_csv(self,True)
 		return None
@@ -292,6 +295,7 @@ class F_05_01_REF_FINREP_3_0_Credit_card_debt_Table:
 		return items
 	def init(self):
 		Orchestration().init(self)
+		self.Credit_card_debts = []
 		self.Credit_card_debts.extend(self.calc_Credit_card_debts())
 		CSVConverter.persist_object_as_csv(self,True)
 		return None
@@ -308,6 +312,7 @@ class F_05_01_REF_FINREP_3_0_Trade_receivables_Table:
 		return items
 	def init(self):
 		Orchestration().init(self)
+		self.Trade_receivabless = []
 		self.Trade_receivabless.extend(self.calc_Trade_receivabless())
 		CSVConverter.persist_object_as_csv(self,True)
 		return None
@@ -323,6 +328,7 @@ class F_05_01_REF_FINREP_3_0_Finance_leases_Table:
 		return items
 	def init(self):
 		Orchestration().init(self)
+		self.Finance_leasess = []
 		self.Finance_leasess.extend(self.calc_Finance_leasess())
 		CSVConverter.persist_object_as_csv(self,True)
 		return None
@@ -339,6 +345,7 @@ class F_05_01_REF_FINREP_3_0_Reverse_repurchase_agreements_Table:
 		return items
 	def init(self):
 		Orchestration().init(self)
+		self.Reverse_repurchase_agreementss = []
 		self.Reverse_repurchase_agreementss.extend(self.calc_Reverse_repurchase_agreementss())
 		CSVConverter.persist_object_as_csv(self,True)
 		return None
@@ -355,6 +362,7 @@ class F_05_01_REF_FINREP_3_0_Advances_that_are_not_loans_Table:
 		return items
 	def init(self):
 		Orchestration().init(self)
+		self.Advances_that_are_not_loanss = []
 		self.Advances_that_are_not_loanss.extend(self.calc_Advances_that_are_not_loanss())
 		CSVConverter.persist_object_as_csv(self,True)
 		return None

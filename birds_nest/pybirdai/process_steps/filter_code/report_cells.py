@@ -74,6 +74,7 @@ class Cell_F_05_01_REF_FINREP_3_0_152457_REF:
 				self.F_05_01_REF_FINREP_3_0s.append(item)
 	def init(self):
 		Orchestration().init(self)
+		self.F_05_01_REF_FINREP_3_0s = []
 		self.calc_referenced_items()
 		return None
 
@@ -174,5 +175,6 @@ class Cell_F_05_01_REF_FINREP_3_0_152589_REF:
 				self.F_05_01_REF_FINREP_3_0s.append(item)
 	def init(self):
 		Orchestration().init(self)
+		self.F_05_01_REF_FINREP_3_0s = []
 		self.calc_referenced_items()
 		return None
