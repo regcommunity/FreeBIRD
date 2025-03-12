@@ -49,6 +49,7 @@ class F_05_01_REF_FINREP_3_0:
 	def CRRYNG_AMNT(self) -> int:
 		return self.unionOfLayers.CRRYNG_AMNT()
 
+
 class F_05_01_REF_FINREP_3_0_Table :
 	F_05_01_REF_FINREP_3_0_UnionTable = None # unionOfLayersTable
 	F_05_01_REF_FINREP_3_0s = [] #F_05_01_REF_FINREP_3_0[]
@@ -61,6 +62,7 @@ class F_05_01_REF_FINREP_3_0_Table :
 		return items
 	def init(self):
 		Orchestration().init(self)
+		self.F_05_01_REF_FINREP_3_0s = []
 		self.F_05_01_REF_FINREP_3_0s.extend(self.calc_F_05_01_REF_FINREP_3_0s())
 		CSVConverter.persist_object_as_csv(self,True)
 		return None
