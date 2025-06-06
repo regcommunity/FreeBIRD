@@ -1,0 +1,486 @@
+entity_name,arc_name,relation_name,target_entity_name
+Accounting classification,Accounting classification type,Hierarchy_282,Accounting classification for financial liabilities
+Accounting classification,Accounting classification type,Hierarchy_281,Accounting classification for financial assets
+Address (used for reporting),Address type,Hierarchy_532,European Union member address
+Address (used for reporting),Address type,Hierarchy_533,Non-European Union member address
+Address (used for reporting),Address type,Hierarchy_534,No registered Postal Code system address
+Advance,Advance type,Hierarchy_75,Suspense item
+Advance,Advance type,Hierarchy_76,Transit item
+Advance,Advance type,Hierarchy_77,Other advance
+Asset pool (subject to a Securitisation and other credit transfer),Asset pool (subject to securitisation and other credit transfer) type,Hierarchy_275,Asset pool (subject to a Covered bond programme)
+Asset pool (subject to a Securitisation and other credit transfer),Asset pool (subject to securitisation and other credit transfer) type,Hierarchy_277,Asset pool (subject to a credit transfer other than securitisation and covered bond programme)
+Asset pool (subject to a Securitisation and other credit transfer),Asset pool (subject to securitisation and other credit transfer) type,Hierarchy_276,Asset pool (subject to a Securitisation)
+Asset pool Instrument assignment,Asset pool Instrument assignment type,Hierarchy_702,Asset pool Equity instrument that is not a security assignment
+Asset pool Instrument assignment,Asset pool Instrument assignment type,Hierarchy_703,Asset pool Loan (excluding repurchase agreement) assignment
+Asset pool Instrument assignment,Asset pool Instrument assignment type,Hierarchy_701v1,Asset pool Over the counter (OTC) Derivative instrument assignment
+Balance sheet recognised exchange tradable derivative asset position,Balance sheet recognised exchange tradable derivative asset position type,Hierarchy_576,Fair-valued balance sheet recognised exchange tradable derivative asset position
+Balance sheet recognised exchange tradable derivative asset position,Balance sheet recognised exchange tradable derivative asset position type,Hierarchy_577v1,Non-fair-valued balance sheet recognised exchange tradable derivative asset position
+Balance sheet recognised exchange tradable derivative asset position,Balance sheet recognised exchange tradable derivative asset position by accounting standard,Hierarchy_697,Balance sheet recognised exchange tradable derivative asset position International Financial Reporting Standard (IFRS)
+Balance sheet recognised exchange tradable derivative asset position,Balance sheet recognised exchange tradable derivative asset position by accounting standard,Hierarchy_698,Balance sheet recognised exchange tradable derivative asset position national general accepted accounting principles (nGAAP)
+Balance sheet recognised exchange tradable derivative liability position,Balance sheet recognised exchange tradable derivative liability position type,Hierarchy_596,Fair-valued balance sheet recognised exchange tradable derivative liability position
+Balance sheet recognised exchange tradable derivative liability position,Balance sheet recognised exchange tradable derivative liability position type,Hierarchy_513,Non-fair-valued balance sheet recognised exchange tradable derivative liability position
+Balance sheet recognised financial asset instrument,Balance sheet recognised financial asset instrument type,Hierarchy_392,Balance sheet recognised financial asset instrument according to national general accepted accounting principles (nGAAP)
+Balance sheet recognised financial asset instrument,Balance sheet recognised financial asset instrument type,Hierarchy_391,Balance sheet recognised financial asset instrument according to International Financial Reporting Standard (IFRS)
+Balance sheet recognised financial asset instrument,Balance sheet recognised financial asset instrument by fair value type,Hierarchy_572,Fair-valued balance sheet recognised financial asset instrument
+Balance sheet recognised financial asset instrument,Balance sheet recognised financial asset instrument by fair value type,Hierarchy_573,Non-fair-valued balance sheet recognised financial asset instrument
+Balance sheet recognised financial liability instrument,Balance sheet recognised financial liability instrument type,Hierarchy_394,Non-fair-valued balance sheet recognised financial liability instrument
+Balance sheet recognised financial liability instrument,Balance sheet recognised financial liability instrument type,Hierarchy_393,Fair-valued balance sheet recognised financial liability instrument
+Branch,Domestic branch indicator,Hierarchy_625,Foreign branch
+Branch,Domestic branch indicator,Hierarchy_626,Domestic branch
+Cash leg,Cash leg direction indicator,Hierarchy_692,Reverse repurchase agreement cash leg
+Cash leg,Cash leg direction indicator,Hierarchy_693v1,Repurchase agreement cash leg
+Central bank,Central bank type,Hierarchy_550,European Central Bank
+Central bank,Central bank type,Hierarchy_551,Central Bank that is not the European Central Bank
+Central bank and Corporation,Central bank and Corporation type,Hierarchy_20,Non-financial corporation
+Central bank and Corporation,Central bank and Corporation type,Hierarchy_19,Financial corporation
+Central bank and private sector company,Central bank and private sector company type,Hierarchy_39,Private sector company other than corporation
+Central bank and private sector company,Central bank and private sector company type,Hierarchy_38,Central bank and Corporation
+Central bank and private sector company,Listed central bank and private sector company indicator,Hierarchy_561,Listed central bank and private sector company
+Central bank and private sector company,Listed central bank and private sector company indicator,Hierarchy_562v1,Non-listed central bank and private sector company
+Central bank and private sector company role,Central bank and private sector company role type,Hierarchy_443,Subsidiary (of the reporting agent)
+Central bank and private sector company role,Central bank and private sector company role type,Hierarchy_444,Joint venture (of the reporting agent)
+Central bank and private sector company role,Central bank and private sector company role type,Hierarchy_445,Associate (of the reporting agent)
+Central bank and private sector company role,Central bank and private sector company role type,Hierarchy_557,Immediate parent enterprise
+Central bank and private sector company role,Central bank and private sector company role type,Hierarchy_558,Partner enterprise
+Central bank and private sector company role,Central bank and private sector company role type,Hierarchy_559,Linked enterprise
+Collateral,Collateral type,Hierarchy_175,Financial collateral
+Collateral,Collateral type,Hierarchy_176,Physical collateral
+Collateral,Collateral type,Hierarchy_569v1,Immaterial rights as collateral
+Collateral,Obtained collateral type,Hierarchy_631v1,Collateral obtained by taking possession
+Collateral,Obtained collateral type,Hierarchy_632,Not obtained collateral
+Collateral Non-financial asset assignment,Collateral non-financial asset assigment type,Hierarchy_676,Immaterial rights as collateral Other intangible asset taken into possession assignment
+Collateral Non-financial asset assignment,Collateral non-financial asset assigment type,Hierarchy_679,Software collateral Software property_ plant and equipment taken into possession assignment
+Collateral Non-financial asset assignment,Collateral non-financial asset assigment type,Hierarchy_675,Immaterial rights as collateral Other intangible asset not taken into possession assignment
+Collateral Non-financial asset assignment,Collateral non-financial asset assigment type,Hierarchy_678,Physical collateral Non-software property_ plant and equipment not taken into possession assignment
+Collateral Non-financial asset assignment,Collateral non-financial asset assigment type,Hierarchy_680,Physical collateral Non-software property_ plant and equipment taken into possession assignment
+Collateral Non-financial asset assignment,Collateral non-financial asset assigment type,Hierarchy_673,Physical collateral Investment property assignment
+Collateral Non-financial asset assignment,Collateral non-financial asset assigment type,Hierarchy_677,Software collateral Software property_ plant and equipment not taken into possession assignment
+Collateral received instrument,Collateral received instrument type,Hierarchy_551v2,Over the counter (OTC) Credit default swap received as collateral instrument
+Collateral received instrument,Collateral received instrument type,Hierarchy_552,Other collateral received instrument
+Collateral received instrument,Obtained collateral received instrument type,Hierarchy_635v1,Collateral received instrument obtained by taking possession
+Collateral received instrument,Obtained collateral received instrument type,Hierarchy_636,Not obtained collateral received instrument
+Collateral role,Collateral role type,Hierarchy_717v1,Collateral given
+Collateral role,Collateral role type,Hierarchy_716v1,Collateral received
+Commercial real estate and offices and commercial premises collateral,Commercial real estate and offices and commercial premises collateral type,Hierarchy_566v1,Commercial real estate collateral
+Commercial real estate and offices and commercial premises collateral,Commercial real estate and offices and commercial premises collateral type,Hierarchy_567,Offices and commercial premises collateral
+Commodity collateral,Commodity collateral type,Hierarchy_184,Gold collateral
+Commodity collateral,Commodity collateral type,Hierarchy_185,Other commodity collateral
+Country,Country type,Hierarchy_521,Registered Postal Code system country
+Country,Country type,Hierarchy_520,Non-registered Postal Code system country
+Country,Country type by reporting,Hierarchy_191,Reporting member state
+Country,Country type by reporting,Hierarchy_192,Non-reporting member state
+Credit facility Entity role assignment,Credit facility Entity role assignment type,Hierarchy_168,Credit facility Debtor assignment
+Credit facility Entity role assignment,Credit facility Entity role assignment type,Hierarchy_169,Credit facility Servicer assignment
+Credit facility Entity role assignment,Credit facility Entity role assignment type,Hierarchy_170,Credit facility Creditor assignment
+Debt security,Debt security type,Hierarchy_227,Debt security without underlying assets
+Debt security,Debt security type,Hierarchy_226,Debt security with underlying assets
+Debt security,Debt security by Performing status type,Hierarchy_569v2,Performing debt security
+Debt security,Debt security by Performing status type,Hierarchy_570v1,Non-performing debt security
+Debt security,Perpetual debt security indicator,Hierarchy_562,Non-perpetual debt security
+Debt security,Perpetual debt security indicator,Hierarchy_561v2,Perpetual debt security
+Debt security,Debt security by accounting standard,Hierarchy_622v2,Debt security for international financial reporting standard (IFRS)
+Debt security,Debt security by accounting standard,Hierarchy_624v1,Debt security for national general accepted accounting principles (nGAAP)
+Debt security issued (by the reporting agent),Debt security issued type,Hierarchy_455,Fair-valued debt security issued
+Debt security issued (by the reporting agent),Debt security issued type,Hierarchy_456,Non-fair-valued debt security issued
+Debt security issued (by the reporting agent),Debt security issued prudential portfolio type,Hierarchy_630v1,Issued debt security in the banking book
+Debt security issued (by the reporting agent),Debt security issued prudential portfolio type,Hierarchy_628,Issued debt security in the trading book
+Debt security with underlying assets,Debt security with underlying assets type,Hierarchy_229,Asset backed security
+Debt security with underlying assets,Debt security with underlying assets type,Hierarchy_228,Covered bond
+Deposit,Deposit type,Hierarchy_124,Overnight deposit
+Deposit,Deposit type,Hierarchy_127,Other deposit
+Deposit redeemable at notice,Minimum reserve indicator,Hierarchy_724v1,On demand deposit not used for minimum reserve
+Deposit redeemable at notice,Minimum reserve indicator,Hierarchy_723v1,Loan on demand used for minimum reserve
+Employee benefit,Employee benefit type,Hierarchy_319,Pension and other post-employment defined benefit obligation
+Employee benefit,Employee benefit type,Hierarchy_320,Other employee benefit
+Entity group role,Entity group role type,Hierarchy_449,Central bank and private sector company role
+Entity group role,Entity group role type,Hierarchy_631,Natural person group role
+Entity role,Entity role type,Hierarchy_514,Entity group role
+Entity role,Entity role type,Hierarchy_515,Entity transaction role
+Entity transaction role,Entity transaction role type,Hierarchy_161,Legal person role
+Entity transaction role,Entity transaction role type,Hierarchy_160,Organisation role
+Entity transaction role,Entity transaction role type,Hierarchy_159,Party role
+Equity and fund security,Equity or fund security type,Hierarchy_222,Equity security
+Equity and fund security,Equity or fund security type,Hierarchy_223,Fund security
+European Union member country,European Union member country type,Hierarchy_524,Single Supervisory Mechanism member country
+European Union member country,European Union member country type,Hierarchy_525,Non-Single Supervisory Mechanism member country
+European Union member postal code,European Union member postal code type,Hierarchy_530,Single Supervisory Mechanism member postal code
+European Union member postal code,European Union member postal code type,Hierarchy_531,Non-Single Supervisory Mechanism member postal code
+Exchange tradable derivative,Exchange tradable derivative type,Hierarchy_243,Exchange tradable option
+Exchange tradable derivative,Exchange tradable derivative type,Hierarchy_244,Exchange tradable future
+Exchange tradable derivative asset or liability position,Exchange tradable derivative asset or liability position role type,Hierarchy_593,Exchange tradable derivative liability position
+Exchange tradable derivative asset or liability position,Exchange tradable derivative asset or liability position role type,Hierarchy_592,Exchange tradable derivative asset position
+Exchange tradable derivative asset position,Exchange tradable derivative asset position type,Hierarchy_594,Balance sheet recognised exchange tradable derivative asset position
+Exchange tradable derivative asset position,Exchange tradable derivative asset position type,Hierarchy_595,Non-balance sheet recognised exchange tradable derivative asset position
+Exchange tradable derivative liability position,Exchange tradable derivative liability position type,Hierarchy_542,Balance sheet recognised exchange tradable derivative liability position
+Exchange tradable derivative liability position,Exchange tradable derivative liability position type,Hierarchy_543,Non-balance sheet recognised exchange tradable derivative liability position
+Exchange tradable derivative position as a hedge,Exchange tradable derivative position hedge accounting standard type,Hierarchy_715,Exchange tradable derivative position as a hedge according to national general accepted accounting principles (nGAAP)
+Exchange tradable derivative position as a hedge,Exchange tradable derivative position hedge accounting standard type,Hierarchy_714v1,Exchange tradable derivative position as a hedge according to International Financial Reporting Standard (IFRS)
+Exchange tradable derivative position Protection arrangement assignment,Exchange tradable derivative Protection arrangement assignment type,Hierarchy_731,Protection arrangement given Exchange tradable derivative position assignment
+Exchange tradable derivative position Protection arrangement assignment,Exchange tradable derivative Protection arrangement assignment type,Hierarchy_730,Exchange tradable derivative position Protection arrangement received assignment
+Exchange tradable derivative position role,Exchange tradable derivative position role type,Hierarchy_622v4,Exchange tradable derivative position as a hedge
+Exchange tradable derivative position role,Exchange tradable derivative position role type,Hierarchy_624v2,Exchange tradable derivative asset or liability position
+Fair-valued balance sheet recognised financial liability instrument,Fair-valued balance sheet recognised financial liability instrument accounting standard,Hierarchy_639,Fair-valued balance sheet recognised financial liability instrument according to national general accepted accounting principles (nGAAP)
+Fair-valued balance sheet recognised financial liability instrument,Fair-valued balance sheet recognised financial liability instrument accounting standard,Hierarchy_638,Fair-valued Balance sheet recognised financial liability instrument according to International Financial Reporting Standard (IFRS)
+Financial asset instrument,Financial asset instrument type by renegotiation status,Hierarchy_505,Renegotiated financial asset instrument
+Financial asset instrument,Financial asset instrument type by renegotiation status,Hierarchy_504,Non-renegotiated financial asset instrument
+Financial asset instrument,Financial asset instrument type by fixed interest rate,Hierarchy_499,Fixed interest financial asset instrument
+Financial asset instrument,Financial asset instrument type by fixed interest rate,Hierarchy_500,Non-fixed interest financial asset instrument
+Financial asset instrument,Financial asset instrument type by CRR_ Article 123 (Retail exposure),Hierarchy_483,Non-retail exposure financial asset instrument
+Financial asset instrument,Financial asset instrument type by CRR_ Article 123 (Retail exposure),Hierarchy_482,Potential retail exposure class financial asset instrument
+Financial asset instrument,Financial asset instrument type by interest rate only,Hierarchy_497,Interest-only financial asset instrument
+Financial asset instrument,Financial asset instrument type by interest rate only,Hierarchy_498,Non-interest-only financial asset instrument
+Financial asset instrument,Financial asset instrument type,Hierarchy_385,Balance sheet recognised financial asset instrument
+Financial asset instrument,Financial asset instrument type,Hierarchy_457,Non-balance sheet recognised financial asset instrument
+Financial asset instrument,Past due financial asset instrument indicator,Hierarchy_630,Past due financial asset instrument
+Financial asset instrument,Past due financial asset instrument indicator,Hierarchy_631v2,Not past due financial asset instrument
+Financial asset instrument debtor assessed,Financial asset instrument debtor assessed type,Hierarchy_489,Non-performing financial asset instrument debtor assessed
+Financial asset instrument debtor assessed,Financial asset instrument debtor assessed type,Hierarchy_488,Performing financial asset instrument debtor assessed
+Financial asset instrument individually assessed,Financial asset instrument individually assessed type,Hierarchy_494,Non-default financial asset instrument individually assessed
+Financial asset instrument individually assessed,Financial asset instrument individually assessed type,Hierarchy_490,Default financial asset instrument individually assessed
+Financial collateral,Financial collateral type,Hierarchy_201,Other financial collateral
+Financial collateral,Financial collateral type,Hierarchy_194,Currency collateral
+Financial collateral,Financial collateral type,Hierarchy_193,Security collateral
+Financial collateral,Financial collateral type,Hierarchy_518,Trade receivable collateral
+Financial collateral,Financial collateral type,Hierarchy_519,Life insurance policy pledged collateral
+Financial collateral,Financial collateral type,Hierarchy_652v1,Exchange tradable derivative collateral
+Financial contract,Financial contract type,Hierarchy_589,Single financial contract
+Financial contract,Financial contract type,Hierarchy_591,Syndicated financial contract member
+Financial corporation,Financial corporation type,Hierarchy_16,Central bank
+Financial corporation,Financial corporation type,Hierarchy_17,Credit institution
+Financial corporation,Financial corporation type,Hierarchy_18,Other financial corporation
+Financial guarantee instrument,Financial guarantee instrument type,Hierarchy_74,Financial guarantee instrument not covering a Debt security
+Financial guarantee instrument,Financial guarantee instrument type,Hierarchy_73,Financial guarantee instrument covering a Debt security
+Financial liability instrument,Financial liability instrument type,Hierarchy_386,Balance sheet recognised financial liability instrument
+Financial liability instrument,Financial liability instrument type,Hierarchy_458,Non-balance sheet recognised financial liability instrument
+Fundamental review of the trading book standard approach risk measure,Risk measure type,Hierarchy_581,Delta sensitivity
+Fundamental review of the trading book standard approach risk measure,Risk measure type,Hierarchy_583,Curvature
+Fundamental review of the trading book standard approach risk measure,Risk measure type,Hierarchy_582,Vega sensitivity
+Fundamental review of the trading book standard approach risk measure,Risk measure type by position,Hierarchy_590,Fundamental review of the trading book standard approach risk measure for security positions
+Fundamental review of the trading book standard approach risk measure,Risk measure type by position,Hierarchy_588v2,Fundamental review of the trading book standard approach risk measure for ETD positions
+Fundamental review of the trading book standard approach risk measure,Risk measure type by position,Hierarchy_587v2,Fundamental review of the trading book standard approach risk measure for OTC positions
+General government,General government type,Hierarchy_14,Central government
+General government,General government type,Hierarchy_15,State and local government and Social security funds
+Group,Group type,Hierarchy_53,Group of clients
+Group,Group type,Hierarchy_54,Internal group
+Group Key management personnel assignment,Group Key management personnel assignment type,Hierarchy_688,Group of clients Key management personnel assignment
+Group Key management personnel assignment,Group Key management personnel assignment type,Hierarchy_689,Internal group Key management personnel assignment
+Group of clients,Group of clients type,Hierarchy_56,Group of consolidated clients
+Group of clients,Group of clients type,Hierarchy_57,Other group of clients
+Group of clients,Group of clients type,Hierarchy_55,Group of connected clients
+Immaterial rights as collateral,Immaterial rights collateral type,Hierarchy_652,Other immaterial rights collateral
+Immaterial rights as collateral,Immaterial rights collateral type,Hierarchy_651,Software collateral
+Institutional unit,Domestic institutional unit indicator,Hierarchy_622v1,Foreign institutional unit
+Institutional unit,Domestic institutional unit indicator,Hierarchy_624v3,Domestic institutional unit
+Instrument,Instrument type by origin,Hierarchy_64,Instrument resulting from a Credit facility
+Instrument,Instrument type by origin,Hierarchy_63,Instrument resulting directly from a Financial contract
+Instrument,Instrument type by product,Hierarchy_78,Over the counter (OTC) Derivative instrument
+Instrument,Instrument type by product,Hierarchy_70,Off-balance instrument
+Instrument,Instrument type by product,Hierarchy_65,Securities financing transaction (SFT)
+Instrument,Instrument type by product,Hierarchy_69,Equity instrument that is not a security
+Instrument,Instrument type by product,Hierarchy_66,Loan (excluding repurchase agreement) and advance
+Instrument Collateral assignment,Instrument Collateral assignment type,Hierarchy_701,Loan (excluding repurchase agreement) and advance Collateral received assignment
+Instrument Collateral assignment,Instrument Collateral assignment type,Hierarchy_702v1,Off-balance instrument Collateral received assignment
+Instrument Collateral assignment,Instrument Collateral assignment type,Hierarchy_727,Loan (excluding repurchase agreement) and advance Collateral given assignment
+Instrument Collateral assignment,Instrument Collateral assignment type,Hierarchy_728,Off-balance instrument Collateral given assignment
+Instrument Collateral instrument assignment,Instrument Collateral received instrument assignment type,Hierarchy_550v2,Over the counter (OTC) Credit default swap Collateral received instrument assignment
+Instrument Collateral instrument assignment,Instrument Collateral received instrument assignment type,Hierarchy_555,Instrument Collateral received instrument assignment
+Instrument Collateral instrument assignment,Instrument Collateral received instrument assignment type,Hierarchy_711,Collateral given instrument Instrument assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_415,Financial guarantee instrument Protection provider assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_420,Trade receivable Factor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_438,Financial lease Lessee assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_407,Credit card debt Loan debtor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_419,Trade receivable Assigned debtor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_408,Advance Creditor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_417,Other commitment Creditor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_411,Repurchase agreement Seller assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_422,Deposit Depositor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_412,Security borrowing and lending transaction Borrower assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_418,Other commitment Loan debtor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_410,Repurchase agreement Buyer assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_413,Security borrowing and lending transaction Lender assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_424,Over the counter (OTC) Derivative Seller assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_421,Deposit Deposit taking corporation assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_404,Other loan Loan debtor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_416,Financial guarantee instrument Beneficiary assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_409,Advance Loan debtor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_405,Other loan Creditor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_481,Equity instrument that is not a security Investor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_437,Financial lease Lessor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_406,Credit card debt Creditor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_423,Over the counter (OTC) Derivative Buyer assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_436,Equity instrument that is not a security Issuer assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_480,Instrument Servicer assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_626v1v1,Syndication or sub-participation member instrument Payment agent assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_700,Reverse repurchase agreement loan Loan debtor assignment
+Instrument Entity role assignment,Instrument Entity role assignment type,Hierarchy_712,Reverse repurchase agreement loan Creditor assignment
+Instrument Protection arrangement assignment,Instrument Protection arrangement assignment type,Hierarchy_724,Instrument Protection arrangement received assignment
+Instrument Protection arrangement assignment,Instrument Protection arrangement assignment type,Hierarchy_723,Protection arrangement given Instrument assignment
+Instrument role,Instrument role type,Hierarchy_381,Financial liability instrument
+Instrument role,Instrument role type,Hierarchy_387,Off-balance sheet item given instrument
+Instrument role,Instrument role type,Hierarchy_382,Collateral given instrument
+Instrument role,Instrument role type,Hierarchy_388,Off-balance sheet item received instrument
+Instrument role,Instrument role type,Hierarchy_379,Collateral received instrument
+Instrument role,Instrument role type,Hierarchy_380,Financial asset instrument
+Internal consolidation group,Internal consolidation group type,Hierarchy_60,Prudential consolidation group
+Internal consolidation group,Internal consolidation group type,Hierarchy_59,Accounting consolidation group
+Internal group,Internal group type,Hierarchy_61,Institutional unit
+Internal group,Internal group type,Hierarchy_442,Subsidiary_ joint venture and associate
+Internal group,Internal group type,Hierarchy_58,Internal consolidation group
+International organisation and general government,International organisation and general government type,Hierarchy_31,General government
+International organisation and general government,International organisation and general government type,Hierarchy_30,International organisation
+Issued debt security in the trading book,Issued debt security in the trading book accounting standard,Hierarchy_635v2,Issued debt security in the trading book national general accepted accounting principles (nGAAP)
+Issued debt security in the trading book,Issued debt security in the trading book accounting standard,Hierarchy_634,Issued debt security in the trading book International Financial Reporting Standard (IFRS)
+Issuer based rating system,Issuer based rating system type,Hierarchy_291,Non-central government rating system
+Issuer based rating system,Issuer based rating system type,Hierarchy_292,Central government rating system
+Legal person,Legal person type,Hierarchy_34,Organisation
+Legal person,Legal person type,Hierarchy_9,Natural person
+Loan (excluding repurchase agreement),Loan type,Hierarchy_119,Financial lease
+Loan (excluding repurchase agreement),Loan type,Hierarchy_120,Trade receivable
+Loan (excluding repurchase agreement),Loan type,Hierarchy_130,Credit card debt
+Loan (excluding repurchase agreement),Loan type,Hierarchy_131,Other loan
+Loan (excluding repurchase agreement),Loan type,Hierarchy_123,Deposit
+Loan (excluding repurchase agreement),Loan type,Hierarchy_697v1,Reverse repurchase agreement loan
+Loan (excluding repurchase agreement),Syndication or sub-participation member instrument indicator,Hierarchy_622v3,Syndication or sub-participation member instrument
+Loan (excluding repurchase agreement),Syndication or sub-participation member instrument indicator,Hierarchy_624,Non-syndicated contract nor sub-participation member instrument
+Loan (excluding repurchase agreement) and advance,Loan and advance type,Hierarchy_67,Loan (excluding repurchase agreement)
+Loan (excluding repurchase agreement) and advance,Loan and advance type,Hierarchy_68,Advance
+Long debt security position Prudential portfolio assignment Accounting classification for financial assets assignment,Long debt security position Prudential portfolio assignment Accounting classification for financial assets assignment type,Hierarchy_396,Long debt security position Prudential portfolio assignment Accounting classification for financial assets assignment according to national general accepted accounting principles (nGAAP)
+Long debt security position Prudential portfolio assignment Accounting classification for financial assets assignment,Long debt security position Prudential portfolio assignment Accounting classification for financial assets assignment type,Hierarchy_395,Long debt security position Prudential portfolio assignment Accounting classification for financial assets assignment according to International Financial Reporting Standard (IFRS)
+Long equity or fund security position Prudential portfolio assignment Accounting classification for financial assets assignment,Long equity or fund security position Prudential portfolio assignment Accounting classification for financial assets assignment type,Hierarchy_397,Long equity or fund security position Prudential portfolio assignment Accounting classification for assets assignment according to International Financial Reporting Standard (IFRS)
+Long equity or fund security position Prudential portfolio assignment Accounting classification for financial assets assignment,Long equity or fund security position Prudential portfolio assignment Accounting classification for financial assets assignment type,Hierarchy_398,Long equity or fund security position Prudential portfolio assignment Accounting classification for assets assignment according to national general accepted accounting principles (nGAAP)
+Long non-negotiable security position,Forborne long non-negotiable security position indicator,Hierarchy_563,Forborne long non-negotiable security position
+Long non-negotiable security position,Forborne long non-negotiable security position indicator,Hierarchy_564,Non-forborne long non-negotiable security position
+Long security position,Long security position type,Hierarchy_247,Long equity or fund security position
+Long security position,Long security position type,Hierarchy_248,Long debt security position
+Long security position,Negotiable security position indicator,Hierarchy_562v2,Long non-negotiable security position
+Long security position,Negotiable security position indicator,Hierarchy_561v1,Long negotiable security position
+Long security position Prudential portfolio assignment,Long security position Prudential portfolio assignment type,Hierarchy_279,Long debt security position Prudential portfolio assignment
+Long security position Prudential portfolio assignment,Long security position Prudential portfolio assignment type,Hierarchy_280,Long equity or fund security position Prudential portfolio assignment
+Long security position Prudential portfolio assignment,Long security position Prudential portfolio type,Hierarchy_624v4,Long security position banking book assignment
+Long security position Prudential portfolio assignment,Long security position Prudential portfolio type,Hierarchy_622,Long security position trading book assignment
+Long security position Prudential Portfolio assignment Accounting classification for financial assets assignment,Long security position Prudential Portfolio assignment Accounting classification for financial assets assignment type,Hierarchy_378,Long equity or fund security position Prudential portfolio assignment Accounting classification for financial assets assignment
+Long security position Prudential Portfolio assignment Accounting classification for financial assets assignment,Long security position Prudential Portfolio assignment Accounting classification for financial assets assignment type,Hierarchy_377,Long debt security position Prudential portfolio assignment Accounting classification for financial assets assignment
+Long security position trading book assignment,Long security position trading book assignment accounting standard type,Hierarchy_626v1,Long security position trading book assignment national general accepted accounting principles (nGAAP)
+Long security position trading book assignment,Long security position trading book assignment accounting standard type,Hierarchy_625v2,Long security position trading book assignment International Financial Reporting Standard (IFRS)
+Master agreement,Master agreement type,Hierarchy_364,Master agreement with a central counterparty
+Master agreement,Master agreement type,Hierarchy_365,Master agreement with a clearing member
+Master agreement Central counterparty assignment,Master agreement Central counterparty assignment type,Hierarchy_369,Master agreement Non-qualifying central counterparty assignment
+Master agreement Central counterparty assignment,Master agreement Central counterparty assignment type,Hierarchy_368,Master agreement Qualifying central counterparty assignment
+Master agreement Entity role assignment,Master agreement Entity role type,Hierarchy_366,Master agreement Central counterparty assignment
+Master agreement Entity role assignment,Master agreement Entity role type,Hierarchy_367,Master agreement Clearing member assignment
+Master agreement with a central counterparty,Master agreement with central counterparty type,Hierarchy_370,Master agreement with a qualifying central counterparty
+Master agreement with a central counterparty,Master agreement with central counterparty type,Hierarchy_371,Master agreement with a non-qualified central counterparty
+Natural person,Natural person type,Hierarchy_12,Self-employed natural person
+Natural person,Natural person type,Hierarchy_13,Non-self-employed natural person
+Non-balance sheet recognised financial asset instrument,Non-balance sheet recognised financial asset instrument by accounting standard,Hierarchy_695,Non-balance sheet recognised financial asset instrument according to International Financial Reporting Standard (IFRS)
+Non-balance sheet recognised financial asset instrument,Non-balance sheet recognised financial asset instrument by accounting standard,Hierarchy_696,Non-balance sheet recognised financial asset instrument according to national general accepted accounting principles (nGAAP)
+Non-default financial asset instrument individually assessed,Non-default financial asset instrument individually assessed type,Hierarchy_496,Non-performing non-default financial asset instrument individually assessed
+Non-default financial asset instrument individually assessed,Non-default financial asset instrument individually assessed type,Hierarchy_495,Performing non-default financial asset instrument individually assessed
+Non-financial asset,Non-financial asset type,Hierarchy_324,Tax asset
+Non-financial asset,Non-financial asset type,Hierarchy_330,Other non-financial asset
+Non-financial asset,Non-financial asset type,Hierarchy_328,Other intangible asset
+Non-financial asset,Non-financial asset type,Hierarchy_329,Property_ plant and equipment
+Non-financial asset,Non-financial asset type,Hierarchy_323,Goodwill
+Non-financial asset,Non-financial asset type,Hierarchy_325,Investment property
+Non-financial asset and non-financial liability,Non-financial asset and non-financial liabilty type,Hierarchy_308,Non-financial liability
+Non-financial asset and non-financial liability,Non-financial asset and non-financial liabilty type,Hierarchy_306,Non-financial asset
+Non-financial liability,Non-financial liability type,Hierarchy_311,Share capital repayable on demand
+Non-financial liability,Non-financial liability type,Hierarchy_314,Provision
+Non-financial liability,Non-financial liability type,Hierarchy_310,Tax liability
+Non-financial liability,Non-financial liability type,Hierarchy_321,Other non-financial liability
+Non-registered collateral,Non-registered collateral type,Hierarchy_179,Rolling stock collateral
+Non-registered collateral,Non-registered collateral type,Hierarchy_180,Machinery and equipment collateral
+Non-registered collateral,Non-registered collateral type,Hierarchy_182,Commodity collateral
+Non-registered collateral,Non-registered collateral type,Hierarchy_183,Other non-registered collateral
+Non-registered collateral,Non-registered collateral type,Hierarchy_181,Inventory collateral
+Non-retail exposure financial asset instrument,Non-retail exposure financial asset instrument type,Hierarchy_487,Non-performing non-retail exposure class financial asset instrument
+Non-retail exposure financial asset instrument,Non-retail exposure financial asset instrument type,Hierarchy_486,Performing non-retail exposure class financial asset instrument
+Off-balance instrument,Off-balance instrument type,Hierarchy_72,Other commitment
+Off-balance instrument,Off-balance instrument type,Hierarchy_71,Financial guarantee instrument
+Off-balance sheet item given instrument,Off-balance sheet item given instrument by forbearance status type,Hierarchy_632v1,Forborne off-balance sheet item given instrument
+Off-balance sheet item given instrument,Off-balance sheet item given instrument by forbearance status type,Hierarchy_635,Non-forborne off-balance sheet item given instrument
+Offices and commercial premises collateral,Offices and commercial premises collateral indicator,Hierarchy_587,Offices and commercial premises not related to land collateral
+Offices and commercial premises collateral,Offices and commercial premises collateral indicator,Hierarchy_586,Offices and commercial premises related to land collateral
+Offices and commercial premises related to land collateral,Agriculture land indicator,Hierarchy_588,Land including agriculture collateral
+Offices and commercial premises related to land collateral,Agriculture land indicator,Hierarchy_590v1,Land excluding agriculture collateral
+Organisation,Organisation type,Hierarchy_33,International organisation and general government
+Organisation,Organisation type,Hierarchy_37,Central bank and private sector company
+Organisation,Organisation type by legal proceeding status,Hierarchy_10,Organisation with legal proceeding
+Organisation,Organisation type by legal proceeding status,Hierarchy_11,Organisation without legal proceeding
+Organisational unit,Organisational unit type,Hierarchy_6,Investment vehicle / fund
+Organisational unit,Organisational unit type,Hierarchy_5,Branch
+Organisational unit,Organisational unit type,Hierarchy_7,Other organisational unit
+Organisation role,Organisation role type,Hierarchy_142,Clearing member
+Organisation role,Organisation role type,Hierarchy_143,Qualifying central counterparty (QCCP)
+Organisation role,Organisation role type,Hierarchy_139,Master netting counterparty
+Organisation role,Organisation role type,Hierarchy_40,Securitisation special purpose entity (SSPE)
+Organisation role,Organisation role type,Hierarchy_36,Sponsor
+Organisation role,Organisation role type,Hierarchy_144,Non-qualifying central counterparty
+Organisation role,Organisation role type,Hierarchy_414,Security debtor
+Other deposit,Other deposit type,Hierarchy_128,Deposit with agreed maturity
+Other deposit,Other deposit type,Hierarchy_129,Deposit redeemable at notice
+Other intangible asset,Other intangible asset type,Hierarchy_467,Other intangible asset not taken into possession
+Other intangible asset,Other intangible asset type,Hierarchy_674,Other intangible asset taken into possession
+Other non-financial asset,Other non-financial asset type,Hierarchy_459,Other non-financial asset not taken into possession
+Other non-financial asset,Other non-financial asset type,Hierarchy_640,Other non-financial asset taken into possession before the period
+Other non-financial asset,Other non-financial asset type,Hierarchy_641,Other non-financial asset taken into possession during the period
+Overnight deposit,Overnight deposit type,Hierarchy_125,Transferable deposit
+Overnight deposit,Overnight deposit type,Hierarchy_126,Other overnight deposit
+Over the counter (OTC) Derivative as a hedge,Over the counter (OTC) Derivative hedge accounting standard type,Hierarchy_716,Over the counter (OTC) Derivative as a hedge according to International Financial Reporting Standard (IFRS)
+Over the counter (OTC) Derivative as a hedge,Over the counter (OTC) Derivative hedge accounting standard type,Hierarchy_717,Over the counter (OTC) Derivative as a hedge according to national general accepted accounting principles (nGAAP)
+Over the counter (OTC) Derivative instrument,Over the counter (OTC) Derivative instrument type,Hierarchy_79,Over the counter (OTC) Swap
+Over the counter (OTC) Derivative instrument,Over the counter (OTC) Derivative instrument type,Hierarchy_82,Other over the counter (OTC) Derivative instrument
+Over the counter (OTC) Derivative instrument,Over the counter (OTC) Derivative instrument type,Hierarchy_80,Over the counter (OTC) Option
+Over the counter (OTC) Derivative instrument,Over the counter (OTC) Derivative instrument type,Hierarchy_81,Over the counter (OTC) Forward
+Over the counter (OTC) Option,Over the counter (OTC) Option type,Hierarchy_103,Over the counter (OTC) Option other than Over the counter (OTC) Credit spread option
+Over the counter (OTC) Option,Over the counter (OTC) Option type,Hierarchy_102,Over the counter (OTC) Credit spread option
+Over the counter (OTC) Swap,Over the counter (OTC) Swap type,Hierarchy_83,Over the counter (OTC) Total return swap
+Over the counter (OTC) Swap,Over the counter (OTC) Swap type,Hierarchy_84,Over the counter (OTC) Credit default swap
+Over the counter (OTC) Swap,Over the counter (OTC) Swap type,Hierarchy_85,Other over the counter (OTC) Swap
+Party,Party type by address,Hierarchy_547,No registered Postal Code system party
+Party,Party type by address,Hierarchy_548,Registered postal code system party
+Party,Party type,Hierarchy_3,Organisational unit
+Party,Party type,Hierarchy_35,Legal person
+Party code,Party code type,Hierarchy_619,Legal entity identifier party code
+Party code,Party code type,Hierarchy_620,Other party code
+Party code,Party code type,Hierarchy_623,Register of Institutions and Affiliates Database (RIAD) party code
+Party role,Party role type,Hierarchy_427,Borrower
+Party role,Party role type,Hierarchy_41,Originator
+Party role,Party role type,Hierarchy_137,Lessee
+Party role,Party role type,Hierarchy_136,Lessor
+Party role,Party role type,Hierarchy_46,Loan debtor
+Party role,Party role type,Hierarchy_133,Seller
+Party role,Party role type,Hierarchy_47,Servicer
+Party role,Party role type,Hierarchy_135,Factor
+Party role,Party role type,Hierarchy_266,Investor
+Party role,Party role type,Hierarchy_45,Creditor
+Party role,Party role type,Hierarchy_44,Depositor
+Party role,Party role type,Hierarchy_42,Issuer
+Party role,Party role type,Hierarchy_426,Beneficiary
+Party role,Party role type,Hierarchy_43,Deposit taking corporation
+Party role,Party role type,Hierarchy_141,Central counterparty client
+Party role,Party role type,Hierarchy_48,Protection provider
+Party role,Party role type,Hierarchy_132,Original lender
+Party role,Party role type,Hierarchy_134,Buyer
+Party role,Party role type,Hierarchy_428,Lender
+Party role,Party role type,Hierarchy_138,Swap provider
+Party role,Party role type,Hierarchy_625v1,Payment agent
+Performing status reason,Performing status reason type,Hierarchy_684,Performing exposure performing status reason
+Performing status reason,Performing status reason type,Hierarchy_685,Non-performing exposure performing status reason
+Physical collateral,Physical collateral type,Hierarchy_178,Non-registered collateral
+Physical collateral,Physical collateral type,Hierarchy_177,Registered collateral
+Postal code,Postal code type,Hierarchy_528,European Union member postal code
+Postal code,Postal code type,Hierarchy_529,Non-European Union member postal code
+Potential retail exposure class financial asset instrument,Potential retail exposure class financial asset instrument type,Hierarchy_484,Financial asset instrument individually assessed
+Potential retail exposure class financial asset instrument,Potential retail exposure class financial asset instrument type,Hierarchy_485,Financial asset instrument debtor assessed
+Property_ plant and equipment,Property_ plant and equipment type,Hierarchy_464,Property_ plant and equipment taken into possession
+Property_ plant and equipment,Property_ plant and equipment type,Hierarchy_463,Property_ plant and equipment not taken into possession
+Property_ plant and equipment not taken into possession,Property_ plant and equipment not taken into possession software assets indicator,Hierarchy_653,Non-software property_ plant and equipment not taken into possession
+Property_ plant and equipment not taken into possession,Property_ plant and equipment not taken into possession software assets indicator,Hierarchy_650,Software property_ plant and equipment not taken into possession
+Property_ plant and equipment taken into possession,Property_ plant and equipment taken into possession software assets indicator,Hierarchy_655,Non-software property_ plant and equipment taken into possession
+Property_ plant and equipment taken into possession,Property_ plant and equipment taken into possession software assets indicator,Hierarchy_654,Software property_ plant and equipment taken into possession
+Protection arrangement,Protection arrangement type,Hierarchy_363,Collateral annex
+Protection arrangement,Protection arrangement type,Hierarchy_362,Credit risk mitigation arrangement
+Protection arrangement role,Protection arrangement role type,Hierarchy_720,Protection arrangement given
+Protection arrangement role,Protection arrangement role type,Hierarchy_719,Protection arrangement received
+Provision,Provision type,Hierarchy_316,Employee benefit
+Provision,Provision type,Hierarchy_315,Funds for general banking risk
+Provision,Provision type,Hierarchy_322,Other provision
+Provision,Provision type,Hierarchy_317,Restructuring
+Provision,Provision type,Hierarchy_318,Pending legal issues and tax litigation
+Rating grade,Rating grade type,Hierarchy_293,Rating grade for issue-based rating system
+Rating grade,Rating grade type,Hierarchy_294,Rating grade for issuer based rating system
+Rating grade for issuer based rating system,Rating grade for issuer based rating system type,Hierarchy_296,Rating grade for issuer based rating system for central government
+Rating grade for issuer based rating system,Rating grade for issuer based rating system type,Hierarchy_295,Rating grade for issuer based rating system for non-central government
+Rating system,Rating system type by nature (Grade vs. Numeric),Hierarchy_289,Graded rating system
+Rating system,Rating system type by nature (Grade vs. Numeric),Hierarchy_290,Numeric rating system
+Rating system,Rating system type by target (Issue vs. Issuer based),Hierarchy_287,Issuer based rating system
+Rating system,Rating system type by target (Issue vs. Issuer based),Hierarchy_288,Issue-based rating system
+Real estate collateral,Real estate collateral location type,Hierarchy_189,Real estate collateral located in a member state
+Real estate collateral,Real estate collateral location type,Hierarchy_190,Real estate collateral not located in a member state
+Real estate collateral,Real estate collateral type,Hierarchy_563v1,Residential real estate collateral
+Real estate collateral,Real estate collateral type,Hierarchy_564v1,Commercial real estate and offices and commercial premises collateral
+Registered collateral,Registered collateral type,Hierarchy_187,Real estate collateral
+Registered collateral,Registered collateral type,Hierarchy_188,Ship collateral
+Registered collateral,Registered collateral type,Hierarchy_186,Aircraft collateral
+Registered Postal Code system country,Registered Postal Code system country type,Hierarchy_522,European Union member country
+Registered Postal Code system country,Registered Postal Code system country type,Hierarchy_523,Non-European Union member country
+Registered postal code system party,Registered postal code system party type,Hierarchy_545,European Union member party
+Registered postal code system party,Registered postal code system party type,Hierarchy_546,Non-European Union member party
+Renegotiated financial asset instrument,Renegotiated financial asset instrument type,Hierarchy_507,Renegotiated financial asset instrument with forbearance measure
+Renegotiated financial asset instrument,Renegotiated financial asset instrument type,Hierarchy_506,Renegotiated financial asset instrument without forbearance measure
+Repurchase agreement component,Repurchase component type,Hierarchy_107,Cash leg
+Repurchase agreement component,Repurchase component type,Hierarchy_652v2,Transferred asset leg
+Repurchase agreement instrument,Repurchase agreement instrument type,Hierarchy_118,Open repurchase agreement instrument
+Repurchase agreement instrument,Repurchase agreement instrument type,Hierarchy_117,Term repurchase agreement instrument
+Risk factor for standardised approach,Risk class,Hierarchy_568,General interest rate risk (GIRR) factor for standardised approach
+Risk factor for standardised approach,Risk class,Hierarchy_565,Commodity risk factor for standardised approach
+Risk factor for standardised approach,Risk class,Hierarchy_566,Foreign exchange risk factor for standardised approach
+Risk factor for standardised approach,Risk class,Hierarchy_569,Credit spread risk (CSR) non-securitisation risk factor for standardised approach
+Risk factor for standardised approach,Risk class,Hierarchy_586v1,Securitisation correlation trading portfolio (CTP) Risk Factor for standardised approach
+Risk factor for standardised approach,Risk class,Hierarchy_570,Securitisation non-correlation trading portfolio_ (non-CTP) Risk Factor for standardised approach
+Risk factor for standardised approach,Risk class,Hierarchy_567v1,Equity risk factor for standardised approach
+Securities financing transaction (SFT),Securities financial transaction type,Hierarchy_105,Repurchase agreement instrument
+Securities financing transaction (SFT),Securities financial transaction type,Hierarchy_110,Security borrowing and lending transaction
+Securitisation,Securitisation type,Hierarchy_264,Traditional securitisation
+Securitisation,Securitisation type,Hierarchy_265,Synthetic securitisation
+Securitisation,Significant risk transfer indicator,Hierarchy_616,Significant risk transfer securitisation
+Securitisation,Significant risk transfer indicator,Hierarchy_615,Not significant risk transfer securitisation
+Securitisation and other credit transfer,Securitisation and other credit transfer type,Hierarchy_263,Credit transfer other than securitisation and covered bond programme
+Securitisation and other credit transfer,Securitisation and other credit transfer type,Hierarchy_262,Securitisation
+Securitisation and other credit transfer,Securitisation and other credit transfer type,Hierarchy_261,Covered bond programme
+Securitisation tranche,Securitisation tranche type,Hierarchy_572v1,Tranche in a Traditional securitisation
+Securitisation tranche,Securitisation tranche type,Hierarchy_577,Tranche in a synthetic securitisation
+Security,Security type by product,Hierarchy_221,Debt security
+Security,Security type by product,Hierarchy_220,Equity and fund security
+Security,Security type by identifier,Hierarchy_225,Non-International securities identification number (Non-ISIN) security
+Security,Security type by identifier,Hierarchy_224,International securities identification number (ISIN) security
+Security/Security Collateral lending component,Security/Security Collateral lending component indicator,Hierarchy_715v1,Security collateral lending component
+Security/Security Collateral lending component,Security/Security Collateral lending component indicator,Hierarchy_714,Security lending component
+Security and exchange tradable derivative,Security and exchange tradable derivative type,Hierarchy_218,Exchange tradable derivative
+Security and exchange tradable derivative,Security and exchange tradable derivative type,Hierarchy_219,Security
+Security borrowing and lending transaction,Security borrowing and lending transaction type,Hierarchy_112,Security against a fee borrowing and lending transaction
+Security borrowing and lending transaction,Security borrowing and lending transaction type,Hierarchy_111,Security against Security borrowing and lending transaction
+Security borrowing and lending transaction component,Security borrowing and lending transaction component type by Security type,Hierarchy_232,Debt security borrowing and lending transaction component
+Security borrowing and lending transaction component,Security borrowing and lending transaction component type by Security type,Hierarchy_233,Equity or fund security borrowing and lending transaction component
+Security borrowing and lending transaction component,Security borrowing and lending transaction component type by direction,Hierarchy_114,Security/Security Collateral lending component
+Security borrowing and lending transaction component,Security borrowing and lending transaction component type by direction,Hierarchy_113,Security borrowing component
+Security borrowing and lending transaction including cash as collateral component,Securities borrowing and lending transaction including cash as collateral component type,Hierarchy_116,Security borrowing and lending transaction cash as collateral component
+Security borrowing and lending transaction including cash as collateral component,Securities borrowing and lending transaction including cash as collateral component type,Hierarchy_115,Security borrowing and lending transaction component
+Security collateral Security leg assignment,Security leg type,Hierarchy_108,Debt security Security repurchase agreement component assignment
+Security collateral Security leg assignment,Security leg type,Hierarchy_109,Equity or fund security Security repurchase agreement component assignment
+Security Entity role assignment,Security Entity role assignment type,Hierarchy_230,Security Issuer assignment
+Security Entity role assignment,Security Entity role assignment type,Hierarchy_231,Debt security Debtor assignment
+Security or exchange tradable derivative position,Security or Exchange tradable derivative position type,Hierarchy_246,Security position
+Security or exchange tradable derivative position,Security or Exchange tradable derivative position type,Hierarchy_245,Exchange tradable derivative position
+Security position,Security position type,Hierarchy_268,Short security position
+Security position,Security position type,Hierarchy_267,Long security position
+Security position,Security position by accounting standard,Hierarchy_692v1,Security position national general accepted accounting principles (nGAAP)
+Security position,Security position by accounting standard,Hierarchy_693,Security position International Financial Reporting Standard (IFRS)
+Security position hedged by Over the counter (OTC) derivative,Over the counter (OTC) derivative role type,Hierarchy_441,Equity or fund security position hedged by Over the counter (OTC) derivative
+Security position hedged by Over the counter (OTC) derivative,Over the counter (OTC) derivative role type,Hierarchy_440,Debt security position hedged by Over the counter (OTC) derivative
+Short security position prudential portfolio assignment,Short security position Prudential portfolio assignment type,Hierarchy_641v1,Short banking book security position
+Short security position prudential portfolio assignment,Short security position Prudential portfolio assignment type,Hierarchy_642,Short trading book security position
+Short trading book security position,Short trading book security position accounting standard,Hierarchy_644,Short trading book security position International Financial Reporting Standard (IFRS)
+Short trading book security position,Short trading book security position accounting standard,Hierarchy_645,Short trading book security position national general accepted accounting principles (nGAAP)
+Subsidiary_ joint venture and associate Other organisation role assignment,Subsidiary_ joint venture and associate Other organisation assignment type,Hierarchy_446,Subsidiary_ joint venture and associate Subsidiary assignment
+Subsidiary_ joint venture and associate Other organisation role assignment,Subsidiary_ joint venture and associate Other organisation assignment type,Hierarchy_447,Subsidiary_ joint venture and associate Associate assignment
+Subsidiary_ joint venture and associate Other organisation role assignment,Subsidiary_ joint venture and associate Other organisation assignment type,Hierarchy_448,Subsidiary_ joint venture and associate Joint venture assignment
+Synthetic securitisation,Synthetic securitisation type,Hierarchy_270,Synthetic securitisation involving an SSPE
+Synthetic securitisation,Synthetic securitisation type,Hierarchy_269,Synthetic securitisation without involvement of an SSPE
+Tax asset,Tax asset type,Hierarchy_326,Current tax asset
+Tax asset,Tax asset type,Hierarchy_327,Deferred tax asset
+Tax liability,Tax liability type,Hierarchy_312,Current tax liability
+Tax liability,Tax liability type,Hierarchy_313,Deferred tax liability
+Trade receivable,Trade receivable type,Hierarchy_121,Factoring
+Trade receivable,Trade receivable type,Hierarchy_122,Other trade receivable
+Tranche in a synthetic securitisation,Tranche in a synthetic securitisation type,Hierarchy_571,Tranche in a synthetic securitisation without securitisation special purpose entity (SSPE)
+Tranche in a synthetic securitisation,Tranche in a synthetic securitisation type,Hierarchy_598,Tranche in a synthetic securitisation with Securitisation Special Purpose Entity (SSPE)
+Tranche in a synthetic securitisation without securitisation special purpose entity (SSPE),Tranche in a synthetic securitisation without SSPE type,Hierarchy_274,Tranche in a synthetic securitisation without securitisation special purpose entity (SSPE) being a deposit
+Tranche in a synthetic securitisation without securitisation special purpose entity (SSPE),Tranche in a synthetic securitisation without SSPE type,Hierarchy_273,Tranche in a synthetic securitisation without securitisation special purpose entity (SSPE) being a financial guarantee
+Transferred asset leg,Transferred asset leg type,Hierarchy_106,Security leg
+Transferred asset leg,Transferred asset leg type,Hierarchy_654v1,Loans and advances leg
+Transferred asset leg,Transferred asset leg type,Hierarchy_655v1,Equity instrument leg
+Transferred asset leg,Transferred asset leg type,Hierarchy_715v2,Gold collateral leg
+Transferred asset leg Instrument assigment,Transferred asset leg Instrument assignment type,Hierarchy_714v2,Loan and advance leg Loan and advance assignment
+Transferred asset leg Instrument assigment,Transferred asset leg Instrument assignment type,Hierarchy_713,Equity instrument leg Equity instrument that is not a security assignment
