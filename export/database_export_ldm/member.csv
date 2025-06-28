@@ -5021,8 +5021,7 @@ EBA,EBA_MC_EBA_x1103,x1103,"Foreign exchange, interest rate, equity, commodities
 EBA,EBA_MC_EBA_x1104,x1104,"Claims, cross-border claims , local claims of foreign affiliates",EBA_MC,
 EBA,EBA_MC_EBA_x1105,x1105,Local liabilities and foreign liabilities (excluding local liabilities in local currency).,EBA_MC,
 EBA,EBA_MC_EBA_x1106,x1106,"Cross-border claims , local claims of foreign affiliates in foreign currency, local claims of foreign affiliates in local
-currency",EBA_MC,
-EBA,EBA_MC_EBA_x1107,x1107,"Forwards, swaps, options related to foreign exchange, interest rate, equity, commodity, and credit instruments, purchased credit derivatives that hedge or offset credit protection sold or are held for trading",EBA_MC,
+currency"EBA_MCEBA,EBA_MC_EBA_x1107,x1107,"Forwards, swaps, options related to foreign exchange, interest rate, equity, commodity, and credit instruments, purchased credit derivatives that hedge or offset credit protection sold or are held for trading",EBA_MC,
 EBA,EBA_MC_EBA_x1108,x1108,"Foreign liabilities, derivatives, local liabilities in local and foreign currency of foreign offices",EBA_MC,
 EBA,EBA_MC_EBA_x1109,x1109,"Securities held as assets, securities in fiduciary, custody or trust accounts and proprietary trading (except for derivatives, commodities or FX)",EBA_MC,
 EBA,EBA_MC_EBA_x111,x111,"Derivatives, Short positions, Deposits, Debt securities issued, Other financial liabilities",EBA_MC,
@@ -5102,10 +5101,7 @@ EBA,EBA_MC_EBA_x119,x119,Derivatives. Options,EBA_MC,
 EBA,EBA_MC_EBA_x1190,x1190,Assets delegated to the reporting entity,EBA_MC,
 EBA,EBA_MC_EBA_x1191,x1191,Profit eligible,EBA_MC,
 EBA,EBA_MC_EBA_x1192,x1192,Deductions in accordance with Article 9 IFR in conjunction with Article 36 CRR,EBA_MC,
-EBA,EBA_MC_EBA_x1193,x1193,"Instruments regarded as equity capital subscribed
-by shareholders or other proprietors in accordance with the legal structure of the entity
-concerned, not qualifying as own funds according to CRR",EBA_MC,
-EBA,EBA_MC_EBA_x1194,x1194,Losses of the current financial year,EBA_MC,
+EBAEBA_MC_EBA_x1193x1193"Instruments regarded as equity capital subscribedby shareholders or other proprietors in accordance with the legal structure of the entityconcerned not qualifying as own funds according to CRR"EBA_MCEBA,EBA_MC_EBA_x1194,x1194,Losses of the current financial year,EBA_MC,
 EBA,EBA_MC_EBA_x1195,x1195,"Deductions in accordance with Article 9 IFR in conjunction with Article 56 CRR, other than the deductions for inv. in own instr., losses of the year, intangible assets, DTA (rely on future diff, not temp-diff), qual. holdings outside fin. sector, non-sign",EBA_MC,
 EBA,EBA_MC_EBA_x1196,x1196,"Other capital elements, deductions and adjustments",EBA_MC,
 EBA,EBA_MC_EBA_x1197,x1197,Liquidity requirement (investment firms),EBA_MC,
@@ -6321,10 +6317,8 @@ EBA,EBA_MC_EBA_x972,x972,Instruments subject to risk to market,EBA_MC,Instrument
 EBA,EBA_MC_EBA_x973,x973,Instruments subject to risk to firm,EBA_MC,Instruments which account for risk to firm
 EBA,EBA_MC_EBA_x974,x974,Segregated account (IFR),EBA_MC,Accounts that ensure the protection of client money in the event of the failure of an investment firm
 EBA,EBA_MC_EBA_x975,x975,Non- segregated account (IFR),EBA_MC,Accounts with entities where client money
-held by an investment firm is deposited
-EBA,EBA_MC_EBA_x976,x976,"Transferable securities, money-market instruments, units in collective investment undertakings and exchange traded options",EBA_MC,"Transactions where a counterparty undertakes to receive or deliver a transferable security, money-market instruments, units in a collective investment
-undertakings or exchange traded options, at a market standard settlement or delivery date"
-EBA,EBA_MC_EBA_x977,x977,Derivatives other than exchange traded options,EBA_MC,Derivative contracts different from exchange traded options
+held by an investment firm is depositedEBA,EBA_MC_EBA_x976,x976,"Transferable securities, money-market instruments, units in collective investment undertakings and exchange traded options",EBA_MC,"Transactions where a counterparty undertakes to receive or deliver a transferable security, money-market instruments, units in a collective investment
+undertakings or exchange traded options at a market standard settlement or delivery date"EBA,EBA_MC_EBA_x977,x977,Derivatives other than exchange traded options,EBA_MC,Derivative contracts different from exchange traded options
 EBA,EBA_MC_EBA_x978,x978,All assets. Excluding intragroup assets,EBA_MC,Total amount of assets excluding intragroup
 EBA,EBA_MC_EBA_x979,x979,Debt securities. Securitisations,EBA_MC,
 EBA,EBA_MC_EBA_x98,x98,Depreciation,EBA_MC,
@@ -10584,8 +10578,7 @@ EBA,EBA_TR_EBA_x33,x33,"Interest rate risk, Equity risk",EBA_TR,
 EBA,EBA_TR_EBA_x34,x34,Position risk in CIUs,EBA_TR,
 EBA,EBA_TR_EBA_x35,x35,Interest rate risk. Specific risk for securitisation instrument,EBA_TR,
 EBA,EBA_TR_EBA_x36,x36,Risk arising from client money held,EBA_TR,"Risks arising from the amount of client money that an investment firm holds, taking into account the legal arrangements in relation to asset segregation and irrespective of the national accounting regime applicable
-to client money held by the investment f"
-EBA,EBA_TR_EBA_x37,x37,Risk arising from assets safeguarded and administered,EBA_TR,"Risk arising from the value of assets that an investment firm safeguards and administers for clients, irrespective of whether assets appear on the investment firm’s own balance sheet or are in third‐party accounts"
+to client money held by the investment f"EBA,EBA_TR_EBA_x37,x37,Risk arising from assets safeguarded and administered,EBA_TR,"Risk arising from the value of assets that an investment firm safeguards and administers for clients, irrespective of whether assets appear on the investment firm’s own balance sheet or are in third‐party accounts"
 EBA,EBA_TR_EBA_x38,x38,Risk arising from client orders handled,EBA_TR,"Risks arising from the value of orders that an investment firm handles for clients, through the reception and transmission of client orders and through the execution of orders on behalf of client"
 EBA,EBA_TR_EBA_x39,x39,Risk arising from position risk,EBA_TR,Risks arising from the value of transactions recorded in the trading book of an investment firm
 EBA,EBA_TR_EBA_x4,x4,"Credit risk, counterparty credit risk and free deliveries",EBA_TR,
@@ -10594,8 +10587,7 @@ EBA,EBA_TR_EBA_x41,x41,Risk arising from trading counterparty default,EBA_TR,Ris
 EBA,EBA_TR_EBA_x42,x42,Risk arising from daily trading flow,EBA_TR,"Risks arising from the daily value of transactions that an investment firm enters through dealing on own account or the execution of orders on behalf of clients in its own name, excluding the value of orders that an investment firm handles for clients thr"
 EBA,EBA_TR_EBA_x43,x43,Concentration risk,EBA_TR,Risks arising from the exposures in the trading book of an investment firm to a client or a group of connected clients the value of which exceeds the limits for concentration risk
 EBA,EBA_TR_EBA_x44,x44,Risk arising from assets under management,EBA_TR,Risks arising from the value of assets that an investment firm manages for its clients under both discretionary portfolio management and nondiscretionary arrangements constituting investment advice of an
-ongoing nature
-EBA,EBA_TR_EBA_x45,x45,Risk to client,EBA_TR,Risk to client
+ongoing natureEBA,EBA_TR_EBA_x45,x45,Risk to client,EBA_TR,Risk to client
 EBA,EBA_TR_EBA_x46,x46,Risk to market,EBA_TR,Risk to market
 EBA,EBA_TR_EBA_x47,x47,Risk to firm,EBA_TR,Risk to firm
 EBA,EBA_TR_EBA_x48,x48,Delta risk,EBA_TR,
@@ -13039,10 +13031,7 @@ ECB6,EBA_ZZ_ECB6_x7177,x7177,Yearly,EBA_ZZ,
 ECB6,EBA_ZZ_ECB6_x7178,x7178,Weekly,EBA_ZZ,
 ECB6,EBA_ZZ_ECB6_x7179,x7179,Daily,EBA_ZZ,
 ECB6,EBA_ZZ_ECB6_x7180,x7180,Anually,EBA_ZZ,
-ECB6,EBA_ZZ_ECB6_x7181,x7181,1 - Interbank operations
-Properties
-References,EBA_ZZ,
-ECB6,EBA_ZZ_ECB6_x7182,x7182,2 - Central bank operations,EBA_ZZ,
+ECB6EBA_ZZ_ECB6_x7181x71811 - Interbank operationsPropertiesReferencesEBA_ZZECB6,EBA_ZZ_ECB6_x7182,x7182,2 - Central bank operations,EBA_ZZ,
 ECB6,EBA_ZZ_ECB6_x7183,x7183,Interbank operations and Central bank operations,EBA_ZZ,
 ECB6,EBA_ZZ_ECB6_x7184,x7184,1 - Cancelled,EBA_ZZ,
 ECB6,EBA_ZZ_ECB6_x7185,x7185,2 - Delayed,EBA_ZZ,
@@ -13575,9 +13564,7 @@ ECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33NR,33NR,Australia and Oceania - Nauru,EC
 ECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33NU,33NU,Australia and Oceania - Niue,ECB2_CL_SHS_COLLATERAL_AREA,
 ECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33NZ,33NZ,Australia and Oceania - New Zealand,ECB2_CL_SHS_COLLATERAL_AREA,
 ECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33PF,33PF,Australia and Oceania - French Polynesia,ECB2_CL_SHS_COLLATERAL_AREA,
-ECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33PG,33PG,Australia
-  and Oceania - Papua New Guinea,ECB2_CL_SHS_COLLATERAL_AREA,
-ECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33PN,33PN,Australia and Oceania - Pitcairn,ECB2_CL_SHS_COLLATERAL_AREA,
+ECB2ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33PG33PGAustralia  and Oceania - Papua New GuineaECB2_CL_SHS_COLLATERAL_AREAECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33PN,33PN,Australia and Oceania - Pitcairn,ECB2_CL_SHS_COLLATERAL_AREA,
 ECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33PW,33PW,Australia and Oceania - Palau,ECB2_CL_SHS_COLLATERAL_AREA,
 ECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33SB,33SB,Australia and Oceania - Solomon Islands,ECB2_CL_SHS_COLLATERAL_AREA,
 ECB2,ECB2_CL_SHS_COLLATERAL_AREA_ECB2_33TK,33TK,Australia and Oceania - Tokelau,ECB2_CL_SHS_COLLATERAL_AREA,
@@ -15862,8 +15849,7 @@ ECB2,ECB2_PrAsCl_ECB2_D_1812,D.1812,Yield enhancement product,ECB2_PrAsCl,Detail
 ECB2,ECB2_PrAsCl_ECB2_D_1813,D.1813,Participation product,ECB2_PrAsCl,Detailed breakdowns of upper category in accordance with categoristion of European Structured Investment Products Association (EUSIPA).
 ECB2,ECB2_PrAsCl_ECB2_D_1819,D.1819,Other investment product,ECB2_PrAsCl,Detailed breakdowns of upper category in accordance with categoristion of European Structured Investment Products Association (EUSIPA).
 ECB2,ECB2_PrAsCl_ECB2_D_182,D.182,Leverage Product,ECB2_PrAsCl,The leverage product category of Structured debt securities covers securities with a large risk compared with the initial investment and that combine an investment in an underlying security with a future or option.
-Detailed breakdowns of upper category in
-ECB2,ECB2_PrAsCl_ECB2_D_1821,D.1821,Leverage product with knock-out,ECB2_PrAsCl,Detailed breakdowns of upper category in accordance with categoristion of European Structured Investment Products Association (EUSIPA).
+Detailed breakdowns of upper category inECB2,ECB2_PrAsCl_ECB2_D_1821,D.1821,Leverage product with knock-out,ECB2_PrAsCl,Detailed breakdowns of upper category in accordance with categoristion of European Structured Investment Products Association (EUSIPA).
 ECB2,ECB2_PrAsCl_ECB2_D_1822,D.1822,Leverage product without knock-out,ECB2_PrAsCl,Detailed breakdowns of upper category in accordance with categoristion of European Structured Investment Products Association (EUSIPA).
 ECB2,ECB2_PrAsCl_ECB2_D_1823,D.1823,Constant leverage product,ECB2_PrAsCl,Detailed breakdowns of upper category in accordance with categoristion of European Structured Investment Products Association (EUSIPA).
 ECB2,ECB2_PrAsCl_ECB2_D_1829,D.1829,Other leverage product,ECB2_PrAsCl,Detailed breakdowns of upper category in accordance with categoristion of European Structured Investment Products Association (EUSIPA).
@@ -15887,11 +15873,7 @@ ECB2,ECB2_PrAsCl_ECB2_D_39,D.39,Other hybrid debt Instrument,ECB2_PrAsCl,A hybri
 ECB2,ECB2_PrAsCl_ECB2_D_9,D.9,Other debt,ECB2_PrAsCl,A debt instrument that is of a type not listed separately.
 ECB2,ECB2_PrAsCl_ECB2_E,E,Equity,ECB2_PrAsCl,Equity securities are negotiable financial instruments that entitle holders to a share of both distributed profits and the residual value of the corporation’s assets in the event of its liquidation. Holders of these financial assets are the collective owners of a corporation. Equity securities are part of the financial assets and liabilities (financial instrument) category “equity and investment fund shares or units” (F.5) and belong to the subcategory “equity” (F.51) in ESA 2010.
 ECB2,ECB2_PrAsCl_ECB2_E_1,E.1,Ordinary / Common share,ECB2_PrAsCl,"Ordinary shares (or “common” shares) usually give holders the right to the following:
-• Holders are generally entitled to participate in the corporation’s general policymaking and have the right to attend, speak, and vote (in the case of voting shares) at general meetings. Holders of ordinary shares can vote on corporate objectives and matters of policy, on stock splits, and to elect the corporation’s board of directors.
-• Holders are usually entitled to a preferential subscription in the event of a capital increase. Some holders of ordinary shares also receive preemptive rights (a rights issue), which enables them to retain their proportional share in the ownership
-of a corporation should it issue more stock.
-• Holders generally have the right to a share in the corporation’s profits. However, no fixed dividends are paid out to ordinary shareholders. Ordinary shareholders’ returns are therefore uncertain and dependent on earnings, corporate reinvestment, and the market’s ability to value and sell stock efficiently."
-ECB2,ECB2_PrAsCl_ECB2_E_2,E.2,Preference / Preferred share,ECB2_PrAsCl,"Holders of preferred shares have priority over holders of ordinary shares when it comes to laying claim to a corporation’s assets. However, while preferred shares may have priority over ordinary shares in the payment of dividends and in the event of liquidation, they are subordinated to debt securities."
+• Holders are generally entitled to participate in the corporation’s general policymaking and have the right to attend speak and vote (in the case of voting shares) at general meetings. Holders of ordinary shares can vote on corporate objectives and matters of policy on stock splits and to elect the corporation’s board of directors.• Holders are usually entitled to a preferential subscription in the event of a capital increase. Some holders of ordinary shares also receive preemptive rights (a rights issue) which enables them to retain their proportional share in the ownershipof a corporation should it issue more stock.• Holders generally have the right to a share in the corporation’s profits. However no fixed dividends are paid out to ordinary shareholders. Ordinary shareholders’ returns are therefore uncertain and dependent on earnings corporate reinvestment and the market’s ability to value and sell stock efficiently."ECB2,ECB2_PrAsCl_ECB2_E_2,E.2,Preference / Preferred share,ECB2_PrAsCl,"Holders of preferred shares have priority over holders of ordinary shares when it comes to laying claim to a corporation’s assets. However, while preferred shares may have priority over ordinary shares in the payment of dividends and in the event of liquidation, they are subordinated to debt securities."
 ECB2,ECB2_PrAsCl_ECB2_E_21,E.21,Cumulative preferred share,ECB2_PrAsCl,Holders are entitled to receive a fixed dividend ahead of ordinary shares and retain the right to any accumulated preferred dividends that may have built up.
 ECB2,ECB2_PrAsCl_ECB2_E_22,E.22,Participating preferred share,ECB2_PrAsCl,Holders are entitled to participate in the profits of a corporation over and above fixed dividends by means of an additional fluctuating dividend. They also participate in the distribution of the residual value of a corporation on dissolution.
 ECB2,ECB2_PrAsCl_ECB2_E_23,E.23,"Cumulative, participating preferred share",ECB2_PrAsCl,A preferred share that fulfils the criteria of cumulative and participating preferred shares at the same time.
