@@ -1,0 +1,3 @@
+ID,TASK_NUMBER,SUBTASK_NAME,OPERATION_TYPE,STATUS,STARTED_AT,COMPLETED_AT,ERROR_MESSAGE,EXECUTION_DATA,CREATED_AT,SUBSTEP_RESULTS,VALIDATION_MESSAGES,COMPARISON_DATA,REVIEW_STATUS,REVIEW_COMMENTS,PROGRESS_PERCENTAGE,ERROR_DETAILS,RECOVERY_ACTION
+1,1,,do,completed,2025-07-14 15:35:36.203734,2025-07-14 15:35:53.494574,,"{""database_deleted"": true, ""hierarchy_analysis_imported"": true, ""semantic_integrations_processed"": true, ""input_model_imported"": true, ""report_templates_created"": true}",2025-07-14 15:35:36.201451,{},,{},not_reviewed,,0,,none
+2,1,,review,pending,,,,{},2025-07-14 15:35:58.582968,{},,{},not_reviewed,,0,,none
