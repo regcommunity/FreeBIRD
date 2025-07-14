@@ -31,9 +31,7 @@ MAINTENANCE_AGENCY_ID,DOMAIN_ID,NAME,IS_ENUMERATED,DESCRIPTION,DATA_TYPE,CODE,FA
 EBA,EBA_AP,Approach,True,Approach used for the calculation of capital requirements (or exposure value in LR),,AP,,True
 EBA,EBA_AS,Accounting standard,True,The accounting standard used to prepare figures or reports,,AS,,True
 EBA,EBA_ATY,Artificial domain for metrics,True,,,ATY,,True
-EBA,EBA_BA,Base items,True,"Defines the basic conceptual meaning of a data point. 
-Identifies the framework in which a data point is included. For FINREP, it indicates in which group of element of the financial statement should be included the data point (e.g. assets, liabilities, equity, income, expenses). For COREP, it indicates whether the data point should be computed in the numerator (own funds) or the denominator (exposures) of the Pillar I solvency ratio. 
-It may determine whether the data point has a ""debit"" or a ""credit"" attribute.",,BA,,True
+EBA,EBA_BA,Base items,True,"Defines the basic conceptual meaning of a data point. Identifies the framework in which a data point is included. For FINREP, it indicates in which group of element of the financial statement should be included the data point (e.g. assets, liabilities, equity, income, expenses). For COREP, it indicates whether the data point should be computed in the numerator (own funds) or the denominator (exposures) of the Pillar I solvency ratio. It may determine whether the data point has a ""debit"" or a ""credit"" attribute.",,BA,,True
 EBA,EBA_BT,Boolean total,True,Dimensions having only two values (usually denoted true and false),,BT,,True
 EBA,EBA_Boolean,Boolean,True,,,Boolean,,True
 EBA,EBA_CB,Covered bond,True,Name or unambiguous abbreviation of a covered bond issuing entity and the designation of a covered bond,,CB,,True
@@ -53,9 +51,7 @@ EBA,EBA_Integer,Integer,True,,,Integer,,True
 EBA,EBA_LE,Legal entity,True,"An association, corporation, partnership, proprietorship, trust, or individual that has legal standing in the eyes of law",,LE,,True
 EBA,EBA_LQ,Liquidity,True,Defines different liquidity-related conditions of assets and liabilities,,LQ,,True
 EBA,EBA_MA,Type of market,True,Defines the type of market on which reported instruments are traded. It includes the fair value hierarchy.,,MA,,True
-EBA,EBA_MC,Main category,True,"Specifies the nature of the item reported (i.e. answers the question: what is reported?). 
-For financial instruments, defines the instrument (e.g. deposits, debt securities issued...) or range of instruments reported. 
-It should be defined for each data point.",,MC,,True
+EBA,EBA_MC,Main category,True,"Specifies the nature of the item reported (i.e. answers the question: what is reported?). For financial instruments, defines the instrument (e.g. deposits, debt securities issued...) or range of instruments reported. It should be defined for each data point.",,MC,,True
 EBA,EBA_Monetary,Monetary,True,,,Monetary,,True
 EBA,EBA_NC,NACE code,True,NACE classification of economic activities,,NC,,True
 EBA,EBA_OF,Computability in own funds,True,Specifies the way in which the item computes in own funds,,OF,,True
