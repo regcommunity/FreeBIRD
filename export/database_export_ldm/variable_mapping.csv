@@ -152,7 +152,7 @@ DPM_TRI,ECB,DPM_TRI,Mapping of Type of risk
 DPM_TRI_F_02.00,ECB,DPM_TRI_F_02.00,Mapping of Type of risk for the template F02.00
 DPM_TRI_F_04.03.1,ECB,DPM_TRI_F_04.03.1,Mapping of Type of risk for the template F04.03.1
 DPM_TRT,ECB,DPM_TRT,Mapping of Type of risk transfer
-DPM_TSA,ECB,DPM_TSA,Mapping of Type of staff  (RF)
+DPM_TSA,ECB,DPM_TSA,Mapping of Type of staff (RF)
 DPM_TYA,ECB,DPM_TYA,Mapping of Type of activity
 DPM_TYA_F_24.01,ECB,DPM_TYA_F_24.01,Mapping of Type of activity for the template F24.01
 DPM_TYH,ECB,DPM_TYH,Mapping of Type of hedge
