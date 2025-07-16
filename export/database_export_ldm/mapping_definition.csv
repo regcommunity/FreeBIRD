@@ -152,7 +152,7 @@ MAINTENANCE_AGENCY_ID,MAPPING_ID,NAME,MAPPING_TYPE,CODE,ALGORITHM,MEMBER_MAPPING
 ,DPM_TRI_F_02.00,Mapping of Type of risk for the template F02.00,E,DPM_TRI_F_02.00,,DPM_TRI_F_02.00,DPM_TRI_F_02.00
 ,DPM_TRI_F_04.03.1,Mapping of Type of risk for the template F04.03.1,E,DPM_TRI_F_04.03.1,,DPM_TRI_F_04.03.1,DPM_TRI_F_04.03.1
 ,DPM_TRT,Mapping of Type of risk transfer,E,DPM_TRT,,DPM_TRT,DPM_TRT
-,DPM_TSA,Mapping of Type of staff  (RF),E,DPM_TSA,,DPM_TSA,DPM_TSA
+,DPM_TSA,Mapping of Type of staff (RF),E,DPM_TSA,,DPM_TSA,DPM_TSA
 ,DPM_TYA,Mapping of Type of activity,E,DPM_TYA,,DPM_TYA,DPM_TYA
 ,DPM_TYA_F_24.01,Mapping of Type of activity for the template F24.01,E,DPM_TYA_F_24.01,,DPM_TYA_F_24.01,DPM_TYA_F_24.01
 ,DPM_TYH,Mapping of Type of hedge,E,DPM_TYH,,DPM_TYH,DPM_TYH
